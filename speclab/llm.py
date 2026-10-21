@@ -85,7 +85,7 @@ def run_item(client, item, arm, effort, out_dir: Path, max_tool_calls=12):
 
 TOOL_RESIDUAL = {"name": "fit_and_residual",
                  "description": "Fit the observed pattern as a non-negative combination of the simulated patterns of the given candidate ids (each candidate at its best isotropic strain in [-2 %, +2 %]) and return the fitted weights, the R-factor, and the residual pattern (observed minus fit) on the same 10-80 degree grid, normalised so the observed maximum is 100. Use the residual to look for a second phase after accounting for the first.",
-                 "input_schema": {"type": "object", "properties": {"candidate_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 3}},
+                 "input_schema": {"type": "object", "properties": {"candidate_ids": {"type": "array", "items": {"type": "string"}}},
                                   "required": ["candidate_ids"], "additionalProperties": False}, "strict": True}
 
 
@@ -95,6 +95,9 @@ def fit_and_residual(item, cids):
     from pymatgen.core import Structure
     from scipy.optimize import nnls
     obs = np.array(item["intensity"], dtype=float)
+    cids = list(cids)[:3]   # the API schema cannot carry maxItems; the limit lives here and in the description
+    if not cids:
+        return {"error": "candidate_ids is empty"}
     cols, used, strains = [], [], []
     for cid in cids:
         c = next((c for c in item["candidates"] if c["id"] == cid), None)

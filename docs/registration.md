@@ -429,3 +429,8 @@ set, one run. The motivating number from arm B: minor phases below 0.15 weight w
 
 If P51 holds, arm B2 is the harness the held-out gate is run on (P47 transfers to B2). If P55
 fails, the residual tool trades missed minor phases for false ones and the gate stays on arm B.
+- 2026-10-21 21:46 UTC (14:46 PT) Arm B2 first submission rejected by the API for every item:
+  the tool schema carried `minItems`/`maxItems` on an array, which the Messages API does not
+  accept. Zero tokens billed. The two keywords are removed; the up-to-three limit is enforced in
+  the tool function and stated in its description. No prediction is affected; the failed
+  directory is kept as `..._run1_schema_error` and the run restarts as run 1.
