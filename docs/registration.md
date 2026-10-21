@@ -290,3 +290,53 @@ same settings; any entry with a mode below -0.3 THz is demoted to grade B with t
   entries remain. Reading: the soft-mode rule removes 9 of 29, and every removal has a physical
   reason that the DFPT number alone did not show. The 20 are the v0.3 deliverable
   (results/funnel/v0.3_gradeA.md).
+
+# Registration: Claude Opus 5.5 on the XRD set (written before any model call)
+
+Registered 2026-10-21 (UTC, after the v0.3 run). No API key was present in the environment when
+this was written; no model call has been made. Prompts are frozen in `speclab/prompts.py`;
+the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/xrd/<run>/raw/`.
+
+## Protocol
+
+- Model `claude-opus-5-5`, adaptive thinking (the model's default), `output_config.effort = "high"`,
+  `max_tokens` 16,000, one request per item, SDK retry once on failure, then recorded as silence.
+- Two arms, registered together, run in order:
+  - **Arm A, reading only:** the observed pattern (1,400 points) and nine CIFs in the prompt; no tools.
+  - **Arm B, with a tool:** the same, plus `simulate_pattern(candidate_id)`, which returns the
+    candidate's clean simulated pattern on the same grid (no strain, no noise). At most 12 tool
+    calls per item. This is the "harness" arm: the model decides what to simulate and compares.
+- Order: dry run (count tokens on one item, estimate cost) -> arm A on the public set once ->
+  arm B on the public set once -> the better arm on the held-out set three times.
+- Launch gate (PRD FR12): on the held-out set, in each of three runs, exact-match rate per tier
+  at or above the strain-refined classic baseline measured on the public set (100 / 65 / 50 %),
+  and coverage at or above 95 %. Silence counts as coverage, never as an error.
+- Budget: hard stop at USD 40 per invocation; expected total for the whole protocol USD 30-60.
+- Answer parsing: the last JSON object with a "present" list of one or two ids; anything else is silence.
+
+## Predictions
+
+| id | prediction |
+| --- | --- |
+| P38 | Dry-run input tokens per item between 9,000 and 16,000 (the pattern is 2,800 numbers; the nine CIFs about 11,500 characters) |
+| P39 | Arm A coverage at or above 95 % (the format is simple; the risk is the model refusing to commit) |
+| P40 | Arm A, T1 exact rate between 40 % and 75 %: without a tool the model must infer peak positions from lattice parameters and systematic absences, which it can do only roughly |
+| P41 | Arm A, T2 between 25 % and 55 %, and T3 exact below 30 % with Jaccard between 0.35 and 0.6 |
+| P42 | Arm A is below the refined classic baseline on every tier (reading numbers is not what the model is for) |
+| P43 | Arm B coverage at or above 95 %, and a median of 3 to 6 tool calls per item |
+| P44 | Arm B, T1 at or above 95 %; T2 between 65 % and 90 %; T3 exact between 45 % and 75 % |
+| P45 | Arm B beats the refined classic baseline on T3 (it can reason about a minor phase's residual after accounting for the major one) and is within 10 points of it on T2 |
+| P46 | Arm B costs between 2 and 4 times arm A per item |
+| P47 | The held-out gate: arm B passes T1 and T3 in all three runs; T2 is the tier most likely to fail the gate at least once |
+
+## What each outcome would mean for the product
+
+- P42 holds and P45 holds: the model's place is the harness, not the raw reading; FR12's gate is
+  set on arm B and the raw-reading arm is retired.
+- P45 fails (arm B does not beat the refined classic on T3): the rule-based matcher stays the
+  QC gate and the model is used only for explanation; that is the same shape as LiveLab's
+  "system rules own detection" result.
+- P39 or P43 fail (coverage below 95 %): the prompt or the parser is at fault before anything is
+  said about the model; fix, re-register, re-run.
+- P47 fails on T2 only: the strained tier is where lattice refinement matters; a v2 tool that
+  accepts a strain parameter would be registered separately.
