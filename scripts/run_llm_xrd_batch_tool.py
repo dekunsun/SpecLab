@@ -62,20 +62,8 @@ def finish(s, text):
 
 
 states = {it["id"]: load_state(it) for it in items}
-for r in range(len(rounds), a.max_rounds):
-    pending = [s for s in states.values() if not s["done"]]
-    if not pending:
-        break
-    reqs = [{"custom_id": s["id"], "params": {"model": llm.MODEL, "max_tokens": 16000, "system": prompts.SYSTEM_XRD_TOOL, "output_config": {"effort": a.effort},
-                                             "tools": [llm.TOOL], "messages": s["messages"]}} for s in pending]
-    batch = client.messages.batches.create(requests=reqs)
-    rounds.append({"round": r + 1, "batch_id": batch.id, "n": len(reqs), "submitted_at": time.time(), "collected": False})
-    rounds_path.write_text(json.dumps(rounds, indent=1))
-    print(f"round {r+1}: submitted {len(reqs)} items as {batch.id}", file=sys.stderr)
-    # fallthrough to collection below
-    break
 
-# collect any submitted, uncollected round, then loop again by re-invoking the same logic
+# submit a round when nothing is open; collect the open round; repeat until every item is done
 while True:
     open_rounds = [rd for rd in rounds if not rd["collected"]]
     if not open_rounds:
