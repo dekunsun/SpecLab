@@ -407,3 +407,25 @@ the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/x
   phase below about 15 % weight is the open problem for both, so the two-phase QC gate cannot
   rest on either alone. A v2 tool that returns the residual after subtracting the major phase
   would be registered separately before any further run.
+
+# Registration: arm B2, the residual tool (written before the run)
+
+Registered 2026-10-21 21:50 UTC (14:50 PT). Arm B2 = arm B plus a second tool, `fit_and_residual`:
+NNLS fit of the observed pattern on up to three named candidates, each at its best isotropic
+strain in [-2 %, +2 %], returning normalised weights, R-factor and the residual pattern. The
+system prompt gains one paragraph describing it (`prompts.SYSTEM_XRD_TOOL2`); nothing else
+changes (model, effort, cap, 12-call limit, parser, Batches API one round per batch). Same public
+set, one run. The motivating number from arm B: minor phases below 0.15 weight were found in
+4 of 12 items, at or above 0.15 in 16 of 28.
+
+| id | prediction |
+| --- | --- |
+| P50 | T1 and T2 stay at or above 97.5 % (the tool cannot hurt single-phase items) |
+| P51 | T3 exact between 60 % and 80 %, Jaccard at or above 0.80 |
+| P52 | Minor-phase recall for weight < 0.15 rises from 4/12 to at least 7/12; for weight >= 0.15 from 16/28 to at least 22/28 |
+| P53 | The model calls fit_and_residual on at least 80 % of T3 items and on fewer than 50 % of T1 items |
+| P54 | Cost per item between 1.0x and 1.6x arm B (fewer simulate calls, one more tool payload) |
+| P55 | Over-reporting (a second phase named where there is none) stays at or below 3 of 80 single-phase items |
+
+If P51 holds, arm B2 is the harness the held-out gate is run on (P47 transfers to B2). If P55
+fails, the residual tool trades missed minor phases for false ones and the gate stays on arm B.

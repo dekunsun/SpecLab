@@ -30,3 +30,8 @@ Candidates (nine; one or two present):
 {cands}
 
 {item['question']}"""
+
+
+SYSTEM_XRD_TOOL2 = SYSTEM_XRD + """
+
+You have two tools. simulate_pattern returns the simulated clean pattern of any candidate id on the same grid. fit_and_residual fits the observed pattern as a non-negative combination of up to three candidates (each at its best strain) and returns the weights, the R-factor and the residual pattern; a residual with structured peaks after fitting one phase points to a second phase, a flat residual does not. Use them as you see fit; the final answer must still be the JSON line."""

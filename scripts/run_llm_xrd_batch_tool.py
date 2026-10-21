@@ -17,6 +17,7 @@ import anthropic
 ap = argparse.ArgumentParser()
 ap.add_argument("--set", default="public"); ap.add_argument("--run", type=int, default=1); ap.add_argument("--effort", default="high")
 ap.add_argument("--poll", type=int, default=60); ap.add_argument("--max-rounds", type=int, default=13); ap.add_argument("--max-tool-calls", type=int, default=12)
+ap.add_argument("--arm", default="B", choices=["B", "B2"], help="B: simulate_pattern only. B2: plus fit_and_residual")
 ap.add_argument("--resume-errored", action="store_true", help="reopen items whose last round errored at the API (e.g. a spend cap) and continue them; their earlier rounds are kept")
 a = ap.parse_args()
 key = os.environ.get("SPECLAB_ANTHROPIC_KEY") or os.environ.get("ANTHROPIC_API_KEY")
@@ -26,7 +27,9 @@ client = anthropic.Anthropic(api_key=key)
 items_path = Path("items/xrd_public.json") if a.set == "public" else Path("data/heldout/xrd_heldout.json")
 ans_path = Path("items/xrd_public_answers.json") if a.set == "public" else Path("data/heldout/xrd_heldout_answers.json")
 items = json.loads(items_path.read_text()); answers = json.loads(ans_path.read_text()); by_id = {it["id"]: it for it in items}
-run_name = f"{llm.MODEL}_armB_batch_{a.set}_run{a.run}"
+run_name = f"{llm.MODEL}_arm{a.arm}_batch_{a.set}_run{a.run}"
+SYSTEM = prompts.SYSTEM_XRD_TOOL2 if a.arm == "B2" else prompts.SYSTEM_XRD_TOOL
+TOOLS = [llm.TOOL, llm.TOOL_RESIDUAL] if a.arm == "B2" else [llm.TOOL]
 out = Path("results/xrd") / run_name; (out / "state").mkdir(parents=True, exist_ok=True)
 rounds_path = out / "rounds.json"
 rounds = json.loads(rounds_path.read_text()) if rounds_path.exists() else []
@@ -78,8 +81,8 @@ while True:
         pending = [s for s in states.values() if not s["done"]]
         if not pending or len(rounds) >= a.max_rounds:
             break
-        reqs = [{"custom_id": s["id"], "params": {"model": llm.MODEL, "max_tokens": 16000, "system": prompts.SYSTEM_XRD_TOOL, "output_config": {"effort": a.effort},
-                                                 "tools": [llm.TOOL], "messages": s["messages"]}} for s in pending]
+        reqs = [{"custom_id": s["id"], "params": {"model": llm.MODEL, "max_tokens": 16000, "system": SYSTEM, "output_config": {"effort": a.effort},
+                                                 "tools": TOOLS, "messages": s["messages"]}} for s in pending]
         batch = client.messages.batches.create(requests=reqs)
         rounds.append({"round": len(rounds) + 1, "batch_id": batch.id, "n": len(reqs), "submitted_at": time.time(), "collected": False})
         rounds_path.write_text(json.dumps(rounds, indent=1))
@@ -106,7 +109,11 @@ while True:
             for c in m.content:
                 if c.type == "tool_use":
                     s["tool_calls"] += 1
-                    results.append({"type": "tool_result", "tool_use_id": c.id, "content": json.dumps(simulate(by_id[s["id"]], c.input.get("candidate_id", "")))})
+                    if c.name == "fit_and_residual":
+                        tr = llm.fit_and_residual(by_id[s["id"]], list(c.input.get("candidate_ids", [])))
+                    else:
+                        tr = simulate(by_id[s["id"]], c.input.get("candidate_id", ""))
+                    results.append({"type": "tool_result", "tool_use_id": c.id, "content": json.dumps(tr)})
             s["messages"].append({"role": "user", "content": results})
             if s["tool_calls"] >= a.max_tool_calls:
                 finish(s, text)

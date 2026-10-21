@@ -81,3 +81,38 @@ def run_item(client, item, arm, effort, out_dir: Path, max_tool_calls=12):
     (out_dir / "raw").mkdir(parents=True, exist_ok=True)
     (out_dir / "raw" / f"{item['id']}.json").write_text(json.dumps(rec, indent=1, default=str))
     return (d["present"] if d else None), rec
+
+
+TOOL_RESIDUAL = {"name": "fit_and_residual",
+                 "description": "Fit the observed pattern as a non-negative combination of the simulated patterns of the given candidate ids (each candidate at its best isotropic strain in [-2 %, +2 %]) and return the fitted weights, the R-factor, and the residual pattern (observed minus fit) on the same 10-80 degree grid, normalised so the observed maximum is 100. Use the residual to look for a second phase after accounting for the first.",
+                 "input_schema": {"type": "object", "properties": {"candidate_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 3}},
+                                  "required": ["candidate_ids"], "additionalProperties": False}, "strict": True}
+
+
+def fit_and_residual(item, cids):
+    """NNLS fit of the observed pattern on the named candidates with a per-candidate strain scan."""
+    import numpy as np
+    from pymatgen.core import Structure
+    from scipy.optimize import nnls
+    obs = np.array(item["intensity"], dtype=float)
+    cols, used, strains = [], [], []
+    for cid in cids:
+        c = next((c for c in item["candidates"] if c["id"] == cid), None)
+        if c is None:
+            return {"error": f"unknown candidate id {cid}"}
+        s = Structure.from_str(c["cif"], fmt="cif")
+        best, best_corr, best_st = None, -1.0, 0.0
+        for st in np.linspace(-0.02, 0.02, 9):
+            x, y = xrd.peaks(s, float(st)); p = xrd.profile(x, y, fwhm=0.25); p = p / max(p.max(), 1e-9) * 100
+            corr = float(np.dot(p, obs) / (np.linalg.norm(p) * np.linalg.norm(obs) + 1e-9))
+            if corr > best_corr:
+                best, best_corr, best_st = p, corr, float(st)
+        cols.append(best); used.append(cid); strains.append(round(best_st * 100, 2))
+    A = np.array(cols).T
+    w, _ = nnls(A, obs)
+    fit = A @ w
+    resid = obs - fit
+    r_factor = float(np.sum(np.abs(resid)) / max(np.sum(obs), 1e-9))
+    wn = (w / w.sum()).tolist() if w.sum() > 0 else [0.0] * len(w)
+    return {"candidate_ids": used, "weights_normalised": [round(v, 3) for v in wn], "strain_pct": strains, "r_factor": round(r_factor, 4),
+            "residual": np.round(resid, 2).tolist(), "residual_max": round(float(resid.max()), 2)}
