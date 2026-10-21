@@ -349,3 +349,7 @@ the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/x
   per-invocation stop. Decision pending with the author: run through the Batches API (half
   price, no latency need) or raise the stop. Item content is not changed; downsampling the
   grid would be a new item set and a new registration.
+- 2026-10-21 20:05 UTC Author's decision: arm A runs through the Message Batches API
+  (`scripts/run_llm_xrd_batch.py`): identical model, system prompt, user prompt, effort and
+  max_tokens; non-streaming; half price. Predictions P39-P42 apply unchanged. Arm B keeps the
+  synchronous runner because of the tool loop.
