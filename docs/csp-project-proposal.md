@@ -366,6 +366,24 @@ PM 的专业性恰恰体现在**这两层之间的映射和"代理指标不等�
 | 新颖性 | pymatgen StructureMatcher 对 MP / Alexandria / OQMD / COD | 无 | 回应 MatterGen 新颖性争议 | CPU |
 | 文献与实验计划 | Claude Opus 5.5 / Sonnet 5.5 | Gemini 交叉 | 产出 LLM eval 报告 | API |
 
-不做：从头训练或微调生成模型；使用 GNoME（权重未公开）；用单一 Eg × k 打分替代 Pareto + 硬约束。
+不做：从头训练或微调生成模型；用单一 Eg × k 打分替代 Pareto + 硬约束。
 
 最小可行版本（第 1 周，笔记本 CPU）：替换枚举 → MACE-MP-0 → ALIGNN 带隙 / 介电 → 去重 → 回溯测试（HfO2、ZrO2、La2O3 是否进 Top-20）。跑通后再加 MatterGen 与 QE 验证。
+
+## B.1 修正：GNoME 要用，而且要主动谈
+
+官方仓库 google-deepmind/materials_discovery 公开了数据集（38.1 万稳定结构，2024-08 扩至 52 万个距凸包 1 meV/atom 以内）、GNoME 与 NequIP 的 JAX 模型代码和 Colab；约 11.9 万个 r²SCAN 确认稳定的结构已并入 Materials Project。预训练权重是否随仓库发布需看 README 确认。Matbench Discovery 的 GNoME 条目训练数据私有，不可复现。
+
+面试 DeepMind 的四种用法：
+1. 候选池：从 GNoME 数据集筛含 Hf/Zr/La/Y/Ta/Nb 的氧化物，与 MatterGen 生成、离子替换枚举三路并行。
+2. 凸包参考：用并入 GNoME 后的 MP 凸包判稳定性，比旧凸包更严格。
+3. 主动回应批评：Cheetham & Seshadri（Chem. Mater. 2024）指出 GNoME 候选缺乏"可信、新颖、有用"，多为已知结构替换且含不现实的有序排列。本项目的新颖性去重、无序性检查、可合成性评分逐条回应这三点。
+4. MLIP 对照：若 NequIP 权重可用，与 MACE-MP-0 交叉验证。
+
+Ops 延伸：A-Lab 自动合成论文曾被质疑 XRD 相鉴定自动化出错。表征自动化的质量控制是自动实验室吞吐的真正瓶颈，适合在面试中展开。
+
+来源：
+- https://newscenter.lbl.gov/2023/11/29/google-deepmind-new-compounds-materials-project/
+- https://matsci.org/t/number-of-materials-in-gnome-explorer/63304
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC11044265 （Cheetham & Seshadri）
+- https://www.theregister.com/2024/04/11/google_deepmind_material_study/
