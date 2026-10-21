@@ -441,3 +441,28 @@ fails, the residual tool trades missed minor phases for false ones and the gate 
   remaining items cost. Observation from the rounds: every item called fit_and_residual in
   round 1 (350 calls over 120 items), so P53's "fewer than 50 % of T1 items" is also headed for
   failure. Neither is a reason to stop the run; the T3 result is what the registration is for.
+
+- 2026-10-21 23:29 UTC (16:29 PT) Arm B2, public set, one run, six rounds (one spend-cap
+  interruption, resumed). 80 of 120 answered; USD 49.33 at batch price; 23.2M input tokens.
+  Tool mix: fit_and_residual 1,013 calls, simulate_pattern 36. Median tool calls per item 9
+  (T1 6, T2 10.5, T3 12; max 15).
+  - All 40 non-answers are the same failure: the item reached the 12-call limit inside a
+    tool_use turn and the runner closed it with the text that preceded the last call, which
+    was empty. The model never got a turn without tools in which to answer. A harness defect,
+    of the same family as the output cap in arm A and in LiveLab 1.0: silence manufactured by
+    the runner, scored as coverage, never as a model error.
+  - P50 FAILED by a hair on T2 (96.0 % exact of 25 answered; T1 100 % of 39), and in substance:
+    T2 coverage fell to 62.5 %.
+  - P51 FAILED: T3 exact 25 % of 16 answered, Jaccard 0.60; coverage 40 %.
+  - P52 FAILED in the wrong direction: minor-phase recall fell from 4/12 to 0/12 (weight < 0.15)
+    and from 16/28 to 4/28 (>= 0.15). On the 16 T3 items it did answer, arm B2 got 4 exact where
+    arm B got 5 on the same items; 10 of the 16 are still "major phase only". The residual tool
+    did not make the minor phase visible to the model; it gave the model something to iterate.
+  - P53 FAILED: fit_and_residual was called on every item in round 1, T1 included.
+  - P54 held: 1.54x arm B.
+  - P55 held: one two-phase answer on a single-phase item (arm B: none).
+  Decision per the registration: the gate stays on arm B. Arm B2 is retired as designed. Two
+  separate lessons go to the next registration, not folded into this one: (1) any tool-call
+  limit must end with one final turn without tools that asks for the answer; (2) a tool that
+  returns a 1,400-point array invites iteration, so a residual tool should return a summary
+  (the residual's largest peaks and their positions) and the harness should say when to stop.
