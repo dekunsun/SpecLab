@@ -1,0 +1,26 @@
+[
+ {
+  "round": 1,
+  "batch_id": "msgbatch_01Hjpw2Zxw98iG9AijqM5oTk",
+  "n": 120,
+  "submitted_at": 1792614703.9482656,
+  "collected": true,
+  "collected_at": 1792615249.6610675
+ },
+ {
+  "round": 2,
+  "batch_id": "msgbatch_01AfrK2fBBdhL71giFg2AeNc",
+  "n": 115,
+  "submitted_at": 1792615250.3219328,
+  "collected": true,
+  "collected_at": 1792615493.2055933
+ },
+ {
+  "round": 3,
+  "batch_id": "msgbatch_01BJkstFpuhwYo8eALUzBKCp",
+  "n": 55,
+  "submitted_at": 1792615493.892054,
+  "collected": true,
+  "collected_at": 1792615675.380435
+ }
+]
