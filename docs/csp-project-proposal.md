@@ -345,3 +345,27 @@ PM 的专业性恰恰体现在**这两层之间的映射和"代理指标不等�
 - https://intechopen.com/chapters/39997 （高-k 带阶与 k 窗口）
 - https://core-cms.cambridgecore.org/core/journals/mrs-online-proceedings-library-archive/article/band-alignments-of-highk-dielectrics-on-si-and-pt/18E8E6710D6A658583D3CC90D0B3AF3D
 - https://deepmind.google/blog/strengthening-our-partnership-with-the-uk-government-to-support-prosperity-and-security-in-the-ai-era/
+
+---
+
+# 附录 B：模型选型（跑什么模型）
+
+原则：不训练任何大模型，全部用开源预训练权重；每阶段一个主模型、一个交叉验证模型；选型理由引公开基准；记录算力与费用。
+
+| 阶段 | 主用 | 备用 / 交叉验证 | 理由 | 算力 |
+|---|---|---|---|---|
+| 候选空间枚举 | pymatgen + SMACT 电荷平衡；MP 离子替换模型 | 无 | 工业筛选主力仍是原型 + 替换，生成模型是补充 | CPU |
+| 结构生成 / CSP | MatterGen（MIT 许可，支持化学体系 + 带隙条件生成） | CrystalFormer-CSP；CALYPSO 作 1 到 2 个体系对照 | 两种生成路径候选分布互补；MatterGen 不支持介电条件，介电靠后筛 | 1 GPU，1k 结构约 1 小时 |
+| 松弛与稳定性 | MACE-MP-0 | Orb-v3；MatterSim | 以 Matbench Discovery F1 + 本地氧化物子集 F1 选型；两势差 > 30 meV/atom 标记送 DFT；UMA 需查许可 | CPU 可跑，GPU 更快 |
+| 带隙 | ALIGNN JARVIS TBmBJ 带隙模型 | MatGL/M3GNet；MP r²SCAN 查表 | 避免 PBE 低估 | CPU |
+| 介电常数 | ALIGNN JARVIS 介电模型 | PRX 2026 离子介电张量模型 / arXiv 2601.04755（若开源）；MP DFPT 查表 | 最弱环节，设高召回 | CPU |
+| Si 带阶 | 电荷中性能级经验法 | Top-10 界面 DFT | 分层处理 | CPU / DFT |
+| 高精度验证 | Quantum ESPRESSO：PBE 松弛 + DFPT 介电；HSE06 只做 Top-10 | VASP（若有许可） | 20 个结构几百美元内 | 云 CPU |
+| 可合成性 | MP ICSD 标记 + matminer 特征的 PU 分类器（唯一自训小模型） | CSLLM | 可解释、可时间切分 eval | CPU |
+| 薄膜生长窗口 | pymatgen ZSL 衬底匹配（Si(100)、TiN、Pt） | 文献沉积温度 | 块体稳定 ≠ 可生长 | CPU |
+| 新颖性 | pymatgen StructureMatcher 对 MP / Alexandria / OQMD / COD | 无 | 回应 MatterGen 新颖性争议 | CPU |
+| 文献与实验计划 | Claude Opus 5.5 / Sonnet 5.5 | Gemini 交叉 | 产出 LLM eval 报告 | API |
+
+不做：从头训练或微调生成模型；使用 GNoME（权重未公开）；用单一 Eg × k 打分替代 Pareto + 硬约束。
+
+最小可行版本（第 1 周，笔记本 CPU）：替换枚举 → MACE-MP-0 → ALIGNN 带隙 / 介电 → 去重 → 回溯测试（HfO2、ZrO2、La2O3 是否进 Top-20）。跑通后再加 MatterGen 与 QE 验证。
