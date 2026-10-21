@@ -1,0 +1,58 @@
+# Registration: funnel v0.1 on MP-20 (written before the run)
+
+Registered 2026-10-21 (UTC), before `scripts/run_funnel.py` and `scripts/retrospective.py` were run
+on the full dataset. Only the 13 anchor structures listed under "What was looked at first" had
+been evaluated by the dielectric estimator before this was written. Deviations are logged at the
+bottom, dated, and never edited away.
+
+## What is being tested
+
+Spec `specs/high_k_gate_dielectric.yaml` v0.1 applied to all 45,229 MP-20 entries through four
+hard-constraint stages (composition, stability, PBE band gap >= 3.4 eV, Clausius-Mossotti k >= 15)
+and a tie-breaker score. The question is not "did we discover a material" (MP-20 contains only
+known Materials Project entries). It is whether a spec written in material-level proxies, with
+the stated margins, recovers the materials the field already uses and rejects the ones it
+already rejected for the stated reason.
+
+## What was looked at first
+
+Clausius-Mossotti estimates on 13 anchors, run once to check the estimator was not broken:
+MgO 8.8 (exp 9.8), SiO2 4.1 (4.5), Al2O3 9.1 (9-10), ZrO2 15.4 (20-25), HfO2 m 20.8 (16-25),
+HfO2 o-Pca21 29.2, La2O3 34.1 (27-30), LaAlO3 119.4 (24: divergent, x = 0.975), HfSiO4 11.2 (11),
+TiO2 29.8, SrTiO3 28.1 (300: divergent), Ta2O5 47.4, LaLuO3 27.8. This fixed two things in the
+code before registration: the divergence cut-off x >= 0.98 and the k cap at 60 inside the score.
+Nothing else about the funnel was tuned on these.
+
+## Predictions
+
+| id | prediction | why it matters |
+| --- | --- | --- |
+| P1 | Survivors after all four stages: between 200 and 800 of 11,522 oxides | A funnel that keeps thousands or single digits is mis-set |
+| P2 | All six positive controls survive: HfO2 mp-352, HfO2 mp-685097, ZrO2 mp-2858, La2O3 mp-1968, LaAlO3 mp-5304, LaLuO3 mp-22220 | The spec must at least recover what the industry uses |
+| P3 | All six negative controls are removed at the named stage: TiO2 mp-2657, SrTiO3 mp-5229, Ta2O5 mp-10390 at band_gap; Al2O3 mp-1143, SiO2 mp-7000, MgO mp-1265 at dielectric | Each removal reason must match the textbook reason |
+| P4 | At most 2 of the 6 positive controls are in the Top-20 by tie-breaker score, and at least 10 of the Top-20 have x > 0.95 | The score rewards Clausius-Mossotti divergence; this registers that weakness instead of discovering it after |
+| P5 | Between 10 % and 40 % of entries that pass band_gap are removed as unscorable (no polarizability for an ion) | Table coverage is a known gap; its size should be reported, not hidden |
+| P6 | HfSiO4 mp-4609 is removed at dielectric (k_CM = 11) | A correct rejection: hafnium silicate's k is about 11; it is not a k >= 25 material |
+
+One run. The funnel is deterministic, so repetition tests nothing; variance would come from
+changing the thresholds, which is a new registration.
+
+## What a failure of each prediction would mean
+
+- P2 fails: the proxies or margins are wrong; fix the spec, re-register, re-run. Do not tune on the controls silently.
+- P3 fails at the wrong stage: the stage order or a threshold hides the real reason.
+- P4 passes: the tie-breaker needs a registered remedy (rank by gap first, or exclude x > 0.95 from the top list). That remedy is run as `funnel v0.2`, not folded into v0.1.
+
+## Deviation log
+
+(append below, dated; never delete)
+
+- 2026-10-21 06:50 Run completed (one run, deterministic). P2, P3, P6 held. P1 failed low: 184
+  survivors, not 200-800; the band-gap stage removed 4,712 of 5,489 and the dielectric stage 593
+  of 777, both harder cuts than I expected. P4 failed in the other direction from the registered
+  worry: only 5 of the Top-20 have x > 0.95 and 1 positive (LaAlO3, rank 5) is in the Top-20; the
+  k cap at 60 limited the divergence reward more than predicted. The registered remedy is
+  therefore NOT triggered; the positives' ranks (42 to 150 of 184) are still read as "the
+  tie-breaker is not a ranking of merit", which the registration already said. P5 failed low:
+  8.6 % unscorable, below the 10 % floor; the missing ions are Sb5+, Re7+, Sb3+, Yb2+. No
+  threshold was changed after seeing these results.

@@ -1,0 +1,44 @@
+# SpecLab reference product profile: high-k gate dielectric / ferroelectric memory oxide.
+# Two layers. Device-level targets are the customer's language and are NOT screened here.
+# Material-level proxies are what the computational funnel screens. The mapping between
+# the two, and the margin each proxy carries, is stated per field.
+name: high_k_gate_dielectric
+version: 0.1
+customer: "ALD/sputter tool vendor or logic/memory fab (hypothetical)"
+device_targets:            # recorded for traceability; cannot be computed from a crystal structure
+  eot_nm_max: 0.5
+  gate_leakage_A_cm2_max_at_1V: 1.0e-2
+  remanent_polarization_uC_cm2_min: 20     # ferroelectric scenario only
+  endurance_cycles_min: 1.0e12
+  retention: "10 years at 85 C"
+  thermal_budget_C_max: 400
+material_proxies:
+  must_contain: [O]
+  blacklist_elements: [Pb, Cd, Hg, Tl, As, Be, Th, U, Pu, Ra, Ac, Pa, Np, Am, Po, Tc, Pm,
+                       F, Cl, Br, I, H, C, N, S, Se, Te, P, He, Ne, Ar, Kr, Xe]
+  band_gap:
+    target_experimental_eV_min: 5.0
+    # MP-20 carries PBE gaps. PBE underestimates oxide gaps by roughly 30-40 percent.
+    # Anchors (PBE in MP-20 / experimental): HfO2 4.07/5.8, ZrO2 3.54/5.8, La2O3 3.88/5.5,
+    # TiO2 rutile 1.77/3.2, SrTiO3 1.83/3.2, Ta2O5 3.1/4.2. A PBE threshold of 3.4 eV keeps the
+    # first three and excludes the last three. The threshold is a calibrated proxy, not a claim
+    # about any one material.
+    pbe_threshold_eV: 3.4
+  dielectric_constant:
+    target_min: 25
+    # Screened with a Clausius-Mossotti estimate from Shannon ion polarizabilities, which
+    # underestimates ionic contributions in soft lattices. Margin: keep anything >= 15 and
+    # send it to the DFPT stage (not run in this version).
+    estimator: clausius_mossotti
+    screen_min: 15
+  energy_above_hull_eV_per_atom_max: 0.05   # metastable polymorphs (ferroelectric HfO2) allowed
+  band_offset_to_Si_eV_min: 1.0             # not screened in this version; Top-N interface DFT
+  deposition:
+    methods: [ALD, sputtering]
+    requires_precursor: true                # not screened in this version; literature stage
+not_screened_in_this_version:
+  - band_offset_to_Si
+  - reaction_with_Si
+  - precursor_availability
+  - crystallisation_temperature
+  - novelty_vs_ICSD (MP-20 entries are all known to MP; the novelty stage applies to generated structures)

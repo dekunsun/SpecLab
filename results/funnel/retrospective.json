@@ -1,0 +1,108 @@
+{
+ "rows": [
+  [
+   "mp-352",
+   "HfO2",
+   "positive",
+   "survived",
+   74
+  ],
+  [
+   "mp-685097",
+   "HfO2",
+   "positive",
+   "survived",
+   54
+  ],
+  [
+   "mp-2858",
+   "ZrO2",
+   "positive",
+   "survived",
+   150
+  ],
+  [
+   "mp-1968",
+   "La2O3",
+   "positive",
+   "survived",
+   47
+  ],
+  [
+   "mp-5304",
+   "LaAlO3",
+   "positive",
+   "survived",
+   5
+  ],
+  [
+   "mp-22220",
+   "LaLuO3",
+   "positive",
+   "survived",
+   42
+  ],
+  [
+   "mp-2657",
+   "TiO2",
+   "negative (expect band_gap)",
+   "band_gap",
+   null
+  ],
+  [
+   "mp-5229",
+   "SrTiO3",
+   "negative (expect band_gap)",
+   "band_gap",
+   null
+  ],
+  [
+   "mp-10390",
+   "Ta2O5",
+   "negative (expect band_gap)",
+   "band_gap",
+   null
+  ],
+  [
+   "mp-1143",
+   "Al2O3",
+   "negative (expect dielectric)",
+   "dielectric",
+   null
+  ],
+  [
+   "mp-7000",
+   "SiO2",
+   "negative (expect dielectric)",
+   "dielectric",
+   null
+  ],
+  [
+   "mp-1265",
+   "MgO",
+   "negative (expect dielectric)",
+   "dielectric",
+   null
+  ],
+  [
+   "mp-4609",
+   "HfSiO4",
+   "negative (expect dielectric)",
+   "dielectric",
+   null
+  ]
+ ],
+ "verdict": {
+  "P2_all_positives_survive": true,
+  "P3_negatives_removed_at_named_stage": true,
+  "P6_HfSiO4_removed_at_dielectric": true,
+  "P1_survivors_200_800": false,
+  "P4_tiebreaker_weakness": false,
+  "P5_unscorable_10_40pct": false
+ },
+ "pos_in_top20": [
+  "mp-5304"
+ ],
+ "top20_divergent": 5,
+ "unscorable_frac": 0.08622908622908623
+}
