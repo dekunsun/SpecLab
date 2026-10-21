@@ -374,3 +374,6 @@ the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/x
   single-phase items and right for the minor phase of two-phase items. Before arm B runs, two
   predictions are added: P48 arm B median output tokens per item below arm A's 5,986 (the tool
   replaces hand computation); P49 arm B coverage at or above 95 % at the same 16,000 cap.
+- 2026-10-21 20:40 UTC (13:40 PT) Author's decision: arm B runs through the Batches API one round
+  per batch (`scripts/run_llm_xrd_batch_tool.py`); message sequence per item identical to the
+  synchronous runner; same prompts, effort, cap and 12-call limit. P43-P47, P48, P49 apply unchanged.
