@@ -1,0 +1,92 @@
+{
+ "random": {
+  "T1": {
+   "n": 40,
+   "answered": 40,
+   "exact": 2,
+   "jaccard": 4.5,
+   "exact_rate": 0.05,
+   "jaccard_mean": 0.113,
+   "coverage": 1.0
+  },
+  "T2": {
+   "n": 40,
+   "answered": 40,
+   "exact": 4,
+   "jaccard": 7.0,
+   "exact_rate": 0.1,
+   "jaccard_mean": 0.175,
+   "coverage": 1.0
+  },
+  "T3": {
+   "n": 40,
+   "answered": 40,
+   "exact": 1,
+   "jaccard": 3.666666666666667,
+   "exact_rate": 0.025,
+   "jaccard_mean": 0.092,
+   "coverage": 1.0
+  },
+  "seconds": 0.0
+ },
+ "oracle": {
+  "T1": {
+   "n": 40,
+   "answered": 40,
+   "exact": 40,
+   "jaccard": 40.0,
+   "exact_rate": 1.0,
+   "jaccard_mean": 1.0,
+   "coverage": 1.0
+  },
+  "T2": {
+   "n": 40,
+   "answered": 40,
+   "exact": 40,
+   "jaccard": 40.0,
+   "exact_rate": 1.0,
+   "jaccard_mean": 1.0,
+   "coverage": 1.0
+  },
+  "T3": {
+   "n": 40,
+   "answered": 40,
+   "exact": 40,
+   "jaccard": 40.0,
+   "exact_rate": 1.0,
+   "jaccard_mean": 1.0,
+   "coverage": 1.0
+  },
+  "seconds": 0.0
+ },
+ "classic_nnls": {
+  "T1": {
+   "n": 40,
+   "answered": 40,
+   "exact": 40,
+   "jaccard": 40.0,
+   "exact_rate": 1.0,
+   "jaccard_mean": 1.0,
+   "coverage": 1.0
+  },
+  "T2": {
+   "n": 40,
+   "answered": 40,
+   "exact": 15,
+   "jaccard": 22.5,
+   "exact_rate": 0.375,
+   "jaccard_mean": 0.562,
+   "coverage": 1.0
+  },
+  "T3": {
+   "n": 40,
+   "answered": 40,
+   "exact": 6,
+   "jaccard": 16.000000000000007,
+   "exact_rate": 0.15,
+   "jaccard_mean": 0.4,
+   "coverage": 1.0
+  },
+  "seconds": 10.1
+ }
+}
