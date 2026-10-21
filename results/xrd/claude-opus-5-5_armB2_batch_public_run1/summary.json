@@ -1,0 +1,46 @@
+{
+ "run": "claude-opus-5-5_armB2_batch_public_run1",
+ "effort": "high",
+ "items": 120,
+ "answered": 80,
+ "api_errors": 0,
+ "rounds": 6,
+ "tool_calls_median": 9.0,
+ "tool_calls_max": 15,
+ "output_tokens_median": 1812.0,
+ "max_tokens_stops": 0,
+ "usage": {
+  "input": 23241228,
+  "output": 284918
+ },
+ "cost_usd_batch_price": 49.33,
+ "score": {
+  "T1": {
+   "n": 40,
+   "answered": 39,
+   "exact": 39,
+   "jaccard": 39.0,
+   "exact_rate": 1.0,
+   "jaccard_mean": 1.0,
+   "coverage": 0.975
+  },
+  "T2": {
+   "n": 40,
+   "answered": 25,
+   "exact": 24,
+   "jaccard": 24.5,
+   "exact_rate": 0.96,
+   "jaccard_mean": 0.98,
+   "coverage": 0.625
+  },
+  "T3": {
+   "n": 40,
+   "answered": 16,
+   "exact": 4,
+   "jaccard": 9.666666666666668,
+   "exact_rate": 0.25,
+   "jaccard_mean": 0.604,
+   "coverage": 0.4
+  }
+ }
+}
