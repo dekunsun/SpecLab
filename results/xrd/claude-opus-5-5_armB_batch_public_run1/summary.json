@@ -2,45 +2,45 @@
  "run": "claude-opus-5-5_armB_batch_public_run1",
  "effort": "high",
  "items": 120,
- "answered": 65,
- "api_errors": 55,
- "rounds": 3,
+ "answered": 119,
+ "api_errors": 0,
+ "rounds": 6,
  "tool_calls_median": 3.0,
  "tool_calls_max": 9,
- "output_tokens_median": 2311.5,
- "max_tokens_stops": 0,
+ "output_tokens_median": 3847.0,
+ "max_tokens_stops": 1,
  "usage": {
-  "input": 7412715,
-  "output": 392874
+  "input": 12767837,
+  "output": 649731
  },
- "cost_usd_batch_price": 18.75,
+ "cost_usd_batch_price": 32.03,
  "score": {
   "T1": {
    "n": 40,
-   "answered": 28,
-   "exact": 28,
-   "jaccard": 28.0,
+   "answered": 40,
+   "exact": 40,
+   "jaccard": 40.0,
    "exact_rate": 1.0,
    "jaccard_mean": 1.0,
-   "coverage": 0.7
+   "coverage": 1.0
   },
   "T2": {
    "n": 40,
-   "answered": 23,
-   "exact": 22,
-   "jaccard": 22.0,
-   "exact_rate": 0.957,
-   "jaccard_mean": 0.957,
-   "coverage": 0.575
+   "answered": 40,
+   "exact": 39,
+   "jaccard": 39.0,
+   "exact_rate": 0.975,
+   "jaccard_mean": 0.975,
+   "coverage": 1.0
   },
   "T3": {
    "n": 40,
-   "answered": 14,
-   "exact": 3,
-   "jaccard": 8.333333333333332,
-   "exact_rate": 0.214,
-   "jaccard_mean": 0.595,
-   "coverage": 0.35
+   "answered": 39,
+   "exact": 19,
+   "jaccard": 28.333333333333336,
+   "exact_rate": 0.487,
+   "jaccard_mean": 0.726,
+   "coverage": 0.975
   }
  }
 }
