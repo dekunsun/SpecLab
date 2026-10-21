@@ -6,6 +6,7 @@
   --effort high      declared in the registration
   --dry-run          count tokens for one item, estimate the set's cost, make no model call
   --budget 40        hard stop in USD for this invocation
+  Credential: SPECLAB_ANTHROPIC_KEY (ANTHROPIC_API_KEY as fallback; the cloud environment does not pass that name through)
 """
 import argparse, json, sys, time
 from pathlib import Path
@@ -20,7 +21,13 @@ a = ap.parse_args()
 items_path = Path("items/xrd_public.json") if a.set == "public" else Path("data/heldout/xrd_heldout.json")
 ans_path = Path("items/xrd_public_answers.json") if a.set == "public" else Path("data/heldout/xrd_heldout_answers.json")
 items = json.loads(items_path.read_text()); answers = json.loads(ans_path.read_text())
-client = anthropic.Anthropic()
+# The cloud environment does not pass a variable named ANTHROPIC_API_KEY into sessions (the
+# platform reserves it), so the key is read from SPECLAB_ANTHROPIC_KEY first.
+import os
+_key = os.environ.get("SPECLAB_ANTHROPIC_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+if not _key:
+    sys.exit("no key: set SPECLAB_ANTHROPIC_KEY in the environment")
+client = anthropic.Anthropic(api_key=_key)
 if a.dry_run:
     n = llm.count_tokens(client, xrd.prompt_payload(items[0]) | {"id": items[0]["id"]}, a.arm)
     pin, pout = llm.PRICE[llm.MODEL]
