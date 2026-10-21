@@ -157,7 +157,7 @@ python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
 - `scripts/` every run, one script each
 - `items/` the public XRD set and answers; the held-out set stays local
 - `results/` every run's output, kept, including the invalid first v0.2 run
-- `docs/` [proposal](docs/speclab-proposal.md), [registration and deviation log](docs/registration.md),
+- `docs/` [PRD](docs/prd.md) ([中文](docs/prd.zh.md)), [proposal](docs/speclab-proposal.md), [registration and deviation log](docs/registration.md),
   [question rules](docs/question_rules.md), [data](docs/data.md), [timeline](docs/timeline.md)
 - `tests/` spec rules, estimator anchors, funnel stage accounting, hull, item leakage, scorer
 
