@@ -340,3 +340,12 @@ the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/x
   said about the model; fix, re-register, re-run.
 - P47 fails on T2 only: the strained tier is where lattice refinement matters; a v2 tool that
   accepts a strain parameter would be registered separately.
+
+- 2026-10-21 19:59 UTC Dry run done (count_tokens only, no generation). P38 FAILED high: 20,460
+  input tokens per item for arm A and 20,952 for arm B, above the 16,000 ceiling; the 2,800
+  numbers of the pattern tokenise at roughly one token per number plus separators, worse than
+  the character count suggested. Estimated cost at list price: arm A on the public set about
+  USD 17; arm B about USD 52 under the registered 3x multiplier, which exceeds the USD 40
+  per-invocation stop. Decision pending with the author: run through the Batches API (half
+  price, no latency need) or raise the stop. Item content is not changed; downsampling the
+  grid would be a new item set and a new registration.
