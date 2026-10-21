@@ -221,3 +221,72 @@ passing the composition rule. Same metrics; predictions are now informed by the 
   agrees with both DFT sources on every candidate's geometry; it says nothing about the five
   DFPT-divergent entries, because a static relaxation from a symmetric minimum cannot see a soft
   mode. The phonon check stays the open item for v0.3.
+
+# Registration: substrate lattice-match stage for the grade-A list (written before the run)
+
+Registered 2026-10-21 06:55 UTC. For each of the 29 grade-A candidates, pymatgen's Zur-McGill
+(ZSL) substrate analyzer searches for coincident-site lattice matches on Si(001), Si(111),
+TiN(001) and Pt(111), with the default tolerances (area up to 400 A^2, length mismatch 1 %,
+angle mismatch 1 %). The reported number per candidate and substrate is the smallest matching
+area with elastic strain below 2 %, or "none". This is a plausibility screen for epitaxial
+growth, not a prediction that ALD or sputtering will give a textured film; polycrystalline
+films do not need a lattice match. It is reported, not used to remove.
+
+| id | prediction |
+| --- | --- |
+| P31 | At least 20 of the 29 candidates have some match below 2 % strain on at least one of the four substrates (a coincident-site search at 400 A^2 is permissive) |
+| P32 | Fewer than 10 have a match on Si(001) with area below 100 A^2 (the demanding case) |
+
+# Registration: soft-mode check on the DFPT-divergent grade-A entries (written before the run)
+
+Registered 2026-10-21 07:05 UTC. Hypothesis: DFPT total dielectric constants above 100 in JARVIS
+come from a low-frequency polar mode at the structure's symmetric minimum, which DFPT's
+ionic term amplifies as 1/omega^2. If so, the structure is at or near a dynamical instability
+and a finite-displacement phonon calculation should show an imaginary (negative) frequency
+somewhere in the Brillouin zone, as cubic SrHfO3 does in the literature (octahedral tilts).
+
+Method: phonopy, 0.01 A displacements, supercell chosen so that each lattice vector is at least
+8 A, forces from mace-mp-0b3-medium (CPU, float64), frequencies on a 4x4x4 q-mesh plus Gamma.
+Reported per structure: the lowest frequency in THz. A frequency below -0.3 THz counts as a
+soft mode (the usual numerical-noise band is about +-0.1 to 0.2 THz for a universal potential).
+
+Structures: the five divergent entries (Na2Hf2O5 890, SrHfO3 315 and 295, LuTaO4 277, tetragonal
+HfO2 141) and three grade-A controls with ordinary values (Pca21 HfO2 23.8, BaHfO3 34.4, Nd2O3 21.4).
+
+| id | prediction |
+| --- | --- |
+| P33 | At least 3 of the 5 divergent entries show a mode below -0.3 THz |
+| P34 | At most 1 of the 3 controls does |
+| P35 | Both SrHfO3 entries are among the soft ones (the tilt instability of cubic SrHfO3 is known) |
+
+If P33 and P34 hold, v0.3 gets a registered rule: a grade-A candidate whose lowest MACE
+phonon frequency is below -0.3 THz is demoted to grade B with the flag "DFPT at an unstable
+structure"; its true dielectric constant is that of the distorted ground state, which is a
+different entry or not in the database.
+
+- 2026-10-21 07:10 UTC Substrate stage run: P31 held (29 of 29 have some match below 2 % strain
+  at 400 A^2: the search is as permissive as feared, so the column is informative only where it
+  is small). P32 held (1 of 29 on Si(001) below 100 A^2). Results in results/substrate/zsl.md.
+- 2026-10-21 07:12 UTC Soft-mode check run: P33 held (5 of 5 divergent entries soft, all with the
+  instability away from Gamma: Na2Hf2O5 -3.2 THz, SrHfO3 -4.9 and -4.9, LuTaO4 -1.6, tetragonal
+  HfO2 -2.0). P34 held (0 of 3 controls). P35 held. The v0.3 rule is therefore registered and
+  applied below.
+
+# Registration: funnel v0.3 = v0.2 plus the soft-mode rule on the whole grade-A list (before the run)
+
+Registered 2026-10-21 07:12 UTC. The phonon check is now run on all 29 grade-A entries with the
+same settings; any entry with a mode below -0.3 THz is demoted to grade B with the flag
+"DFPT at a dynamically unstable structure". Deliverable: the remaining grade-A list.
+
+| id | prediction |
+| --- | --- |
+| P36 | Among the 21 grade-A entries not yet checked, at most 2 are soft |
+| P37 | The v0.3 grade-A list has between 20 and 24 entries |
+
+- 2026-10-21 07:20 UTC v0.3 run (all 29 grade A through the phonon check). P36 FAILED: 4 of the
+  21 unchecked entries are soft (Sr2HfO4 -3.5 THz, SiBi2O5 -1.3, LiSiBiO4 -1.1, TaGaO4
+  JVASP-59246 -1.5), twice the registered ceiling; a DFPT value between 28 and 73 can also sit
+  on an unstable structure, so the "> 100" flag of v0.2 was too narrow. P37 held: 20 grade-A
+  entries remain. Reading: the soft-mode rule removes 9 of 29, and every removal has a physical
+  reason that the DFPT number alone did not show. The 20 are the v0.3 deliverable
+  (results/funnel/v0.3_gradeA.md).

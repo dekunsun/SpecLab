@@ -1,0 +1,138 @@
+[
+ {
+  "jid": "JVASP-41602",
+  "formula": "Na2Hf2O5",
+  "role": "divergent",
+  "k_dfpt": 890.04902783,
+  "n_unit": 9,
+  "supercell": [
+   3,
+   3,
+   1
+  ],
+  "n_displacements": 7,
+  "min_freq_THz_mesh": -3.238,
+  "min_freq_THz_gamma": -0.001,
+  "soft": true,
+  "seconds": 8.3
+ },
+ {
+  "jid": "JVASP-7773",
+  "formula": "SrHfO3",
+  "role": "divergent",
+  "k_dfpt": 315.05969691999996,
+  "n_unit": 5,
+  "supercell": [
+   2,
+   2,
+   2
+  ],
+  "n_displacements": 8,
+  "min_freq_THz_mesh": -4.852,
+  "min_freq_THz_gamma": -0.002,
+  "soft": true,
+  "seconds": 3.1
+ },
+ {
+  "jid": "JVASP-8061",
+  "formula": "SrHfO3",
+  "role": "divergent",
+  "k_dfpt": 294.75804221,
+  "n_unit": 5,
+  "supercell": [
+   2,
+   2,
+   2
+  ],
+  "n_displacements": 3,
+  "min_freq_THz_mesh": -4.853,
+  "min_freq_THz_gamma": -0.004,
+  "soft": true,
+  "seconds": 1.3
+ },
+ {
+  "jid": "JVASP-4492",
+  "formula": "LuTaO4",
+  "role": "divergent",
+  "k_dfpt": 276.92643598,
+  "n_unit": 12,
+  "supercell": [
+   2,
+   2,
+   2
+  ],
+  "n_displacements": 18,
+  "min_freq_THz_mesh": -1.557,
+  "min_freq_THz_gamma": -0.001,
+  "soft": true,
+  "seconds": 25.6
+ },
+ {
+  "jid": "JVASP-35894",
+  "formula": "HfO2",
+  "role": "divergent",
+  "k_dfpt": 140.6752679,
+  "n_unit": 6,
+  "supercell": [
+   3,
+   3,
+   2
+  ],
+  "n_displacements": 4,
+  "min_freq_THz_mesh": -2.028,
+  "min_freq_THz_gamma": -0.004,
+  "soft": true,
+  "seconds": 7.3
+ },
+ {
+  "jid": "JVASP-52653",
+  "formula": "HfO2",
+  "role": "control",
+  "k_dfpt": 23.81246019,
+  "n_unit": 12,
+  "supercell": [
+   2,
+   2,
+   2
+  ],
+  "n_displacements": 18,
+  "min_freq_THz_mesh": -0.0,
+  "min_freq_THz_gamma": -0.0,
+  "soft": false,
+  "seconds": 28.1
+ },
+ {
+  "jid": "JVASP-36951",
+  "formula": "BaHfO3",
+  "role": "control",
+  "k_dfpt": 34.37446251,
+  "n_unit": 5,
+  "supercell": [
+   2,
+   2,
+   2
+  ],
+  "n_displacements": 30,
+  "min_freq_THz_mesh": -0.0,
+  "min_freq_THz_gamma": -0.0,
+  "soft": false,
+  "seconds": 11.2
+ },
+ {
+  "jid": "JVASP-8020",
+  "formula": "Nd2O3",
+  "role": "control",
+  "k_dfpt": 21.375015939999997,
+  "n_unit": 5,
+  "supercell": [
+   3,
+   3,
+   2
+  ],
+  "n_displacements": 5,
+  "min_freq_THz_mesh": -0.0,
+  "min_freq_THz_gamma": -0.0,
+  "soft": false,
+  "seconds": 5.2
+ }
+]

@@ -9,10 +9,15 @@ SpecLab is the design stage of a self-driving-lab loop. Its siblings cover the o
 thesis: in an AI-for-Science product the system owns the guarantees, the model explains, and
 every step has an eval and an evidence grade.
 
-**Status (2026-10-21): v0.2. Two funnel runs, two validations, one potential cross-check and one
-eval set with baselines, all registered before running. No language model has been run yet.
-No material has been made. 30 registered predictions; 17 held, 11 failed, 2 could not be read.
-Every failure is logged with its direction in [docs/registration.md](docs/registration.md).**
+**Status (2026-10-21): v0.3. Three funnel versions, two validations, a potential cross-check, a
+phonon check, a substrate stage and one eval set with baselines, all registered before running.
+No language model has been run yet. No material has been made. 37 registered predictions:
+21 held, 12 failed, 4 could not be read. Every failure is logged with its direction in
+[docs/registration.md](docs/registration.md).**
+
+**Deliverable:** [results/funnel/v0.3_gradeA.md](results/funnel/v0.3_gradeA.md), 20 oxides with a
+TBmBJ gap, a DFPT dielectric constant, a stable phonon spectrum in MACE-MP-0 and a substrate
+lattice-match column, each with its evidence stated.
 
 ## What it does
 
@@ -79,6 +84,25 @@ positive controls survived and all seven negatives left at the textbook stage;
 [results/funnel/retrospective.md](results/funnel/retrospective.md). The Top-20 was rare-earth
 tantalates and the LaAlO3 family, the classes the literature already names.
 
+## v0.3: the soft-mode rule
+
+Five grade-A entries carried DFPT values above 100. Hypothesis, registered before the run: those
+are polar soft modes at a symmetric minimum, which DFPT's ionic term turns into 1/omega^2.
+Finite-displacement phonons (phonopy, forces from MACE-MP-0b3, 4x4x4 mesh) found an imaginary
+mode in all five (SrHfO3 at -4.9 THz, the known octahedral-tilt instability of the cubic phase)
+and in none of three controls, so the rule was applied to the whole list: 9 of 29 are demoted,
+four of them with ordinary-looking DFPT values between 28 and 73 (Sr2HfO4, SiBi2O5, LiSiBiO4,
+TaGaO4). The registered ceiling for that second group was 2; it is logged as a failure.
+[results/phonon/softmodes_all.md](results/phonon/softmodes_all.md).
+
+## Substrate lattice match
+
+Zur-McGill coincident-site matching of each grade-A film on Si(001), Si(111), TiN(001) and Pt(111)
+below 2 % strain. At 400 A^2 every candidate matches something, as registered; the column is
+informative only where the area is small (one candidate below 100 A^2 on Si(001)).
+[results/substrate/zsl.md](results/substrate/zsl.md). Polycrystalline ALD films do not need a
+match; the column is a plausibility note for epitaxial routes.
+
 ## MACE-MP-0 cross-check
 
 The 29 grade-A structures and the six v0.1 positives relaxed with mace-mp-0b3-medium (CPU):
@@ -140,9 +164,9 @@ python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
 ## Next
 
 1. Register and run frontier models (Claude, Gemini, GPT) and one open-weight model on the XRD set (needs API keys).
-2. v0.3: a registered rule for DFPT-divergent entries (phonon check or cut-off); the Si band-offset and reaction stages.
+2. The Si band-offset and reaction-with-Si stages; precursor availability from the literature.
 3. Verify the Shannon table against the paper, or retire the estimator.
-4. A deposition-window stage (precursors, substrate mismatch) for the grade-A list.
+4. Run the phonon check on the grade-B list, whose DFPT values (where present) carry the same risk.
 
 Code and documents: MIT. Data: MP-20 (CDVAE, Xie et al.) from the Materials Project, CC BY 4.0;
 JARVIS-DFT (NIST), CC BY 4.0; Petousis 2017 via matminer.
