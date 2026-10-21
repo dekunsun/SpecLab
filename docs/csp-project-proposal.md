@@ -394,7 +394,7 @@ Ops 延伸：A-Lab 自动合成论文曾被质疑 XRD 相鉴定自动化出错�
 
 ## C.1 关键事实
 
-- Periodic Labs（据 hyper.ai 单一来源，未见官方公告）：发布 "Periodic Neon"，基于开源权重 Kimi K2.6 后训练（科学文献 + 代码中间训练，再用自有实验数据做 RL），用于实验室 XRD 分析；自建 FrontierXRD 基准，基线 2.7% 提升到 55.3%。模型由"科学 harness"供给实验上下文、晶体学数据库和分析工具。
+- Periodic Labs（hyper.ai 报道，且 CEO 在播客中亲口确认）：发布 "Periodic Neon"，基于开源权重 Kimi K2.6 后训练（科学文献 + 代码中间训练，再用自有实验数据做 RL），用于实验室 XRD 分析；自建 FrontierXRD 基准，基线 2.7% 提升到 55.3%。模型由"科学 harness"供给实验上下文、晶体学数据库和分析工具。
 - Lila Sciences：官方称在训练科学推理模型，有"验证器与工具驱动的通用 RL 引擎"；后训练工程师 JD 提到使用前沿与开源 LLM，未点名基座。
 - DeepMind：Gemini 是实验室的"科学推理层"，机器人做合成与表征；AI co-scientist 是多智能体系统。
 - Anthropic：Claude for Life Sciences 走"连接器 + Agent Skills + 提示库"路线，2026 年扩展到化学数据库（ChEMBL、OpenTargets）；材料科学在岗位 JD 里被点名，但产品上还没有材料专属连接器。
@@ -451,7 +451,7 @@ Ops 延伸：A-Lab 自动合成论文曾被质疑 XRD 相鉴定自动化出错�
 
 ## C.6 来源
 
-- https://hyper.ai/en/stories/1e9ac8c903b2b6ef401eec65c77632ce （Periodic Neon，单一来源）
+- https://hyper.ai/en/stories/1e9ac8c903b2b6ef401eec65c77632ce （Periodic Neon；CEO 播客口述为第二来源）
 - https://arxiv.org/pdf/2507.20534 （Kimi K2 技术报告）
 - https://www.lila.ai/tech
 - https://job-boards.greenhouse.io/lilasciences/jobs/4031323009
@@ -479,3 +479,30 @@ Ops 延伸：A-Lab 自动合成论文曾被质疑 XRD 相鉴定自动化出错�
 4. 按难度分档报告，不只报总分。
 5. 每类抽 10 道两人独立复核，报告一致率。
 6. 总量约 120 道，宁少勿滥。
+
+---
+
+# 附录 D：与 LiveLab 1.0 / 2.0、ai4s.fyi 的组合结构
+
+## D.1 四个项目构成一个闭环
+
+| 项目 | 闭环阶段 | 核心问题 | 方法论标志 |
+|---|---|---|---|
+| CSP（本项目） | 实验前：设计与交付 | 从客户性能目标反向设计材料并交付候选与验证方案 | 预注册 + 证据阶梯 + 阶段门 |
+| LiveLab 1.0 | 实验中：监控 | 模型能否在证据不足时说"无法验证" | 21 份预注册、四类错误、系统定状态 / 模型解释 |
+| LiveLab 2.0 | 实验后：诊断 | 模型能否回到正确时间窗找异常起点 | 预注册、真实 Zenodo 数据、经典算法基线 |
+| ai4s.fyi | 领域知识与证据记录 | 自动化发布如何保持准确 | 证据阶梯、逐步 eval、审核门、纠错率 |
+
+贯穿论点：AI for Science 产品里，保证由系统承担，模型负责解释，每一步都有 eval 和证据分级。
+
+## D.2 CSP 方案的三处调整
+
+1. **沿用既有方法论。** 每个阶段的预测先登记再跑（例如回溯测试中 HfO2 是否进 Top-20）；候选材料按 ai4s 证据阶梯分级（仅计算 / 已对照已有数据 / 已实验 / 已应用）；保留偏差日志与更正记录。
+2. **eval 收窄。** 删去附录 C 中"需求转规格"与弃答类题目，弃答行为引用 LiveLab 1.0 结论。CSP 独有 eval 只留两类：候选回溯检索、XRD 相鉴定。XRD 相鉴定同时连接 LiveLab 2.0 的诊断与 DeepMind 实验室的表征质控。
+3. **承担组合缺失的两样：客户与物理验证。** CSP 是唯一从客户需求出发的项目；争取大学或开放实验室对 1 到 2 个候选做真实沉积，补上"已实验"一级。
+
+## D.3 组合层面
+
+- 命名：不叫 LiveLab 3.0；README 首段写明"LiveLab 闭环中实验前的设计阶段"；ai4s 的 repos 页按闭环阶段排列四个项目。
+- 运营：四个项目偏重前沿模型 eval，运营只在 ai4s 的定时例程与审核门中体现。CSP 明确承担实验室运营：吞吐模型、阶段门、成本、表征质控，对应 DeepMind 的 TPM Science Automation 岗位。
+- 工具层与 LiveLab 共用：harness、后端、计分、预注册模板可直接复用 livelab/ 与 livelab2/ 的结构。
