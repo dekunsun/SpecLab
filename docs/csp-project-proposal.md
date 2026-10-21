@@ -213,3 +213,135 @@ Anthropic 岗位：
 - https://www.alphaxiv.org/overview/2601.15743 （Materealize）
 - https://arxiv.org/html/2506.12557v1 （合成规划数据泄露警示）
 - https://arxiv.org/pdf/2609.15922 （RHEED 引导的 agentic 薄膜合成开源工具包）
+
+---
+
+# 附录 A：Public Reference Product Profile（PRPP）可行性与草案
+
+更新日期：2026-10-21。背景：用户确认 DeepMind 英国实验室已开业，负责人 2025 年 12 月加入；材料方向 PM/Ops 岗位尚未出现，本项目为提前准备。
+
+## A.1 结论：数据足够，但要分"两层"写规格
+
+高-k / 铁电 HfO2 体系是过去 25 年半导体材料里公开数据最密集的方向之一，可以做出数值化、经得起内行追问的 PRPP。关键是把规格写成两层：
+
+- **第一层：器件级目标（客户语言）**：EOT、漏电流、Pr、耐久、保持。来自器件文献和 IRDS 路线图，是客户真正关心的。
+- **第二层：材料级代理指标（模型语言）**：带隙、带阶、介电张量、凸包距离、相稳定性、生长窗口。这是计算漏斗真正能筛的东西。
+
+PM 的专业性恰恰体现在**这两层之间的映射和"代理指标不等于器件指标"的风险说明**。写出"我们筛 k 和 Eg，但器件里的 EOT 还取决于界面层 SiOx 的 0.4 到 0.7 nm 贡献，所以材料级 k 目标要留余量"这一句，比任何模型细节都更能证明不外行。
+
+## A.2 PRPP 草案（高-k 栅介电 / 铁电存储氧化物）
+
+### 器件级目标（第一层）
+
+| 指标 | 目标值 | 依据 / 备注 |
+|---|---|---|
+| 等效氧化层厚度 EOT | ≤ 0.5 nm（逻辑栅介电）；铁电存储场景则按物理厚度 ≤ 10 nm 要求 | IRDS More Moore 章节给出逐年 EOT 目标，需从原文取当年数值 |
+| 栅漏电流密度 | 在 |V| = 1 V 下 ≤ 1e-2 A/cm²（低功耗）量级 | 器件文献常用阈值；具体按 IRDS 当年值 |
+| 剩余极化 2Pr（铁电场景） | ≥ 20 μC/cm²（文献中溅射未掺杂 HfO2 达到约 35 μC/cm²） | arXiv 2304.12924 |
+| 耐久性 | 电容器 ≥ 1e11 次；FeFET 目前约 1e8 次，目标 ≥ 1e12 | 2025 J. Appl. Phys. 综述、外延 HfO2 综述 |
+| 保持 | 10 年 @ 85 °C（行业常规要求，需引 JEDEC 标准原文） | 文献报告范围 1e3 到 1e6 s，与 10 年仍有差距，这正是客户痛点 |
+| 唤醒效应 | 无唤醒或 < 100 次循环内饱和 | 外延膜比多晶膜更抗唤醒 |
+| 热预算 | 沉积 + 退火 ≤ 400 °C（BEOL 兼容）或 ≤ 1000 °C spike（栅优先流程） | 按客户流程选一 |
+
+### 材料级代理指标（第二层，计算漏斗实际筛选项）
+
+| 指标 | 目标值 | 数据来源 | 备注 |
+|---|---|---|---|
+| 介电常数 k（静态，离子 + 电子） | ≥ 25，优先 25 到 40 | Materials Project DFPT 介电数据（首批 1,056 种，PBE 对实验 MARD 约 16%，Spearman 0.92）；2026 年 PRX 离子介电张量 ML 模型筛过 8000+ 氧化物；arXiv 2601.04755 等变 GNN 介电张量模型 | k 与 Eg 反比是已知权衡，k 过高通常 Eg 过小 |
+| 带隙 Eg | ≥ 5 eV（HfO2 约 5.8 eV 作基线） | JARVIS-DFT TBmBJ 带隙（约 7,000 到 25,000 条，取决于版本）；MP r²SCAN 带隙 | PBE 带隙系统性偏低，必须用 TBmBJ / HSE 或经验校正；PRX 论文明确指出这一点 |
+| 与 Si 的导带/价带偏移 | 各 ≥ 1 eV | Robertson 带阶规则（Rep. Prog. Phys. 2006）；HfO2 实测 CBO 约 1.4 eV，Al2O3 约 2.8 eV | 可用电荷中性能级近似，或对 Top-N 做界面 DFT |
+| 热力学稳定性 | ≤ 50 meV/atom above hull（含亚稳相容忍度） | Materials Project / Alexandria 凸包 | 铁电正交相 HfO2 本身是亚稳相，所以阈值不能设 0 |
+| 与 Si 的化学稳定性 | 不与 Si 反应生成硅化物或低 k 硅酸盐（可用反应能筛） | pymatgen 界面反应计算 | 这是 Robertson/Hubbard-Schlom 经典筛选标准 |
+| 相 / 极性 | 铁电场景：存在极性相（如 Pca21 型）且与非极性相能差 < 50 meV/f.u. | DFT 相能数据，MP 含部分 | 可解释为什么掺杂 / 应变能稳定极性相 |
+| 元素约束 | 排除 Pb、Cd、Hg、Tl、放射性元素；标记 In、Ga、稀土的供应链风险 | 自定义黑名单 + 价格表 | 客户可改 |
+| 可沉积性 | 存在商用 ALD / CVD 前驱体；或可溅射靶材 | 文献 + 供应商目录（Strem、Sigma 等）；文本挖掘合成配方 | 没有前驱体的候选直接降级 |
+| 结晶温度 / 生长窗口 | 可在 ≤ 400 °C 形成目标相，或退火窗口可接受 | 文献 + 薄膜生长模型 | 这是薄膜与块体最大的差别 |
+
+### 验收口径
+
+- 交付 10 到 20 个候选，每个附：所有第二层指标、预测不确定度、数据来源、可沉积性证据、建议的沉积路线和表征矩阵。
+- 明确标注"哪些第一层指标无法由计算预测，必须实验"：耐久、保持、唤醒、漏电流。
+
+## A.3 可用的公开数据与参考文献清单
+
+| 类别 | 资源 | 规模 / 要点 |
+|---|---|---|
+| 介电张量 | Materials Project DFPT（Petousis 2017, Sci. Data） | 首批 1,056 种；PBE 对实验 MARD 16.2%，排序相关性 0.92 |
+| 介电张量 ML | Takigawa/Kiyohara/Kumagai PRX 2026（arXiv 2509.26022）；arXiv 2601.04755 等变 GNN | 前者报告 31 个新高-k 氧化物（来自 8,000+ 候选）；后者给出 Ba2SmTaO6 等候选 |
+| 带隙 / 光学 | JARVIS-DFT（OptB88vdW 约 17,800 条，TBmBJ 约 7,400 条，2018 版；dft_3d 现 75,993 条） | 用 TBmBJ 带隙而非 PBE |
+| 稳定性 | Materials Project、Alexandria、OQMD | 凸包距离 |
+| MLIP 基准 | Matbench Discovery（2026 年 1 月榜首 PET-OAM-XL，F1 0.924；eSEN-30M-OAM 0.925） | 用于选择松弛势并引用其 F1 |
+| 薄膜逆向设计基线 | Hf–Zr–O IDEAL 平台（Chem. Mater. 2026，arXiv 2603.09744） | 直接可对标的 ALD 绑定案例 |
+| 铁电 HfO2 器件 | 2025 J. Appl. Phys. 综述（hal-05226133）；FeFET 综述（TU Dresden）；外延 HfO2 综述（arXiv 2104.13099） | 耐久、保持、唤醒、厚度标度 |
+| 高-k 设计规则 | Robertson Rep. Prog. Phys. 2006；Hubbard & Schlom 1996 热力学稳定性筛选 | 带阶 ≥ 1 eV、与 Si 不反应 |
+| 路线图 | IRDS More Moore | EOT、漏电逐年目标 |
+| 高-k 筛选先例 | npj Comput. Mater. 2022 神经网络筛选；2024 年 ML 预筛 + 合成 CsTaTeO6、Bi2Zr2O7 | 证明"计算筛选 → 合成验证"链条可行 |
+
+## A.4 Evals 设计：PM/Ops 要定义的评估体系
+
+把 evals 分为四类，每类有明确的指标、数据集和通过线。这是区别于"跑了个模型"的核心。
+
+### 1. 模型组件评估（选型依据）
+
+| 组件 | 评估方法 | 指标 | 通过线示例 |
+|---|---|---|---|
+| MLIP 松弛 | 在本项目化学空间（二元到四元氧化物，含 Hf/Zr/La/Y/Al/Ti/Ta/Nb 等）抽 200 到 500 个 MP 结构，与 DFT 松弛能量和晶格对比 | 能量 MAE（meV/atom）、晶格参数误差、hull 分类 F1 | 引 Matbench Discovery 全局 F1，再报本地子集 F1；本地 F1 ≥ 0.85 |
+| 介电常数预测 | 对 MP 1,056 条 DFPT 数据做留出测试，重点看 k ≥ 20 区间 | MAE、Spearman、k ≥ 25 的召回率 | 召回 ≥ 0.8（宁可多漏进后面的 DFT，不可漏掉） |
+| 带隙预测 | 与 JARVIS TBmBJ 留出集对比 | MAE、Eg ≥ 5 eV 的分类精度 | 分类 F1 ≥ 0.8 |
+| 生成模型 | 有效率、唯一率、新颖率、稳定率（LeMat-GenBench 口径） | 四项比例 | 新颖且稳定 ≥ 5% |
+| 可合成性 / 合成规划 | 用时间切分（训练集截止年份之前，测试集之后）避免泄露 | 精度、召回、Top-k 命中 | 必须报时间切分结果，不接受随机切分 |
+
+### 2. 流水线级评估：回溯"重新发现"测试（最有说服力）
+
+把已知成功的高-k / 铁电材料从候选池里"蒙住"，看漏斗能否把它们排进 Top-N：
+- 正例：HfO2、ZrO2、Hf0.5Zr0.5O2、La2O3、Y2O3、HfSiO4、LaAlO3、Al2O3（作 k 偏低的边界例子）。
+- 负例：已知会和 Si 反应或 Eg 太小的高-k 材料（如 TiO2、Ta2O5、SrTiO3 作为"k 高但带阶不足"的反例）。
+- 指标：正例进入 Top-20 的比例、负例被正确淘汰的比例、各阶段淘汰原因是否与文献一致。
+- 这同时是对"规格写得对不对"的检验：如果 HfO2 都过不了你的规格，规格有问题。
+
+### 3. 运营级评估（Ops 视角）
+
+| 指标 | 定义 |
+|---|---|
+| 漏斗转化率 | 每阶段输入/输出候选数 |
+| 单位成本 | 每个候选在各阶段的 GPU/CPU 小时和美元 |
+| 周期时间 | 从规格冻结到候选档案交付的日历天数 |
+| 实验吞吐假设 | 若实验室每天 300 样品，一轮组合库验证需几天；瓶颈在表征还是沉积 |
+| 决策记录 | 每个阶段门的 Go/No-Go 记录和理由 |
+
+### 4. LLM / agent 评估（对口 Anthropic 类岗位）
+
+- 任务：从 50 到 100 篇薄膜合成文献中抽取"材料、前驱体、沉积方法、温度、退火、衬底、表征结果"。
+- 建人工标注金标准（可自己标 30 篇），报精度 / 召回 / 幻觉率。
+- 二级任务：让 agent 生成候选材料的实验计划草案，用 rubric 打分（可执行性、安全合规、是否引用了真实前驱体），并记录人工修改比例。
+- 这一块的产出直接就是一份"Claude for Materials 的 eval 报告"，是 Anthropic AI for Science PM 岗位最能对上的材料。
+
+## A.5 不外行的几个"必答题"，建议写进复盘
+
+1. 为什么 k 与 Eg 不能同时很高，你的规格如何处理这个权衡。
+2. 为什么凸包距离 ≤ 0 不是薄膜可生长的充分条件，亚稳相（铁电正交相 HfO2）为什么能存在。
+3. PBE 带隙为什么不能直接用，你用了什么校正。
+4. 界面层 SiOx 对 EOT 的贡献，材料级 k 目标为什么要留余量。
+5. 耐久 / 保持 / 唤醒为什么不能由计算预测，你的实验计划如何用最少样品回答这几个问题。
+6. 你如何证明候选是"新"的，而不是训练集里换了个写法的已知物。
+
+## A.6 附录来源
+
+- https://docs.materialsproject.org/methodology/materials-methodology/dielectricity
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC5315501 （Petousis 2017 介电数据库）
+- https://link.aps.org/accepted/10.1103/PhysRevB.93.115151 （DFPT 基准）
+- https://arxiv.org/pdf/2509.26022 （PRX 2026 离子介电张量 ML）
+- https://arxiv.org/pdf/2601.04755 （等变 GNN 介电张量）
+- https://www.alphaxiv.org/abs/2604.21068.md （DielecMIND）
+- https://www.nature.com/articles/am201557 （Eg 与 k 权衡）
+- https://link.springer.com/10.1038/s41524-022-00832-5 （npj 2022 高-k 筛选）
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5944908/ （JARVIS OptB88vdW / TBmBJ）
+- https://jarvis-tools.readthedocs.io/en/master/databases.html
+- https://matbench-discovery.materialsproject.org/
+- https://arxiv.org/pdf/2304.12924 （溅射 HfO2 铁电）
+- https://arxiv.org/pdf/2104.13099 （外延铁电 HfO2 综述）
+- https://hal.parisnanterre.fr/LAAS-MPN/hal-05226133v1 （2025 JAP FeFET 综述）
+- https://fis.tu-dresden.de/portal/en/publications/ferroelectric-fieldeffect-transistors-based-on-hfo2-a-review(01a4f31c-8d62-4bcd-b63e-fdf4b093d3b8).html
+- https://intechopen.com/chapters/39997 （高-k 带阶与 k 窗口）
+- https://core-cms.cambridgecore.org/core/journals/mrs-online-proceedings-library-archive/article/band-alignments-of-highk-dielectrics-on-si-and-pt/18E8E6710D6A658583D3CC90D0B3AF3D
+- https://deepmind.google/blog/strengthening-our-partnership-with-the-uk-government-to-support-prosperity-and-security-in-the-ai-era/
