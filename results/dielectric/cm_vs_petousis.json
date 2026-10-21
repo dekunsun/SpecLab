@@ -1,0 +1,1184 @@
+{
+ "summary": {
+  "n_oxides": 130,
+  "n_scored": 68,
+  "unscorable_share": 0.477,
+  "spearman_lt_200": 0.559,
+  "mard_lt_200": 0.773,
+  "n_ge_25": 1,
+  "recall_at_15": 0.0,
+  "precision_at_15": 0.0
+ },
+ "rows": [
+  {
+   "material_id": "mp-971",
+   "formula": "K2O",
+   "dfpt": 9.24,
+   "cm": 5.376886204920826,
+   "x": 0.5933243489646323,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-2097",
+   "formula": "SnO",
+   "dfpt": 18.73,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-617",
+   "formula": "PtO2",
+   "dfpt": 9.29,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+4",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-1105",
+   "formula": "BaO2",
+   "dfpt": 17.11,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-2352",
+   "formula": "Na2O",
+   "dfpt": 7.57,
+   "cm": 4.474583737606072,
+   "x": 0.5366497489907781,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-1285",
+   "formula": "PtO2",
+   "dfpt": 22.44,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+4",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-1986",
+   "formula": "ZnO",
+   "dfpt": 11.35,
+   "cm": 7.48011920489589,
+   "x": 0.6835482829740488,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-841",
+   "formula": "Li2O2",
+   "dfpt": 9.12,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-24972",
+   "formula": "Fe2O3",
+   "dfpt": 19.87,
+   "cm": 17.118218335090432,
+   "x": 0.8430816121346587,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-352",
+   "formula": "HfO2",
+   "dfpt": 18.75,
+   "cm": 20.804236620424923,
+   "x": 0.8684454976531418,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-19128",
+   "formula": "CoO",
+   "dfpt": 9.79,
+   "cm": 6.088285357164979,
+   "x": 0.6290932048604764,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-7048",
+   "formula": "Al2O3",
+   "dfpt": 8.98,
+   "cm": 6.8451004924759955,
+   "x": 0.6608291785320107,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-7029",
+   "formula": "SiO2",
+   "dfpt": 4.04,
+   "cm": 3.426155043312467,
+   "x": 0.44712232215012215,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-554151",
+   "formula": "SiO2",
+   "dfpt": 3.74,
+   "cm": 3.2003384127660377,
+   "x": 0.4231144664286736,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-8484",
+   "formula": "ZnO2",
+   "dfpt": 10.8,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-559091",
+   "formula": "SiO2",
+   "dfpt": 3.84,
+   "cm": 3.1677199293645533,
+   "x": 0.41947318333698974,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19326",
+   "formula": "MnO2",
+   "dfpt": 17.32,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-19399",
+   "formula": "Cr2O3",
+   "dfpt": 11.05,
+   "cm": 8.916177356869193,
+   "x": 0.7251785215717297,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-18759",
+   "formula": "Mn3O4",
+   "dfpt": 12.69,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-25620",
+   "formula": "V2O5",
+   "dfpt": 13.67,
+   "cm": 7.174900016437088,
+   "x": 0.6730209599422973,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-1346",
+   "formula": "B6O",
+   "dfpt": 6.4,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-306",
+   "formula": "B2O3",
+   "dfpt": 4.79,
+   "cm": 4.257610624188824,
+   "x": 0.5205837850627065,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-554089",
+   "formula": "SiO2",
+   "dfpt": 3.99,
+   "cm": 3.4770253029794516,
+   "x": 0.4522574145553011,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-2858",
+   "formula": "ZrO2",
+   "dfpt": 21.28,
+   "cm": 15.443652611970123,
+   "x": 0.8280176711418026,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-555235",
+   "formula": "SiO2",
+   "dfpt": 3.9,
+   "cm": 3.2280017287506424,
+   "x": 0.4261669839353854,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-1394",
+   "formula": "Rb2O",
+   "dfpt": 14.11,
+   "cm": 6.535980465359268,
+   "x": 0.6485465246582269,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-550172",
+   "formula": "SnO2",
+   "dfpt": 12.59,
+   "cm": 10.49559693115136,
+   "x": 0.7599154312891576,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-223",
+   "formula": "GeO2",
+   "dfpt": 6.36,
+   "cm": 4.6778575075208755,
+   "x": 0.5507541158790409,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-7812",
+   "formula": "GeO2",
+   "dfpt": 5.71,
+   "cm": 4.019955646291544,
+   "x": 0.5016574579169729,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-19395",
+   "formula": "MnO2",
+   "dfpt": 14.16,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-554278",
+   "formula": "TiO2",
+   "dfpt": 35.47,
+   "cm": 12.545562130502917,
+   "x": 0.7937515255110822,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-554573",
+   "formula": "SiO2",
+   "dfpt": 3.9,
+   "cm": 3.2907821312139887,
+   "x": 0.4329760845185966,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-753746",
+   "formula": "Rb2O",
+   "dfpt": 9.06,
+   "cm": 4.63945797723068,
+   "x": 0.5481558870787068,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-714882",
+   "formula": "MnO",
+   "dfpt": 18.23,
+   "cm": 19.172797196268252,
+   "x": 0.858308754757791,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-2672",
+   "formula": "K2O2",
+   "dfpt": 6.31,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-634859",
+   "formula": "CaO2",
+   "dfpt": 19.63,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-715434",
+   "formula": "NiO",
+   "dfpt": 14.41,
+   "cm": 9.132202535655948,
+   "x": 0.7305115505767045,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-715460",
+   "formula": "CoO",
+   "dfpt": 10.46,
+   "cm": 6.170576422773327,
+   "x": 0.6328288428172226,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-545820",
+   "formula": "SnO",
+   "dfpt": 16.8,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-7868",
+   "formula": "PtO2",
+   "dfpt": 9.29,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+4",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-559550",
+   "formula": "SiO2",
+   "dfpt": 3.39,
+   "cm": 2.795308732142156,
+   "x": 0.374388560241909,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-2340",
+   "formula": "Na2O2",
+   "dfpt": 6.17,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-19372",
+   "formula": "WO2",
+   "dfpt": 11.33,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:W+4",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-3744",
+   "formula": "NaNbO2",
+   "dfpt": 11.2,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Nb+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-764673",
+   "formula": "Na3VO4",
+   "dfpt": 5.5,
+   "cm": 4.710902606415279,
+   "x": 0.5529662437460866,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-33857",
+   "formula": "CrSbO4",
+   "dfpt": 9.31,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-549158",
+   "formula": "InCuO2",
+   "dfpt": 8.96,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-2998",
+   "formula": "BaTiO3",
+   "dfpt": 7.87,
+   "cm": 140.52487511881,
+   "x": 0.978951042774118,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-9127",
+   "formula": "Ba(SbO3)2",
+   "dfpt": 9.94,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-754596",
+   "formula": "RbGaO2",
+   "dfpt": 4.66,
+   "cm": 5.5327299999663335,
+   "x": 0.6017380152994455,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-772231",
+   "formula": "RbCrO2",
+   "dfpt": 10.55,
+   "cm": 15.13993267235073,
+   "x": 0.8249701409364666,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-7467",
+   "formula": "RbCuO2",
+   "dfpt": 6.09,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-4359",
+   "formula": "Sr2PdO3",
+   "dfpt": 16.04,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pd+2",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-6972",
+   "formula": "YCuO2",
+   "dfpt": 11.77,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3982",
+   "formula": "KCuO2",
+   "dfpt": 6.17,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-8208",
+   "formula": "Mg(PtO2)3",
+   "dfpt": 17.42,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-18946",
+   "formula": "VBO3",
+   "dfpt": 9.62,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-11022",
+   "formula": "ScAgO2",
+   "dfpt": 13.81,
+   "cm": 7.337037601061977,
+   "x": 0.6786989484053502,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-5986",
+   "formula": "BaTiO3",
+   "dfpt": 11.53,
+   "cm": 61.77511641636582,
+   "x": 0.9529597095454279,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-4280",
+   "formula": "GaCuO2",
+   "dfpt": 10.5,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3642",
+   "formula": "ScCuO2",
+   "dfpt": 14.02,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-541044",
+   "formula": "CsYO2",
+   "dfpt": 20.77,
+   "cm": 17.14537801380802,
+   "x": 0.8433042169323405,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-8098",
+   "formula": "InGaO3",
+   "dfpt": 13.02,
+   "cm": 8.372131767439969,
+   "x": 0.7107634122603849,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-14070",
+   "formula": "RbAlO2",
+   "dfpt": 24.01,
+   "cm": 6.184371104161427,
+   "x": 0.6334477063882624,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3614",
+   "formula": "KTaO3",
+   "dfpt": 8.81,
+   "cm": 42.88536836621794,
+   "x": 0.9331630749797324,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19225",
+   "formula": "FeAgO2",
+   "dfpt": 13.49,
+   "cm": 8.158160847398694,
+   "x": 0.7046709492921407,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-6948",
+   "formula": "KNaO",
+   "dfpt": 15.8,
+   "cm": 5.882426328802084,
+   "x": 0.6194065285408231,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3924",
+   "formula": "LiNbO2",
+   "dfpt": 16.46,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Nb+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-755293",
+   "formula": "Sr4Sb2O",
+   "dfpt": 19.13,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb-3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-25010",
+   "formula": "NaMnO2",
+   "dfpt": 27.41,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-553303",
+   "formula": "CsCu3O2",
+   "dfpt": 9.24,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-4784",
+   "formula": "CaPtO3",
+   "dfpt": 14.04,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+4",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-8830",
+   "formula": "NaRhO2",
+   "dfpt": 10.99,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Rh+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-935811",
+   "formula": "KNbO3",
+   "dfpt": 7.94,
+   "cm": 20.599158912445034,
+   "x": 0.8672516967723103,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-14232",
+   "formula": "LiBO2",
+   "dfpt": 8.16,
+   "cm": 9.877298523312355,
+   "x": 0.7474173109220331,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-510625",
+   "formula": "CrCuO2",
+   "dfpt": 9.9,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-4541",
+   "formula": "NaCuO2",
+   "dfpt": 9.15,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-561800",
+   "formula": "KCrO2",
+   "dfpt": 9.64,
+   "cm": 10.905171783910566,
+   "x": 0.7675350587940077,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-4342",
+   "formula": "KNbO3",
+   "dfpt": 12.26,
+   "cm": 17.489235608663517,
+   "x": 0.8460688730826151,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-9200",
+   "formula": "K3AuO",
+   "dfpt": 13.99,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-12992",
+   "formula": "BaTiO3",
+   "dfpt": 11.5,
+   "cm": 60.293324604982836,
+   "x": 0.9518407466767309,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-540584",
+   "formula": "K2PdO2",
+   "dfpt": 10.13,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pd+2",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3759",
+   "formula": "MgGeO3",
+   "dfpt": 11.41,
+   "cm": 9.748006059536188,
+   "x": 0.7446375168010051,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-7502",
+   "formula": "K2Sn2O3",
+   "dfpt": 10.63,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19218",
+   "formula": "Sr3Fe2O5",
+   "dfpt": 16.85,
+   "cm": 10.180827861390219,
+   "x": 0.7537113212551708,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-510624",
+   "formula": "SrFeO3",
+   "dfpt": 70.86,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-8207",
+   "formula": "Zn(PtO2)3",
+   "dfpt": 18.6,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-4651",
+   "formula": "SrTiO3",
+   "dfpt": 7.8,
+   "cm": 28.70491571223576,
+   "x": 0.9022957747835629,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-18966",
+   "formula": "FeAgO2",
+   "dfpt": 13.44,
+   "cm": 8.20467719256413,
+   "x": 0.7060171582707174,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19299",
+   "formula": "CrBO3",
+   "dfpt": 8.5,
+   "cm": 7.794056624392715,
+   "x": 0.6936917852273479,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19378",
+   "formula": "CrAgO2",
+   "dfpt": 10.13,
+   "cm": 6.568554965072822,
+   "x": 0.649882621722261,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-9125",
+   "formula": "Ca(SbO3)2",
+   "dfpt": 9.79,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-9126",
+   "formula": "Sr(SbO3)2",
+   "dfpt": 9.47,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-10418",
+   "formula": "RbSbO2",
+   "dfpt": 10.48,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3098",
+   "formula": "AlCuO2",
+   "dfpt": 9.6,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-7027",
+   "formula": "InBO3",
+   "dfpt": 10.11,
+   "cm": 7.070587373055424,
+   "x": 0.6692606689494408,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-14069",
+   "formula": "CsAlO2",
+   "dfpt": 15.17,
+   "cm": 9.630337960119359,
+   "x": 0.7420539273848228,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-7650",
+   "formula": "RbScO2",
+   "dfpt": 20.92,
+   "cm": 17.167046749228962,
+   "x": 0.8434813646958584,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-8453",
+   "formula": "RbNaO",
+   "dfpt": 15.8,
+   "cm": 7.1484531846509025,
+   "x": 0.6720757116587379,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19167",
+   "formula": "Rb2NiO2",
+   "dfpt": 7.32,
+   "cm": 4.8415528497812055,
+   "x": 0.5615030584619484,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-11019",
+   "formula": "GaCuO2",
+   "dfpt": 10.49,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-30250",
+   "formula": "YAgO2",
+   "dfpt": 11.41,
+   "cm": 6.05239598285932,
+   "x": 0.6274400803952103,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3748",
+   "formula": "AlCuO2",
+   "dfpt": 9.6,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-3163",
+   "formula": "BaSnO3",
+   "dfpt": 22.51,
+   "cm": 21.043778223936545,
+   "x": 0.8698130154332169,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-23054",
+   "formula": "NaBiO3",
+   "dfpt": 10.54,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+5",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-11023",
+   "formula": "ScAuO2",
+   "dfpt": 15.27,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-28698",
+   "formula": "Na4IrO4",
+   "dfpt": 9.04,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ir+4",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-9631",
+   "formula": "AlAgO2",
+   "dfpt": 10.73,
+   "cm": 6.837423135334743,
+   "x": 0.6605345297991815,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-20329",
+   "formula": "InAgO2",
+   "dfpt": 9.2,
+   "cm": 5.725323232395212,
+   "x": 0.6116667342254546,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-7472",
+   "formula": "RbAuO2",
+   "dfpt": 5.52,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-8001",
+   "formula": "LiAlO2",
+   "dfpt": 12.78,
+   "cm": 10.387335637088258,
+   "x": 0.7578171700605366,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-5175",
+   "formula": "NaInO2",
+   "dfpt": 11.07,
+   "cm": 7.4470709088726705,
+   "x": 0.6824412530679318,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-25005",
+   "formula": "MnSnO3",
+   "dfpt": 13.04,
+   "cm": 10.757638047674288,
+   "x": 0.764846753859199,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-27418",
+   "formula": "KAuO2",
+   "dfpt": 9.43,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-29521",
+   "formula": "RbBiO2",
+   "dfpt": 12.09,
+   "cm": 8.364088105931927,
+   "x": 0.7105389331567976,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-24964",
+   "formula": "SrFeO2",
+   "dfpt": 5.14,
+   "cm": 10.276873625606713,
+   "x": 0.7556381134572653,
+   "reason": "ok",
+   "pot_ferroelectric": false
+  },
+  {
+   "material_id": "mp-4482",
+   "formula": "NaSbO3",
+   "dfpt": 8.06,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-28075",
+   "formula": "K2Ti2O5",
+   "dfpt": 11.38,
+   "cm": 7.315778483387173,
+   "x": 0.6779657217751689,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-11020",
+   "formula": "GaAgO2",
+   "dfpt": 11.44,
+   "cm": 6.837244242576319,
+   "x": 0.6605276579834111,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-510281",
+   "formula": "FeCuO2",
+   "dfpt": 14.28,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19308",
+   "formula": "Li2NiO2",
+   "dfpt": 9.84,
+   "cm": 9.703222743733244,
+   "x": 0.743660351879877,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-9158",
+   "formula": "LiCuO2",
+   "dfpt": 17.01,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19340",
+   "formula": "LiVO2",
+   "dfpt": 16.34,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-540570",
+   "formula": "MgVO3",
+   "dfpt": 6.49,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+4",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-19156",
+   "formula": "BaMnO3",
+   "dfpt": 15.51,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-14116",
+   "formula": "CuRhO2",
+   "dfpt": 13.71,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1,Rh+3",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-20930",
+   "formula": "InCuO2",
+   "dfpt": 8.98,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-2918",
+   "formula": "YCuO2",
+   "dfpt": 11.73,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-578614",
+   "formula": "NaCrO2",
+   "dfpt": 9.28,
+   "cm": 8.1879752347577,
+   "x": 0.7055352088249016,
+   "reason": "ok",
+   "pot_ferroelectric": true
+  },
+  {
+   "material_id": "mp-4405",
+   "formula": "Rb3AuO",
+   "dfpt": 22.44,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess",
+   "pot_ferroelectric": true
+  }
+ ]
+}

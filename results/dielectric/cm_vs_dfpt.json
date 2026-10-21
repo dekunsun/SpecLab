@@ -1,0 +1,6136 @@
+{
+ "summary": {
+  "n_oxides_with_dfpt": 765,
+  "n_scored": 498,
+  "n_unscorable": 267,
+  "mard_dfpt_lt_200": 0.4709053238292612,
+  "spearman_dfpt_lt_200": 0.6981136587124439,
+  "n_dfpt_ge_target": 175,
+  "recall_at_screen": 0.4514285714285714,
+  "precision_at_screen": 0.6370967741935484,
+  "screen_min": 15,
+  "target_min": 25
+ },
+ "rows": [
+  {
+   "jid": "JVASP-1390",
+   "formula": "SrO",
+   "dfpt": 17.53490269,
+   "cm": 10.287989068706313,
+   "x": 0.7558591578145144,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50006",
+   "formula": "RbTaO3",
+   "dfpt": 90.83234059,
+   "cm": null,
+   "x": 0.9965871319568187,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-50463",
+   "formula": "Li4CuSi2O7",
+   "dfpt": 7.87016,
+   "cm": 7.18713124011765,
+   "x": 0.6734562812273941,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4492",
+   "formula": "LuTaO4",
+   "dfpt": 276.92643598,
+   "cm": 79.17609020810974,
+   "x": 0.9630433050876317,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43427",
+   "formula": "K2O",
+   "dfpt": 10.16003126,
+   "cm": 5.984855358195281,
+   "x": 0.6242887484591765,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-2017",
+   "formula": "LiCoO2",
+   "dfpt": 18.379257459999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-3396",
+   "formula": "K3CrO4",
+   "dfpt": 17.27704371,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+5"
+  },
+  {
+   "jid": "JVASP-44065",
+   "formula": "VBO4",
+   "dfpt": 8.35258666,
+   "cm": 4.650883142979654,
+   "x": 0.5489320838290997,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50936",
+   "formula": "KNdO2",
+   "dfpt": 19.5962372,
+   "cm": 10.309322189412121,
+   "x": 0.7562822750240096,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50811",
+   "formula": "KTmO2",
+   "dfpt": 15.42781772,
+   "cm": 12.242333692906803,
+   "x": 0.7893603629372826,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46861",
+   "formula": "FeSbO4",
+   "dfpt": 433.88925147,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-43637",
+   "formula": "Na2O",
+   "dfpt": 18.03328167,
+   "cm": 5.521938053879745,
+   "x": 0.6011666170990828,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22560",
+   "formula": "K2PdO2",
+   "dfpt": 11.19189863,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pd+2"
+  },
+  {
+   "jid": "JVASP-42416",
+   "formula": "Na4WO4",
+   "dfpt": 8.85269162,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:W+4"
+  },
+  {
+   "jid": "JVASP-12019",
+   "formula": "CoO2",
+   "dfpt": 152.92949018,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-1291",
+   "formula": "YbO",
+   "dfpt": 15.600101890000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Yb+2"
+  },
+  {
+   "jid": "JVASP-32",
+   "formula": "Al2O3",
+   "dfpt": 11.968647879999999,
+   "cm": 9.14380839339076,
+   "x": 0.730792212671275,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49782",
+   "formula": "Ba2HfO4",
+   "dfpt": 29.13510222,
+   "cm": 18.211346390553363,
+   "x": 0.8515685228470391,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48660",
+   "formula": "LiY3WO8",
+   "dfpt": 16.63984341,
+   "cm": 7.612329359958183,
+   "x": 0.6879008315614925,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12050",
+   "formula": "MgRe2O8",
+   "dfpt": 4.945582269999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Re+7"
+  },
+  {
+   "jid": "JVASP-43076",
+   "formula": "Na5Li3Ti5O14",
+   "dfpt": 58.01283737,
+   "cm": 12.800994588906187,
+   "x": 0.7973109183994571,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4918",
+   "formula": "K3VO4",
+   "dfpt": 29.6833423,
+   "cm": 6.135037325383497,
+   "x": 0.6312248020498694,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48112",
+   "formula": "LiMn2B2O6",
+   "dfpt": 402.05514458,
+   "cm": 6.759590189370048,
+   "x": 0.6575182245808069,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49784",
+   "formula": "NaSbO2",
+   "dfpt": 20.375971279999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-23438",
+   "formula": "RbGaO2",
+   "dfpt": 4.5576950400000005,
+   "cm": 5.641681753673253,
+   "x": 0.6074162603594503,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43535",
+   "formula": "Na5CoO4",
+   "dfpt": 14.683137039999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-42740",
+   "formula": "Li3CrO4",
+   "dfpt": 26.11685921,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+5"
+  },
+  {
+   "jid": "JVASP-48321",
+   "formula": "LiV3O8",
+   "dfpt": 125.69762396,
+   "cm": 10.21846830719927,
+   "x": 0.754470042842247,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-42742",
+   "formula": "LiMnSiO4",
+   "dfpt": 9.23919942,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3"
+  },
+  {
+   "jid": "JVASP-22705",
+   "formula": "Sr4Sb2O",
+   "dfpt": 273.98166862,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb-3"
+  },
+  {
+   "jid": "JVASP-1405",
+   "formula": "CaO",
+   "dfpt": 14.85406058,
+   "cm": 11.547794480981297,
+   "x": 0.7785617427093784,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22565",
+   "formula": "SnO",
+   "dfpt": 22.02087706,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-42559",
+   "formula": "Na4CrO3",
+   "dfpt": 15.311588190000002,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+2"
+  },
+  {
+   "jid": "JVASP-44705",
+   "formula": "MnSb4O12",
+   "dfpt": 14.61793406,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4,Sb+5"
+  },
+  {
+   "jid": "JVASP-47467",
+   "formula": "TaFeO4",
+   "dfpt": 715.5429452,
+   "cm": null,
+   "x": 1.0025178260996643,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-2190",
+   "formula": "KO",
+   "dfpt": 5.82245779,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-43629",
+   "formula": "MgO",
+   "dfpt": 6.21224258,
+   "cm": 5.07870760586388,
+   "x": 0.5761938242067165,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52785",
+   "formula": "MnSnO3",
+   "dfpt": 733.23588818,
+   "cm": 12.748064977296641,
+   "x": 0.7965834836896747,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1789",
+   "formula": "LiRhO2",
+   "dfpt": 28.01661148,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Rh+3"
+  },
+  {
+   "jid": "JVASP-4837",
+   "formula": "Ga2O3",
+   "dfpt": 25.23351683,
+   "cm": 12.491171405511192,
+   "x": 0.7929773987174661,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48236",
+   "formula": "Li2FeSi2O6",
+   "dfpt": 12.9080007,
+   "cm": 6.054926940981698,
+   "x": 0.6275571433507784,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-18465",
+   "formula": "Ag3BO3",
+   "dfpt": 202.66118197,
+   "cm": 5.303045715861854,
+   "x": 0.5892124852122795,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48187",
+   "formula": "LiCoGeO4",
+   "dfpt": 35.67305237,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-43975",
+   "formula": "LiNiBO3",
+   "dfpt": 8.27853989,
+   "cm": 6.227038086921553,
+   "x": 0.6353487162325074,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43226",
+   "formula": "TiMnO4",
+   "dfpt": 76.89369749,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-1792",
+   "formula": "CuRhO2",
+   "dfpt": 13.369143730000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1,Rh+3"
+  },
+  {
+   "jid": "JVASP-50345",
+   "formula": "BaMgO2",
+   "dfpt": 12.10201601,
+   "cm": 8.300657847614488,
+   "x": 0.7087564654237336,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43807",
+   "formula": "Na7NbO6",
+   "dfpt": 13.20159111,
+   "cm": 6.431405064824919,
+   "x": 0.6441874187120085,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22711",
+   "formula": "Na3VO4",
+   "dfpt": 5.22289808,
+   "cm": 4.972456247546959,
+   "x": 0.5697355575296071,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50348",
+   "formula": "NaSmO2",
+   "dfpt": 19.44722392,
+   "cm": 9.716659179880414,
+   "x": 0.7439543171869731,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1417",
+   "formula": "SrO2",
+   "dfpt": 16.90143797,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-43984",
+   "formula": "Li2AlFeO4",
+   "dfpt": 8.22569093,
+   "cm": 7.016171326930148,
+   "x": 0.667264530451037,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12125",
+   "formula": "ZnWO4",
+   "dfpt": 17.43794079,
+   "cm": 9.850621608795933,
+   "x": 0.7468487224523903,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1387",
+   "formula": "Na2O",
+   "dfpt": 6.9515543300000004,
+   "cm": 4.716160793552145,
+   "x": 0.5533162334528751,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48198",
+   "formula": "Li4MnSb2WO12",
+   "dfpt": 28.76155017,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4,Sb+5"
+  },
+  {
+   "jid": "JVASP-3501",
+   "formula": "Na2PtO2",
+   "dfpt": 11.863098780000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+2"
+  },
+  {
+   "jid": "JVASP-22677",
+   "formula": "CaO2",
+   "dfpt": 29.04140623,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-42784",
+   "formula": "TiNiO3",
+   "dfpt": 194.05755433,
+   "cm": 16.996777283942272,
+   "x": 0.8420784770406368,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52356",
+   "formula": "BaSrO2",
+   "dfpt": 364.62285156999997,
+   "cm": 11.54017329528133,
+   "x": 0.7784371045645714,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48721",
+   "formula": "Li2CoSiO4",
+   "dfpt": 141.63396889,
+   "cm": 6.981613550765126,
+   "x": 0.665984293017769,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1795",
+   "formula": "RbYO2",
+   "dfpt": 16.80510821,
+   "cm": 12.937866021832496,
+   "x": 0.7991681010115275,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48125",
+   "formula": "LiV3O8",
+   "dfpt": 35.591263070000004,
+   "cm": 10.03543509843029,
+   "x": 0.7507360576942272,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-60771",
+   "formula": "CoO2",
+   "dfpt": 123.22082108000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-60623",
+   "formula": "Ge3Sb2O9",
+   "dfpt": 10.08159413,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-1855",
+   "formula": "LiCrO2",
+   "dfpt": 18.114268080000002,
+   "cm": 12.09781260608314,
+   "x": 0.7872010301296306,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-48267",
+   "formula": "Li5Co2O6",
+   "dfpt": 339.34537551,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-3144",
+   "formula": "GaAgO2",
+   "dfpt": 12.23275139,
+   "cm": 7.178916235751092,
+   "x": 0.6731640290696567,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50365",
+   "formula": "BaNa4O3",
+   "dfpt": 21.083450470000002,
+   "cm": 5.040211215471874,
+   "x": 0.5738764210075019,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50821",
+   "formula": "Rb2SnO3",
+   "dfpt": 60.869311409999995,
+   "cm": 7.959861697558131,
+   "x": 0.6987909981987488,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-3147",
+   "formula": "ScAgO2",
+   "dfpt": 15.042176650000002,
+   "cm": 7.755680057894824,
+   "x": 0.6924868402616138,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1285",
+   "formula": "BaO2",
+   "dfpt": 13.270918210000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-43142",
+   "formula": "LiV3O8",
+   "dfpt": 76.71052669,
+   "cm": 9.861220408281001,
+   "x": 0.7470749301728238,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49962",
+   "formula": "KHoO2",
+   "dfpt": 16.398419009999998,
+   "cm": 11.480967442021194,
+   "x": 0.7774640423320975,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43585",
+   "formula": "Na4MnO4",
+   "dfpt": 12.86475382,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-3369",
+   "formula": "K3MnO4",
+   "dfpt": 97.83776111,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-21530",
+   "formula": "Li2SiO3",
+   "dfpt": 7.28926765,
+   "cm": 6.713134975994913,
+   "x": 0.6556922384118761,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13827",
+   "formula": "MgSiO3",
+   "dfpt": 20.66870697,
+   "cm": 15.220330831003258,
+   "x": 0.825787319103136,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-3372",
+   "formula": "Rb2NiO2",
+   "dfpt": 7.51993614,
+   "cm": 5.269218300711216,
+   "x": 0.5873008794210401,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49795",
+   "formula": "Al2O3",
+   "dfpt": 6.12128499,
+   "cm": 3.7091856092365525,
+   "x": 0.47453100926575625,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1225",
+   "formula": "Bi2O3",
+   "dfpt": 42.19224318,
+   "cm": 33.81800247299806,
+   "x": 0.9162432354439197,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12066",
+   "formula": "BiO2",
+   "dfpt": 165.96060013,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-3384",
+   "formula": "K2NiO2",
+   "dfpt": 7.39069402,
+   "cm": 4.648720218898639,
+   "x": 0.5487853449641846,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-3822",
+   "formula": "Na2Pd3O4",
+   "dfpt": 16.6591658,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pd+2"
+  },
+  {
+   "jid": "JVASP-50608",
+   "formula": "Mg2TiO4",
+   "dfpt": 20.78260574,
+   "cm": 9.78336845730245,
+   "x": 0.745403870644406,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43293",
+   "formula": "Li5Ti6FeO16",
+   "dfpt": 146.9881526,
+   "cm": 15.403278644295272,
+   "x": 0.8276186883335693,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50610",
+   "formula": "LiSiBiO4",
+   "dfpt": 31.58182162,
+   "cm": 12.173733924177224,
+   "x": 0.7883408834927633,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57577",
+   "formula": "TiFeBi2O6",
+   "dfpt": 196.16206524999998,
+   "cm": 90.4862786423818,
+   "x": 0.9675627558591675,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12195",
+   "formula": "NiO2",
+   "dfpt": 114.02630357999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-1561",
+   "formula": "NaScO2",
+   "dfpt": 19.81755182,
+   "cm": 10.809654920432056,
+   "x": 0.7658016536249664,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4089",
+   "formula": "RbBiO2",
+   "dfpt": 19.41400663,
+   "cm": 10.75770809558683,
+   "x": 0.7648480449997311,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-305",
+   "formula": "TiO2",
+   "dfpt": 1026.13634039,
+   "cm": 4.625593353479911,
+   "x": 0.5472103644235377,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-2544",
+   "formula": "KNbO3",
+   "dfpt": 57.66539139,
+   "cm": 19.60014884245382,
+   "x": 0.8611120681676194,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22567",
+   "formula": "SnO2",
+   "dfpt": 13.528738999999998,
+   "cm": 10.762208566247093,
+   "x": 0.7649309690852206,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47639",
+   "formula": "Hf3SnO8",
+   "dfpt": 20.65715862,
+   "cm": 14.050735556427583,
+   "x": 0.8130926779365798,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1480",
+   "formula": "GaCuO2",
+   "dfpt": 11.54557003,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-1306",
+   "formula": "BaO",
+   "dfpt": 43.04080563,
+   "cm": 13.791450976894485,
+   "x": 0.8100237904427213,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-110",
+   "formula": "BaTiO3",
+   "dfpt": 22.408010100000002,
+   "cm": 103.5594131604737,
+   "x": 0.9715799859986022,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49752",
+   "formula": "SrO",
+   "dfpt": 17.86337742,
+   "cm": 10.862509896269867,
+   "x": 0.7667640278457627,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-2922",
+   "formula": "K3AuO",
+   "dfpt": 13.65716624,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-1783",
+   "formula": "PrCuO2",
+   "dfpt": 13.35731648,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-1786",
+   "formula": "SmCuO2",
+   "dfpt": 12.849435490000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-1486",
+   "formula": "KPrO2",
+   "dfpt": 20.15728089,
+   "cm": 10.441735757832797,
+   "x": 0.7588760878391646,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12197",
+   "formula": "SnO2",
+   "dfpt": 11.343796430000001,
+   "cm": 8.596473144031531,
+   "x": 0.7168869340560022,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-18430",
+   "formula": "FeO2",
+   "dfpt": 132.11654283,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-50830",
+   "formula": "Na6MgO4",
+   "dfpt": 8.90432227,
+   "cm": 5.0565243628433585,
+   "x": 0.5748615259097357,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-42181",
+   "formula": "Na3VO4",
+   "dfpt": 5.3699485199999994,
+   "cm": 4.981370735275396,
+   "x": 0.570284960682344,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-234",
+   "formula": "NiO2",
+   "dfpt": 114.36749256,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-1600",
+   "formula": "KYO2",
+   "dfpt": 16.0867715,
+   "cm": 10.388706709248465,
+   "x": 0.7578439727077865,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4122",
+   "formula": "YAgO2",
+   "dfpt": 11.414510360000001,
+   "cm": 6.41368873116402,
+   "x": 0.6434381998364046,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-3027",
+   "formula": "AlAgO2",
+   "dfpt": 11.32927962,
+   "cm": 7.112080677096618,
+   "x": 0.670766742930563,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-2577",
+   "formula": "RbAuO2",
+   "dfpt": 9.061179339999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-42470",
+   "formula": "CrCuO2",
+   "dfpt": 12.90259382,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-1195",
+   "formula": "ZnO",
+   "dfpt": 11.42759086,
+   "cm": 7.770551223061735,
+   "x": 0.6929548874459603,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1546",
+   "formula": "RbErO2",
+   "dfpt": 16.74289028,
+   "cm": 14.679938692209609,
+   "x": 0.820143223823649,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-28390",
+   "formula": "K2Mg2Si2O7",
+   "dfpt": 8.51253259,
+   "cm": 9.009213549221815,
+   "x": 0.7275009712013394,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1549",
+   "formula": "RbTmO2",
+   "dfpt": 16.23513136,
+   "cm": 15.844701439884597,
+   "x": 0.831882869539374,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22571",
+   "formula": "SiO2",
+   "dfpt": 4.20816746,
+   "cm": 3.6274310084216013,
+   "x": 0.46689706270758013,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1552",
+   "formula": "RbLuO2",
+   "dfpt": 14.94918612,
+   "cm": 16.5810180713514,
+   "x": 0.8385449070400797,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12983",
+   "formula": "SrBi2O4",
+   "dfpt": 24.88594797,
+   "cm": 12.879332157962434,
+   "x": 0.7983780476064849,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1264",
+   "formula": "K2O",
+   "dfpt": 8.08064551,
+   "cm": 5.9622105328121915,
+   "x": 0.6232202115685048,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4143",
+   "formula": "KBiO2",
+   "dfpt": 20.8061287,
+   "cm": 11.234657045146077,
+   "x": 0.7733224223516789,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1234",
+   "formula": "BaTiO3",
+   "dfpt": 22.40801019,
+   "cm": 103.5594131604737,
+   "x": 0.9715799859986022,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-28392",
+   "formula": "SiO2",
+   "dfpt": 9.81911529,
+   "cm": 9.600187071671368,
+   "x": 0.741383481019349,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22734",
+   "formula": "KNbO3",
+   "dfpt": 8.92635752,
+   "cm": 21.480595215373693,
+   "x": 0.8722349253720886,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1216",
+   "formula": "Cu2O",
+   "dfpt": 9.193756950000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-13346",
+   "formula": "K6Fe2O5",
+   "dfpt": 11.40925053,
+   "cm": 5.693526395930248,
+   "x": 0.6100617784860072,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-2262",
+   "formula": "ScCuO2",
+   "dfpt": 15.55312352,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-4516",
+   "formula": "SiO2",
+   "dfpt": 4.31992095,
+   "cm": 3.8219197402262366,
+   "x": 0.48470605335355904,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52281",
+   "formula": "Mg3ZnO4",
+   "dfpt": 13.969013060000002,
+   "cm": 10.662756564971087,
+   "x": 0.7630847608411834,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-2601",
+   "formula": "Li2PdO2",
+   "dfpt": 16.6377205,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pd+2"
+  },
+  {
+   "jid": "JVASP-2829",
+   "formula": "NaPrO2",
+   "dfpt": 31.052321999999997,
+   "cm": 9.194568052835429,
+   "x": 0.7320128846561309,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1489",
+   "formula": "NdCuO2",
+   "dfpt": 13.2768557,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-1567",
+   "formula": "KErO2",
+   "dfpt": 15.91914217,
+   "cm": 11.512824848301262,
+   "x": 0.7779886860313194,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-42495",
+   "formula": "Na2FeO2",
+   "dfpt": 128.15526031000002,
+   "cm": 7.163029039705758,
+   "x": 0.6725973488679093,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22572",
+   "formula": "SiO2",
+   "dfpt": 3.79884474,
+   "cm": 3.222599306646127,
+   "x": 0.4255733928922542,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49166",
+   "formula": "SnB4O7",
+   "dfpt": 27.77727125,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-4152",
+   "formula": "NdO2",
+   "dfpt": 14.09792039,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-1573",
+   "formula": "RbNdO2",
+   "dfpt": 20.22363076,
+   "cm": 12.419153383445966,
+   "x": 0.7919434019306448,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-18883",
+   "formula": "CoO2",
+   "dfpt": 147.4317672,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-3039",
+   "formula": "Ba4Sb2O",
+   "dfpt": 31.795274159999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb-3"
+  },
+  {
+   "jid": "JVASP-49137",
+   "formula": "Li2MnSiO4",
+   "dfpt": 137.06132426,
+   "cm": 7.880863187325049,
+   "x": 0.6963828014693764,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1576",
+   "formula": "RbSmO2",
+   "dfpt": 19.17970246,
+   "cm": 13.428632376417497,
+   "x": 0.8055563236709516,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52227",
+   "formula": "TbBi5O9",
+   "dfpt": 46.96782707,
+   "cm": 29.702724594012885,
+   "x": 0.9053709093329299,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13350",
+   "formula": "TaBi3O7",
+   "dfpt": 73.35450042,
+   "cm": 51.821022178676934,
+   "x": 0.9442596985608989,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49143",
+   "formula": "TiVO4",
+   "dfpt": 491.26955757999997,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+4"
+  },
+  {
+   "jid": "JVASP-1516",
+   "formula": "RbHoO2",
+   "dfpt": 17.17644361,
+   "cm": 14.560012496164065,
+   "x": 0.8188407164128098,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-2616",
+   "formula": "RbScO2",
+   "dfpt": 21.76205923,
+   "cm": 19.31556088283969,
+   "x": 0.8592577499372686,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-284",
+   "formula": "SnO2",
+   "dfpt": 11.3428995,
+   "cm": 8.593374196352674,
+   "x": 0.7168041131754878,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-275",
+   "formula": "PtO2",
+   "dfpt": 14.49733374,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+4"
+  },
+  {
+   "jid": "JVASP-12160",
+   "formula": "Al2Si4O11",
+   "dfpt": 5.51743628,
+   "cm": 4.095297591380249,
+   "x": 0.5078173042375335,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52228",
+   "formula": "HoBO3",
+   "dfpt": 12.25913208,
+   "cm": 8.506940562567577,
+   "x": 0.7144744483767317,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47453",
+   "formula": "Li4FeO3",
+   "dfpt": 88.73247755,
+   "cm": 7.4654225909459555,
+   "x": 0.6830569400177001,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43170",
+   "formula": "NaMnO2",
+   "dfpt": 21.14019446,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3"
+  },
+  {
+   "jid": "JVASP-13357",
+   "formula": "Li7NbO6",
+   "dfpt": 16.44050318,
+   "cm": 11.884628708425575,
+   "x": 0.7839337253448112,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1231",
+   "formula": "BaTiO3",
+   "dfpt": 50.16016569,
+   "cm": 90.30721108851736,
+   "x": 0.9674998305698655,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12047",
+   "formula": "CoO2",
+   "dfpt": 149.4438504,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-1240",
+   "formula": "LiNbO3",
+   "dfpt": 44.261090710000005,
+   "cm": 19.639004448976287,
+   "x": 0.8613614592541051,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50229",
+   "formula": "LiCuO",
+   "dfpt": 9.0353341,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-7756",
+   "formula": "NbAgO3",
+   "dfpt": 14.830715990000002,
+   "cm": 13.098279109414365,
+   "x": 0.8013018584264094,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49763",
+   "formula": "TmBiO3",
+   "dfpt": 53.418276770000006,
+   "cm": 22.333075311740128,
+   "x": 0.876711021456767,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52283",
+   "formula": "DyBO3",
+   "dfpt": 12.33497241,
+   "cm": 8.45396160350302,
+   "x": 0.7130274518136044,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7675",
+   "formula": "Sm2O3",
+   "dfpt": 20.26913933,
+   "cm": 22.4814436810793,
+   "x": 0.8774582071596302,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29315",
+   "formula": "V2O5",
+   "dfpt": 61.700679210000004,
+   "cm": 14.522999089470657,
+   "x": 0.8184348989093777,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1453",
+   "formula": "AlCuO2",
+   "dfpt": 10.341212259999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-22573",
+   "formula": "TiO2",
+   "dfpt": 34.6834787,
+   "cm": 12.861064008906657,
+   "x": 0.798130201296353,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22575",
+   "formula": "SiO2",
+   "dfpt": 4.01834924,
+   "cm": 3.430979828264024,
+   "x": 0.44761348875071594,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7633",
+   "formula": "SiO2",
+   "dfpt": 43.36458618,
+   "cm": 18.641043804704125,
+   "x": 0.8546585129906902,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50884",
+   "formula": "ScBiO3",
+   "dfpt": 47.61657963,
+   "cm": 30.210558437952372,
+   "x": 0.9068628379796972,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1498",
+   "formula": "NaInO2",
+   "dfpt": 11.86203057,
+   "cm": 7.907671895893109,
+   "x": 0.697204345125362,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7760",
+   "formula": "BaTiO3",
+   "dfpt": 22.41559788,
+   "cm": 103.72649141961833,
+   "x": 0.9716248977931814,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7991",
+   "formula": "ZnO",
+   "dfpt": 28.8237889,
+   "cm": 16.806014583370192,
+   "x": 0.8404765673928146,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13286",
+   "formula": "NbBi3O7",
+   "dfpt": 69.52687983,
+   "cm": 36.51301371783916,
+   "x": 0.9221042522930267,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49764",
+   "formula": "NaAgO2",
+   "dfpt": 15.60736128,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-7888",
+   "formula": "Li2MnO2",
+   "dfpt": 29.70694424,
+   "cm": 15.143484553961528,
+   "x": 0.8250064045872892,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7764",
+   "formula": "Sc2O3",
+   "dfpt": 26.98530605,
+   "cm": 22.3688844653519,
+   "x": 0.8768921899455245,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1594",
+   "formula": "KScO2",
+   "dfpt": 20.54294217,
+   "cm": 13.758957031593297,
+   "x": 0.8096320718442439,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7765",
+   "formula": "Y2O3",
+   "dfpt": 19.78144345,
+   "cm": 16.443048790269504,
+   "x": 0.837337089213645,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13360",
+   "formula": "Li7SbO6",
+   "dfpt": 11.08801783,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-50976",
+   "formula": "LiTmO2",
+   "dfpt": 22.49459228,
+   "cm": 11.625848046388112,
+   "x": 0.7798302175551394,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7766",
+   "formula": "Tb2O3",
+   "dfpt": 19.43656749,
+   "cm": 22.556069457796422,
+   "x": 0.8778306110773963,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50250",
+   "formula": "LiSbO2",
+   "dfpt": 13.94157092,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-7767",
+   "formula": "Dy2O3",
+   "dfpt": 19.19118753,
+   "cm": 21.30209654455555,
+   "x": 0.8712562196168164,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8801",
+   "formula": "HoTaO4",
+   "dfpt": 19.41709204,
+   "cm": null,
+   "x": 1.0159104218649542,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-47502",
+   "formula": "Co5O8",
+   "dfpt": 420.72973582,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-22611",
+   "formula": "SiO2",
+   "dfpt": 4.01577974,
+   "cm": 3.2514175681294244,
+   "x": 0.42872568005126055,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7768",
+   "formula": "Ho2O3",
+   "dfpt": 19.07608108,
+   "cm": 21.66423190204671,
+   "x": 0.8732263944835441,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1609",
+   "formula": "NaRhO2",
+   "dfpt": 12.0091014,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Rh+3"
+  },
+  {
+   "jid": "JVASP-7769",
+   "formula": "Er2O3",
+   "dfpt": 18.8972663,
+   "cm": 20.9883169109587,
+   "x": 0.8694989280154791,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7770",
+   "formula": "Tm2O3",
+   "dfpt": 18.57773265,
+   "cm": 24.566028318381164,
+   "x": 0.8870738236048523,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8053",
+   "formula": "NaTaO3",
+   "dfpt": 45.26284483,
+   "cm": 16.519167372699453,
+   "x": 0.8380056759774992,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8138",
+   "formula": "NaAlO2",
+   "dfpt": 9.53107949,
+   "cm": 8.68069401789097,
+   "x": 0.7191193760466527,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29367",
+   "formula": "SnO",
+   "dfpt": 15.536927,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-7773",
+   "formula": "SrHfO3",
+   "dfpt": 315.05969691999996,
+   "cm": 13.491271011278094,
+   "x": 0.8063425526662136,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29368",
+   "formula": "Ba2DyBiO6",
+   "dfpt": 36.94450621,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+5"
+  },
+  {
+   "jid": "JVASP-13367",
+   "formula": "Ca3SiO5",
+   "dfpt": 13.23587038,
+   "cm": 7.607106873968683,
+   "x": 0.6877311724168731,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8057",
+   "formula": "KNbO3",
+   "dfpt": 20.95267798,
+   "cm": 19.919617091992986,
+   "x": 0.8631362953372087,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-21247",
+   "formula": "Zn4B6O13",
+   "dfpt": 7.60395373,
+   "cm": 7.4104502161517924,
+   "x": 0.6812054757113643,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8099",
+   "formula": "BaTiO3",
+   "dfpt": 38.219695470000005,
+   "cm": 91.7875332074143,
+   "x": 0.9680128062077782,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49768",
+   "formula": "NaTmO2",
+   "dfpt": 25.78188999,
+   "cm": 11.423820752054029,
+   "x": 0.776516682142008,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47515",
+   "formula": "Li4MnSi2O7",
+   "dfpt": 7.00738286,
+   "cm": 7.324808312253374,
+   "x": 0.678277568874224,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8101",
+   "formula": "CaTiO3",
+   "dfpt": 24.74689779,
+   "cm": 21.316211463235547,
+   "x": 0.871334157149401,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8235",
+   "formula": "AlCuO2",
+   "dfpt": 10.33498631,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-8623",
+   "formula": "FeBiO3",
+   "dfpt": 213.61164912,
+   "cm": null,
+   "x": 0.9958964632589071,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-7900",
+   "formula": "VAg3O4",
+   "dfpt": 11.736314329999999,
+   "cm": 5.872253723284836,
+   "x": 0.6189147218252771,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47558",
+   "formula": "Li5VSi2O8",
+   "dfpt": 8.53755659,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+3"
+  },
+  {
+   "jid": "JVASP-8362",
+   "formula": "YCuO2",
+   "dfpt": 11.929449739999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-26879",
+   "formula": "BaYFeCuO5",
+   "dfpt": 461.02529841,
+   "cm": 24.70151641201946,
+   "x": 0.8876468304755315,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8060",
+   "formula": "NaCuO2",
+   "dfpt": 14.43915541,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+3"
+  },
+  {
+   "jid": "JVASP-240",
+   "formula": "NiO2",
+   "dfpt": 21.19025755,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-8104",
+   "formula": "CaSiO3",
+   "dfpt": 22.18144414,
+   "cm": 28.997614122758204,
+   "x": 0.9032183577703994,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7992",
+   "formula": "GeO2",
+   "dfpt": 6.72881046,
+   "cm": 5.058363994005537,
+   "x": 0.5749723303377648,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8061",
+   "formula": "SrHfO3",
+   "dfpt": 294.75804221,
+   "cm": 13.491049435411764,
+   "x": 0.8063397826914069,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8533",
+   "formula": "NaO3",
+   "dfpt": 5.96452137,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-22578",
+   "formula": "SiO2",
+   "dfpt": 4.08131643,
+   "cm": 3.5217373353466095,
+   "x": 0.45669273675951044,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8148",
+   "formula": "RbO",
+   "dfpt": 6.07503627,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-8655",
+   "formula": "KAuO2",
+   "dfpt": 12.334794200000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-237",
+   "formula": "NiO2",
+   "dfpt": 18.4557741,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-7689",
+   "formula": "LiErO2",
+   "dfpt": 25.09881675,
+   "cm": 10.68009146011395,
+   "x": 0.7634086465829766,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8810",
+   "formula": "TiO2",
+   "dfpt": 65.87529523,
+   "cm": 16.042100926290228,
+   "x": 0.8337222470788577,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11412",
+   "formula": "SrAl2B2O7",
+   "dfpt": 5.90391371,
+   "cm": 3.8992255320800706,
+   "x": 0.4914586696701188,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8150",
+   "formula": "SiO2",
+   "dfpt": 5.14180506,
+   "cm": 4.484370430227623,
+   "x": 0.5373490715436054,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8766",
+   "formula": "Nd2O3",
+   "dfpt": 7.8911633000000005,
+   "cm": 9.66584544388118,
+   "x": 0.742839041162377,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8064",
+   "formula": "ScCuO2",
+   "dfpt": 15.60430297,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-11169",
+   "formula": "K3NbO8",
+   "dfpt": 18.4589513,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-52299",
+   "formula": "TaGaO4",
+   "dfpt": 26.193577570000002,
+   "cm": 31.497457628272407,
+   "x": 0.9104409644071629,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8065",
+   "formula": "GeO2",
+   "dfpt": 15.90903353,
+   "cm": 14.037818523918089,
+   "x": 0.8129421407577387,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7692",
+   "formula": "GaCuO2",
+   "dfpt": 11.539491739999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-8029",
+   "formula": "BaTiO3",
+   "dfpt": 7.471917660000001,
+   "cm": null,
+   "x": 0.9870241886610728,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-7693",
+   "formula": "ScAuO2",
+   "dfpt": 16.18164173,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-47811",
+   "formula": "LiFeSiO4",
+   "dfpt": 12.59682782,
+   "cm": 4.253522981177301,
+   "x": 0.5202704125290968,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52944",
+   "formula": "Li4MoO5",
+   "dfpt": 19.253252,
+   "cm": 18.96138218794407,
+   "x": 0.8568796669465123,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13301",
+   "formula": "LiMn4O8",
+   "dfpt": 158.05125628000002,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-27529",
+   "formula": "NaAlSiO4",
+   "dfpt": 6.1128663,
+   "cm": 3.740105028572297,
+   "x": 0.4773614794386137,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7655",
+   "formula": "Nb2O5",
+   "dfpt": 40.47699684,
+   "cm": 49.49224174202981,
+   "x": 0.9417387960106757,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8245",
+   "formula": "MnO2",
+   "dfpt": 27.50453439,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-7819",
+   "formula": "Nb2O5",
+   "dfpt": 28.971282260000002,
+   "cm": 9.411371090811194,
+   "x": 0.7371043342534275,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-54225",
+   "formula": "SiO2",
+   "dfpt": 3.18331154,
+   "cm": 2.441682281459399,
+   "x": 0.324580235618678,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8153",
+   "formula": "Mg2SiO4",
+   "dfpt": 10.508815160000001,
+   "cm": 9.622301356293947,
+   "x": 0.7418755625042042,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7789",
+   "formula": "Rb2O",
+   "dfpt": 9.34396396,
+   "cm": 7.44479242856302,
+   "x": 0.6823646445709728,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52189",
+   "formula": "Ca2SiB2O7",
+   "dfpt": 9.85142514,
+   "cm": 8.920166034742993,
+   "x": 0.7252789023119826,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8247",
+   "formula": "NiO2",
+   "dfpt": 18.392410820000002,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-8115",
+   "formula": "KNaO",
+   "dfpt": 12.963201770000001,
+   "cm": 6.53471483401542,
+   "x": 0.6484944068613295,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8032",
+   "formula": "AlCuO2",
+   "dfpt": 10.3395115,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-8248",
+   "formula": "NiO2",
+   "dfpt": 19.777464,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-50122",
+   "formula": "LiTa2CuO6",
+   "dfpt": 66.23571491999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-47815",
+   "formula": "LiFeSiO4",
+   "dfpt": 8.80203144,
+   "cm": 5.777092686110251,
+   "x": 0.6142517363387032,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8116",
+   "formula": "YCuO2",
+   "dfpt": 11.933258219999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-308",
+   "formula": "TiO2",
+   "dfpt": 194.95034993,
+   "cm": 16.141044309393717,
+   "x": 0.8346291454430463,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8155",
+   "formula": "LiGaO2",
+   "dfpt": 18.80685536,
+   "cm": 11.552861714979926,
+   "x": 0.7786445355165019,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29506",
+   "formula": "V2MoO8",
+   "dfpt": 75.88682295,
+   "cm": 9.0160083610007,
+   "x": 0.7276690520115511,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47823",
+   "formula": "LiFeSiO4",
+   "dfpt": 7.36397653,
+   "cm": 4.165509838918641,
+   "x": 0.5134222345955797,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50131",
+   "formula": "BaNa2O2",
+   "dfpt": 28.67134175,
+   "cm": 7.552030113455614,
+   "x": 0.6859306383703707,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8162",
+   "formula": "RbScO2",
+   "dfpt": 22.64414125,
+   "cm": 19.042576491677615,
+   "x": 0.8574319071057431,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-5308",
+   "formula": "MnO2",
+   "dfpt": 220.90702377,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-50514",
+   "formula": "Rb4SnO3",
+   "dfpt": 9.67751434,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-8640",
+   "formula": "LiMnO2",
+   "dfpt": 17.13874561,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3"
+  },
+  {
+   "jid": "JVASP-311",
+   "formula": "Ti2O",
+   "dfpt": 50.50657683,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-9119",
+   "formula": "NaO",
+   "dfpt": 6.91627308,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-50294",
+   "formula": "LiBiB2O5",
+   "dfpt": 52.24690513,
+   "cm": 17.706079603730288,
+   "x": 0.847762717885697,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8706",
+   "formula": "YAuO2",
+   "dfpt": 11.89753713,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-30201",
+   "formula": "Mg2SnO4",
+   "dfpt": 12.77864086,
+   "cm": 8.345557491511414,
+   "x": 0.71002046023508,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8642",
+   "formula": "MnO2",
+   "dfpt": 27.4771243,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-8020",
+   "formula": "Nd2O3",
+   "dfpt": 21.375015939999997,
+   "cm": 19.823370813931465,
+   "x": 0.8625326937081196,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50889",
+   "formula": "NaSmO2",
+   "dfpt": 32.76390176,
+   "cm": 9.9514364688642,
+   "x": 0.7489841486573117,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50518",
+   "formula": "TiO2",
+   "dfpt": 110.58042298000001,
+   "cm": 17.80189559945599,
+   "x": 0.8484993527547727,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7923",
+   "formula": "ZnO",
+   "dfpt": 12.76479029,
+   "cm": 7.808644017995677,
+   "x": 0.6941473261241845,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12528",
+   "formula": "GeBi2O5",
+   "dfpt": 36.88804667,
+   "cm": 17.59286755567651,
+   "x": 0.8468830562205872,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8127",
+   "formula": "K2Sn2O3",
+   "dfpt": 11.58380375,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-8645",
+   "formula": "NiO2",
+   "dfpt": 19.744998719999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-8614",
+   "formula": "CoO",
+   "dfpt": 139.04442774,
+   "cm": 7.546468727221205,
+   "x": 0.6857476742739781,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8256",
+   "formula": "TiO2",
+   "dfpt": 159.22623734,
+   "cm": 10.684440963708838,
+   "x": 0.7634897739219859,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7881",
+   "formula": "Li2NiO2",
+   "dfpt": 13.80525441,
+   "cm": 7.598247962477093,
+   "x": 0.6874429571180023,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8257",
+   "formula": "SnO2",
+   "dfpt": 11.45950887,
+   "cm": 9.322163493558802,
+   "x": 0.7350329730084975,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11748",
+   "formula": "Na4FeO3",
+   "dfpt": 11.17646546,
+   "cm": 4.589640401372179,
+   "x": 0.5447399528242388,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8826",
+   "formula": "Na2CeO3",
+   "dfpt": 28.40108298,
+   "cm": 5.185545298871037,
+   "x": 0.5824951516941452,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-7982",
+   "formula": "Pr2O3",
+   "dfpt": 21.64449665,
+   "cm": 21.237107320488825,
+   "x": 0.8708961507719675,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8259",
+   "formula": "AlCuO2",
+   "dfpt": 10.339653720000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-8827",
+   "formula": "Li3TaO4",
+   "dfpt": 110.73353444,
+   "cm": 58.52621411213901,
+   "x": 0.9504346993446212,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50139",
+   "formula": "Na2O",
+   "dfpt": 6.94206479,
+   "cm": 4.711969912407618,
+   "x": 0.5530373289584839,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11006",
+   "formula": "KAlO2",
+   "dfpt": 8.018103609999999,
+   "cm": 5.653737234332865,
+   "x": 0.6080346230671853,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50893",
+   "formula": "NaLuO2",
+   "dfpt": 25.335651350000003,
+   "cm": 11.799164011773009,
+   "x": 0.7825955255375981,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8038",
+   "formula": "Sr2SnO4",
+   "dfpt": 33.124836959999996,
+   "cm": 10.662211307916442,
+   "x": 0.7630745588549456,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8263",
+   "formula": "MgV2O6",
+   "dfpt": 33.02507577,
+   "cm": 5.354609189159135,
+   "x": 0.5920925336968184,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47899",
+   "formula": "Li7Cr2O8",
+   "dfpt": 109.30997603,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+4"
+  },
+  {
+   "jid": "JVASP-45407",
+   "formula": "K3Ta3B2O12",
+   "dfpt": 62.78708164,
+   "cm": 11.761371733340939,
+   "x": 0.7819984767411213,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8266",
+   "formula": "TiO2",
+   "dfpt": 193.73254622,
+   "cm": 16.000040920194365,
+   "x": 0.8333337122231605,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8173",
+   "formula": "RbNaO",
+   "dfpt": 13.103366770000001,
+   "cm": 8.15372452894105,
+   "x": 0.7045419154863682,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8082",
+   "formula": "SrTiO3",
+   "dfpt": 9.96297086,
+   "cm": 31.255034866188897,
+   "x": 0.9097880963868673,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29374",
+   "formula": "TiZnBi2O6",
+   "dfpt": 22.061892020000002,
+   "cm": 23.81645238411649,
+   "x": 0.8837950328974812,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9401",
+   "formula": "NaGaO2",
+   "dfpt": 7.01380168,
+   "cm": 4.971822070356157,
+   "x": 0.5696964194258698,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30282",
+   "formula": "TiCo3O8",
+   "dfpt": 228.01738816,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-8083",
+   "formula": "KNbO3",
+   "dfpt": 39.07002427,
+   "cm": 19.616331983217986,
+   "x": 0.8612160470921212,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8392",
+   "formula": "NiO2",
+   "dfpt": 20.63900137,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-8175",
+   "formula": "Ca2SiO4",
+   "dfpt": 17.5934685,
+   "cm": 17.33500099530716,
+   "x": 0.844840969973152,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50657",
+   "formula": "LiSiBi3O7",
+   "dfpt": 36.81959767,
+   "cm": 24.207850905422635,
+   "x": 0.885530484326005,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49817",
+   "formula": "HoCuO2",
+   "dfpt": 12.0898576,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-116",
+   "formula": "MgO",
+   "dfpt": 10.28397003,
+   "cm": 9.464884261032998,
+   "x": 0.7383314186435845,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52600",
+   "formula": "Bi2O3",
+   "dfpt": 46.294201120000004,
+   "cm": 16.69110654035228,
+   "x": 0.8394958589785312,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50083",
+   "formula": "LiBiB2O5",
+   "dfpt": 47.83372087,
+   "cm": 8.866852654808723,
+   "x": 0.7239311054178634,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10852",
+   "formula": "TiZnBi2O6",
+   "dfpt": 22.03238617,
+   "cm": 23.801861637899023,
+   "x": 0.8837293199187823,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11387",
+   "formula": "Li2GeO3",
+   "dfpt": 7.82617069,
+   "cm": 6.652051302434488,
+   "x": 0.6532614179996981,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8569",
+   "formula": "GaBiO3",
+   "dfpt": 10.121312739999999,
+   "cm": 105.88214173448465,
+   "x": 0.9721918757658382,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30506",
+   "formula": "AgBiO2",
+   "dfpt": 30.54203847,
+   "cm": 9.75653386063099,
+   "x": 0.7448227483062779,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11504",
+   "formula": "Ba2Ti3O8",
+   "dfpt": 610.8213914099999,
+   "cm": 14.542145066880106,
+   "x": 0.8186450434408016,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-51898",
+   "formula": "Tb3BWO9",
+   "dfpt": 16.364911539999998,
+   "cm": 17.05783716988066,
+   "x": 0.8425844457973829,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30422",
+   "formula": "V2O5",
+   "dfpt": 28.653700739999998,
+   "cm": 9.612396175449092,
+   "x": 0.7416553866511552,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50085",
+   "formula": "TiO",
+   "dfpt": 64.97994218,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ti+2"
+  },
+  {
+   "jid": "JVASP-11507",
+   "formula": "MoO3",
+   "dfpt": 31.22098402,
+   "cm": 8.838630726431322,
+   "x": 0.7232122695458076,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11766",
+   "formula": "BaCoO2",
+   "dfpt": 872.08538706,
+   "cm": 10.657634275795441,
+   "x": 0.7629888860245592,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8395",
+   "formula": "SnO2",
+   "dfpt": 11.3433836,
+   "cm": 8.59591266431779,
+   "x": 0.7168719585522223,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-51899",
+   "formula": "Dy3BWO9",
+   "dfpt": 16.32285994,
+   "cm": 16.617791933431192,
+   "x": 0.8388638131349494,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8033",
+   "formula": "NaNbO3",
+   "dfpt": 26.43419457,
+   "cm": 10.972619678352835,
+   "x": 0.7687437021678788,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8575",
+   "formula": "AlBiO3",
+   "dfpt": 9.19552998,
+   "cm": null,
+   "x": 1.0007477878451019,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-8093",
+   "formula": "BaCeO3",
+   "dfpt": 10.98125248,
+   "cm": 11.194715972213425,
+   "x": 0.7726362578536999,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9738",
+   "formula": "Na2GeO3",
+   "dfpt": 8.02539165,
+   "cm": 4.771770704229357,
+   "x": 0.5569844090960834,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-14248",
+   "formula": "Ca2MgSi2O7",
+   "dfpt": 12.85382623,
+   "cm": 6.16637853781468,
+   "x": 0.6326401003690433,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29377",
+   "formula": "TiZnBi2O6",
+   "dfpt": 30.03774346,
+   "cm": 25.466114878952286,
+   "x": 0.8907745047589913,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30423",
+   "formula": "CoO2",
+   "dfpt": 123.08303513999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-12063",
+   "formula": "CoO2",
+   "dfpt": 49.48170118,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+4"
+  },
+  {
+   "jid": "JVASP-30507",
+   "formula": "AgBiO2",
+   "dfpt": 30.16878189,
+   "cm": 8.902681282540245,
+   "x": 0.7248383290077226,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50307",
+   "formula": "NaDyO2",
+   "dfpt": 28.883712019999997,
+   "cm": 10.417719234397133,
+   "x": 0.7584097414853778,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50095",
+   "formula": "NaLuO2",
+   "dfpt": 15.24815142,
+   "cm": 10.493425731933987,
+   "x": 0.7598737076307414,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34252",
+   "formula": "BaCuB2O5",
+   "dfpt": 11.80507888,
+   "cm": 6.603340284679281,
+   "x": 0.6512982282774097,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-53030",
+   "formula": "WO3",
+   "dfpt": 14.57006552,
+   "cm": 7.562795067444292,
+   "x": 0.6862841900467741,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30559",
+   "formula": "NiO2",
+   "dfpt": 18.38753682,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-34653",
+   "formula": "InBiO3",
+   "dfpt": 38.80959687,
+   "cm": 19.963604250065213,
+   "x": 0.8634103963154821,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8456",
+   "formula": "GeO2",
+   "dfpt": 145.73448987,
+   "cm": 5.95626845018596,
+   "x": 0.6229388162575281,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49861",
+   "formula": "LiLuO2",
+   "dfpt": 24.71900447,
+   "cm": 12.354650948348908,
+   "x": 0.7910085023457109,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34204",
+   "formula": "SrSnO3",
+   "dfpt": 56.68733693,
+   "cm": 12.888433456325002,
+   "x": 0.7985012990923152,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34454",
+   "formula": "SiO2",
+   "dfpt": 3.51110598,
+   "cm": 2.802022811680586,
+   "x": 0.3752632759880463,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12625",
+   "formula": "FeBiO3",
+   "dfpt": 137.7644412,
+   "cm": null,
+   "x": 1.0144740867979847,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-9743",
+   "formula": "LiGaO2",
+   "dfpt": 7.463841499999999,
+   "cm": 6.387149588932699,
+   "x": 0.6423099447327536,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57482",
+   "formula": "La2MoO6",
+   "dfpt": 16.6600605,
+   "cm": 10.908879104329124,
+   "x": 0.7676018207503454,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9866",
+   "formula": "MgSn2O4",
+   "dfpt": 171.46207449000002,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+3"
+  },
+  {
+   "jid": "JVASP-34656",
+   "formula": "SiO2",
+   "dfpt": 4.31661583,
+   "cm": 3.8177028631919407,
+   "x": 0.48433255005498504,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30560",
+   "formula": "NiO2",
+   "dfpt": 19.76186815,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-9407",
+   "formula": "LiAlO2",
+   "dfpt": 6.66606294,
+   "cm": 5.384708352664634,
+   "x": 0.593755114388843,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10875",
+   "formula": "AlAgO2",
+   "dfpt": 10.6029929,
+   "cm": 5.153309833503217,
+   "x": 0.5806137201062912,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12064",
+   "formula": "VO2",
+   "dfpt": 971.87997971,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+4"
+  },
+  {
+   "jid": "JVASP-57226",
+   "formula": "CrO3",
+   "dfpt": 12.14144357,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+6"
+  },
+  {
+   "jid": "JVASP-30671",
+   "formula": "AlSbO3",
+   "dfpt": 36.89895435,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-34318",
+   "formula": "Ba3Ga2Ge4O14",
+   "dfpt": 10.69012839,
+   "cm": 8.615237652503186,
+   "x": 0.7173873917657823,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34259",
+   "formula": "V2ZnO6",
+   "dfpt": 33.63169911,
+   "cm": 15.16715504140149,
+   "x": 0.8252476899774602,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34188",
+   "formula": "SiO",
+   "dfpt": 33.877052840000005,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-42378",
+   "formula": "Na2SnO2",
+   "dfpt": 16.050403680000002,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-34659",
+   "formula": "SiO2",
+   "dfpt": 3.74796286,
+   "cm": 2.931061735972408,
+   "x": 0.39161175409449656,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34560",
+   "formula": "Zn2SiO4",
+   "dfpt": 9.336338640000001,
+   "cm": 6.962693683904852,
+   "x": 0.6652792000035234,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34219",
+   "formula": "SiO2",
+   "dfpt": 4.87729435,
+   "cm": 4.439940156940996,
+   "x": 0.5341571618850236,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50529",
+   "formula": "NbRhO4",
+   "dfpt": 42.880998739999995,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Rh+3"
+  },
+  {
+   "jid": "JVASP-30565",
+   "formula": "TiO2",
+   "dfpt": 156.14610104,
+   "cm": 10.835066478018733,
+   "x": 0.7662653321556391,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34660",
+   "formula": "SiO2",
+   "dfpt": 4.23995287,
+   "cm": 3.6736461377847176,
+   "x": 0.47123949447235813,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9938",
+   "formula": "Ca2YSbO5",
+   "dfpt": 25.77224616,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-45378",
+   "formula": "BaSi4O9",
+   "dfpt": 8.70654504,
+   "cm": 6.912239734554916,
+   "x": 0.663384279445685,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50160",
+   "formula": "Rb2O",
+   "dfpt": 9.43931152,
+   "cm": 7.4314060153859485,
+   "x": 0.681913810612549,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30566",
+   "formula": "TiZnBi2O6",
+   "dfpt": 22.04210141,
+   "cm": 23.802459330837706,
+   "x": 0.8837320132343136,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34221",
+   "formula": "LiGeBO4",
+   "dfpt": 14.06464016,
+   "cm": 6.130217616534302,
+   "x": 0.6310061868579083,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30568",
+   "formula": "V2O5",
+   "dfpt": 19.1284271,
+   "cm": 6.793970002700825,
+   "x": 0.6588571488100786,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34269",
+   "formula": "AlBiO3",
+   "dfpt": 62.91724173,
+   "cm": 80.40193141577268,
+   "x": 0.9635930863699905,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50915",
+   "formula": "SmAgO2",
+   "dfpt": 12.11779715,
+   "cm": 6.656305448876221,
+   "x": 0.6534318228812656,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-8388",
+   "formula": "MoWO6",
+   "dfpt": 37.49284226,
+   "cm": 8.824609385408037,
+   "x": 0.7228537406583827,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-78494",
+   "formula": "CaO2",
+   "dfpt": 10.79973142,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-30569",
+   "formula": "SnO2",
+   "dfpt": 11.44271442,
+   "cm": 9.309710070718687,
+   "x": 0.7347412107612621,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11782",
+   "formula": "Rb2LiVO4",
+   "dfpt": 7.49746378,
+   "cm": 8.07916338219008,
+   "x": 0.7023562486048186,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9563",
+   "formula": "Zn2Bi2O5",
+   "dfpt": 108.66024404,
+   "cm": 17.547974968517465,
+   "x": 0.8465314179687881,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12739",
+   "formula": "Au2O3",
+   "dfpt": 12.80611327,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-34279",
+   "formula": "LiNbO3",
+   "dfpt": 44.68693707999999,
+   "cm": 19.627999855107088,
+   "x": 0.8612909182495856,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10806",
+   "formula": "TiO2",
+   "dfpt": 23.90693178,
+   "cm": 12.605734744358484,
+   "x": 0.7946012266751071,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11785",
+   "formula": "LiMnBO3",
+   "dfpt": 8.54101422,
+   "cm": 7.519570393749696,
+   "x": 0.6848597283371398,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30514",
+   "formula": "RbAgO2",
+   "dfpt": 10.48905051,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-50168",
+   "formula": "KRbO",
+   "dfpt": 6.60434716,
+   "cm": 6.638722339763677,
+   "x": 0.652726423884337,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34228",
+   "formula": "MgO",
+   "dfpt": 6.997768069999999,
+   "cm": 5.171701132776662,
+   "x": 0.5816892053282633,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12790",
+   "formula": "LiBO2",
+   "dfpt": 9.53672583,
+   "cm": 10.744491464527211,
+   "x": 0.7646041814732156,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30349",
+   "formula": "MnO2",
+   "dfpt": 27.8391401,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-79248",
+   "formula": "CaO",
+   "dfpt": 12.781019429999999,
+   "cm": 6.694836084801774,
+   "x": 0.6549676186255103,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9946",
+   "formula": "Ca2YSnO5",
+   "dfpt": 19.09117601,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+3"
+  },
+  {
+   "jid": "JVASP-34231",
+   "formula": "ScBiO3",
+   "dfpt": 13.086371,
+   "cm": 43.90601213116519,
+   "x": 0.9346490827513347,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34289",
+   "formula": "TiO2",
+   "dfpt": 9.249743290000001,
+   "cm": 4.78962933640675,
+   "x": 0.558149664531219,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34330",
+   "formula": "SiO2",
+   "dfpt": 3.6466537199999998,
+   "cm": 2.7589382915871163,
+   "x": 0.36960729133567033,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58260",
+   "formula": "SiO2",
+   "dfpt": 4.69762519,
+   "cm": 3.8508090465194353,
+   "x": 0.4872503997058905,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34584",
+   "formula": "SiO2",
+   "dfpt": 6.47755232,
+   "cm": 4.830942146907764,
+   "x": 0.5608219282960781,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30515",
+   "formula": "KAgO2",
+   "dfpt": 10.8369505,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-79569",
+   "formula": "MgO",
+   "dfpt": 10.26867998,
+   "cm": 5.923686922515242,
+   "x": 0.6213883726935919,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34291",
+   "formula": "SiO2",
+   "dfpt": 7.19846456,
+   "cm": 6.548581976305226,
+   "x": 0.6490646041278735,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10496",
+   "formula": "NaAlO2",
+   "dfpt": 6.24044084,
+   "cm": 4.675067788305353,
+   "x": 0.5505663619992043,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36222",
+   "formula": "TiO2",
+   "dfpt": 10.89534572,
+   "cm": null,
+   "x": 1.035516901247725,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-79759",
+   "formula": "CuBO2",
+   "dfpt": 19.05032987,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-9564",
+   "formula": "Mg2Sb2O5",
+   "dfpt": 23.74057469,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-79526",
+   "formula": "CaO",
+   "dfpt": 9.67290389,
+   "cm": 5.171508891608526,
+   "x": 0.5816779919898951,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-78874",
+   "formula": "GaAgO2",
+   "dfpt": 12.24056619,
+   "cm": 7.180340360887335,
+   "x": 0.6732147303839144,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9788",
+   "formula": "Na2ZnSiO4",
+   "dfpt": 6.47052314,
+   "cm": 5.423861492261874,
+   "x": 0.5958976331755388,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34621",
+   "formula": "SiO2",
+   "dfpt": 4.53934042,
+   "cm": 3.632152347699621,
+   "x": 0.46734395399916506,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30358",
+   "formula": "TiV2CrO10",
+   "dfpt": 41.3398393,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+6"
+  },
+  {
+   "jid": "JVASP-9565",
+   "formula": "Zn2Sb2O5",
+   "dfpt": 38.14189014,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-34636",
+   "formula": "SiO2",
+   "dfpt": 5.65264111,
+   "cm": 5.067849929765403,
+   "x": 0.5755427704589681,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34637",
+   "formula": "BaNa2Si2O6",
+   "dfpt": 8.79222311,
+   "cm": 6.153640178567703,
+   "x": 0.632066177278013,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9789",
+   "formula": "Na2ZnGeO4",
+   "dfpt": 6.89437043,
+   "cm": 5.296155854803281,
+   "x": 0.5888245728707935,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36358",
+   "formula": "CrO2",
+   "dfpt": 55.33853122,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+4"
+  },
+  {
+   "jid": "JVASP-55631",
+   "formula": "Bi2O3",
+   "dfpt": 43.9837055,
+   "cm": 22.90950587617855,
+   "x": 0.8795640501697403,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-79794",
+   "formula": "NaCoO2",
+   "dfpt": 12.3678399,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-9790",
+   "formula": "Na2MgSiO4",
+   "dfpt": 5.89437325,
+   "cm": 4.872818102754176,
+   "x": 0.56349783230873,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-79796",
+   "formula": "CoCuO2",
+   "dfpt": 15.90835159,
+   "cm": 13.67200642583777,
+   "x": 0.8085758824693928,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34249",
+   "formula": "HfO2",
+   "dfpt": 35.31597388,
+   "cm": 46.72249992544792,
+   "x": 0.938426804770067,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36587",
+   "formula": "HfMgO3",
+   "dfpt": 10.32106736,
+   "cm": 6.885784636574761,
+   "x": 0.6623820942439111,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50028",
+   "formula": "SnO2",
+   "dfpt": 10.46757916,
+   "cm": 7.338094721429867,
+   "x": 0.6787353213375165,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34650",
+   "formula": "SiO2",
+   "dfpt": 4.57180297,
+   "cm": 3.6832314416816967,
+   "x": 0.47213129875416704,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36311",
+   "formula": "MgO",
+   "dfpt": 123.2084125,
+   "cm": 10.375782366603861,
+   "x": 0.7575910830417055,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58370",
+   "formula": "SiO2",
+   "dfpt": 4.14563031,
+   "cm": 3.5654043968036935,
+   "x": 0.4609556132663152,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36589",
+   "formula": "MgGeO3",
+   "dfpt": 7.31976073,
+   "cm": 9.225601781657685,
+   "x": 0.7327537482309487,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-79227",
+   "formula": "AlAgO2",
+   "dfpt": 11.56075864,
+   "cm": 7.611632050035252,
+   "x": 0.6878781892208413,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50029",
+   "formula": "Na2O",
+   "dfpt": 8.75746109,
+   "cm": 3.6581766210638964,
+   "x": 0.46979385747136404,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36313",
+   "formula": "MgO",
+   "dfpt": 13.8963625,
+   "cm": 8.410118725460212,
+   "x": 0.7118188486493582,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-79809",
+   "formula": "NaCoO2",
+   "dfpt": 12.366452989999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-50197",
+   "formula": "GaBiO3",
+   "dfpt": 42.24934418,
+   "cm": 37.40493806479815,
+   "x": 0.9238674098391743,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9426",
+   "formula": "LiTaO3",
+   "dfpt": 40.55814876,
+   "cm": 46.02208736340797,
+   "x": 0.9375287463600354,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1133",
+   "formula": "CeO2",
+   "dfpt": 28.2602241,
+   "cm": 14.971127471680475,
+   "x": 0.8232291870409868,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36592",
+   "formula": "MgTiO3",
+   "dfpt": 37.29462999,
+   "cm": 10.719377048816567,
+   "x": 0.7641393923235317,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36630",
+   "formula": "MgSiO3",
+   "dfpt": 7.121466590000001,
+   "cm": 12.00666309125177,
+   "x": 0.7858162232892052,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9717",
+   "formula": "Rb3TaO8",
+   "dfpt": 10.837859889999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-9224",
+   "formula": "MgBi2O6",
+   "dfpt": 30.43123581,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+5"
+  },
+  {
+   "jid": "JVASP-36407",
+   "formula": "SrO",
+   "dfpt": 57.41528541,
+   "cm": 19.9862377539628,
+   "x": 0.8635510070630761,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36237",
+   "formula": "RuO2",
+   "dfpt": 20.75212319,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ru+4"
+  },
+  {
+   "jid": "JVASP-36751",
+   "formula": "LaAuO2",
+   "dfpt": 12.43371387,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-9225",
+   "formula": "MgSb2O6",
+   "dfpt": 18.35823245,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-36188",
+   "formula": "BaO",
+   "dfpt": 31.89515317,
+   "cm": 16.35999237655074,
+   "x": 0.8366012393430196,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58268",
+   "formula": "CaB4O7",
+   "dfpt": 13.62612055,
+   "cm": 9.666164001682978,
+   "x": 0.7428460632331917,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35692",
+   "formula": "KInO2",
+   "dfpt": 11.48921889,
+   "cm": 9.58705944595517,
+   "x": 0.7410904799450869,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36638",
+   "formula": "SrSiO3",
+   "dfpt": 22.66508767,
+   "cm": 40.865957097184285,
+   "x": 0.9300143936317927,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1127",
+   "formula": "KTaO3",
+   "dfpt": 385.93488915,
+   "cm": 48.88955794223781,
+   "x": 0.941048809985633,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36671",
+   "formula": "Bi2O3",
+   "dfpt": 51.815378890000005,
+   "cm": 19.37568776149327,
+   "x": 0.8596536385882152,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-27655",
+   "formula": "Zn2W3O8",
+   "dfpt": 18.69815201,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:W+4"
+  },
+  {
+   "jid": "JVASP-30375",
+   "formula": "TiMn2O6",
+   "dfpt": 62.397527319999995,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-9226",
+   "formula": "MgTa2O6",
+   "dfpt": 108.73122837000001,
+   "cm": 24.024698276989835,
+   "x": 0.884724888332231,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30586",
+   "formula": "TiO2",
+   "dfpt": 195.62962565,
+   "cm": 16.04124662111446,
+   "x": 0.8337143733466307,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43519",
+   "formula": "HfO2",
+   "dfpt": 29.34293747,
+   "cm": 13.344190899995855,
+   "x": 0.8044862697842993,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10572",
+   "formula": "Rb3NbO8",
+   "dfpt": 11.42617667,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-36243",
+   "formula": "RbCuO",
+   "dfpt": 33.56922081,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-30378",
+   "formula": "HfSnO3",
+   "dfpt": 17.96350777,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-10181",
+   "formula": "GeO2",
+   "dfpt": 6.5030772500000005,
+   "cm": 4.563310843302539,
+   "x": 0.5429136191132379,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10576",
+   "formula": "BaAl2B2O7",
+   "dfpt": 6.225014249999999,
+   "cm": 4.112102755280759,
+   "x": 0.5091705555165859,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36672",
+   "formula": "Bi2O3",
+   "dfpt": 302.99673743,
+   "cm": 129.4009622270209,
+   "x": 0.9771691169596086,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11610",
+   "formula": "TiZnBi2O6",
+   "dfpt": 29.99482073,
+   "cm": 25.48903019221017,
+   "x": 0.890865556950418,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49715",
+   "formula": "ScZnMo3O8",
+   "dfpt": 29.43714756,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mo+4"
+  },
+  {
+   "jid": "JVASP-43520",
+   "formula": "CrO3",
+   "dfpt": 11.401866810000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+6"
+  },
+  {
+   "jid": "JVASP-36245",
+   "formula": "RbAgO",
+   "dfpt": 49.119307129999996,
+   "cm": 6.566102250284849,
+   "x": 0.649782373319179,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35694",
+   "formula": "AgRhO2",
+   "dfpt": 17.53658321,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Rh+3"
+  },
+  {
+   "jid": "JVASP-34507",
+   "formula": "SrGeO3",
+   "dfpt": 15.472872599999999,
+   "cm": 5.8560866178271125,
+   "x": 0.61813048328765,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30380",
+   "formula": "NbV3O10",
+   "dfpt": 47.903663630000004,
+   "cm": 9.438688875705349,
+   "x": 0.7377321795707107,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49730",
+   "formula": "Ca2CoSi2O7",
+   "dfpt": 13.840254289999999,
+   "cm": 6.387602953586111,
+   "x": 0.6423292785077108,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36296",
+   "formula": "KCuO",
+   "dfpt": 8.63536385,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-9644",
+   "formula": "BiO2",
+   "dfpt": 53.098632169999995,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-36297",
+   "formula": "KAgO",
+   "dfpt": 34.64858554,
+   "cm": 5.887349860912642,
+   "x": 0.6196441069684119,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9227",
+   "formula": "CaSb2O6",
+   "dfpt": 14.91940022,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-9228",
+   "formula": "ZnSb2O6",
+   "dfpt": 51.7585165,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-30535",
+   "formula": "MgSb4O8",
+   "dfpt": 46.0852948,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+4"
+  },
+  {
+   "jid": "JVASP-9231",
+   "formula": "Ta2ZnO6",
+   "dfpt": 119.95476203,
+   "cm": 24.810285881977155,
+   "x": 0.8881026478715504,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10637",
+   "formula": "BiO2",
+   "dfpt": 229.21992017000002,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-36612",
+   "formula": "CaHfO3",
+   "dfpt": 9.4458523,
+   "cm": 10.630372184637679,
+   "x": 0.7624773081787012,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35745",
+   "formula": "BaCaO2",
+   "dfpt": 9.50608731,
+   "cm": 11.157410997771878,
+   "x": 0.771991617461214,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43301",
+   "formula": "LiMnO2",
+   "dfpt": 1071.55766799,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3"
+  },
+  {
+   "jid": "JVASP-12003",
+   "formula": "NbO2",
+   "dfpt": 20.232606219999997,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Nb+4"
+  },
+  {
+   "jid": "JVASP-30537",
+   "formula": "TiBi2O6",
+   "dfpt": 72.88835168,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+4"
+  },
+  {
+   "jid": "JVASP-36254",
+   "formula": "NaAgO",
+   "dfpt": 76.11490634,
+   "cm": 5.1259247912183366,
+   "x": 0.5790020119638278,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36255",
+   "formula": "NaCuO",
+   "dfpt": 30.81928551,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-47706",
+   "formula": "LiCoSiO4",
+   "dfpt": 110.4301181,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-57519",
+   "formula": "LiAlSiO4",
+   "dfpt": 5.40082007,
+   "cm": 4.77012385788301,
+   "x": 0.5568766446559387,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50456",
+   "formula": "LiCuSi2O5",
+   "dfpt": 9.00782019,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-50746",
+   "formula": "Ag2SnO3",
+   "dfpt": 15.78923199,
+   "cm": 6.165494461060773,
+   "x": 0.6326003263726087,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57520",
+   "formula": "Ca2Al2SiO7",
+   "dfpt": 10.46843873,
+   "cm": 6.166256001791824,
+   "x": 0.6326345880729497,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36622",
+   "formula": "CaGeO3",
+   "dfpt": 57.4508926,
+   "cm": 17.082841780118674,
+   "x": 0.8427907103896062,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52653",
+   "formula": "HfO2",
+   "dfpt": 23.81246019,
+   "cm": 30.956823653187257,
+   "x": 0.9089718101607808,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58385",
+   "formula": "SiO2",
+   "dfpt": 4.13392447,
+   "cm": 3.5912039829694917,
+   "x": 0.46344293480655696,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35835",
+   "formula": "CeO2",
+   "dfpt": 133.00857429,
+   "cm": 27.163765084683025,
+   "x": 0.897132623607107,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47722",
+   "formula": "Li3V2O6",
+   "dfpt": 39.85688123,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+4"
+  },
+  {
+   "jid": "JVASP-41602",
+   "formula": "Na2Hf2O5",
+   "dfpt": 890.04902783,
+   "cm": 6.993862404623877,
+   "x": 0.6664391931927204,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35125",
+   "formula": "BaSr2MgSi2O8",
+   "dfpt": 18.37594652,
+   "cm": 10.61506701722516,
+   "x": 0.7621891349523812,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35894",
+   "formula": "HfO2",
+   "dfpt": 140.6752679,
+   "cm": 32.55010194734341,
+   "x": 0.9131695760385253,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35840",
+   "formula": "CeO2",
+   "dfpt": 25.5413295,
+   "cm": 7.97708566077332,
+   "x": 0.6993109910046146,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58032",
+   "formula": "MgCuO2",
+   "dfpt": 58.101846699999996,
+   "cm": 6.628291120618534,
+   "x": 0.6523065856191301,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30647",
+   "formula": "TiZnBi2O6",
+   "dfpt": 30.01749618,
+   "cm": 25.49242515823253,
+   "x": 0.8908790336707834,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35817",
+   "formula": "TiSnO3",
+   "dfpt": 33.8865579,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-35672",
+   "formula": "SrCaO2",
+   "dfpt": 28.72026298,
+   "cm": 10.515043740495878,
+   "x": 0.7602884926168758,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36108",
+   "formula": "BaO2",
+   "dfpt": 64.39395797,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-30658",
+   "formula": "MgSb4O8",
+   "dfpt": 50.55814004,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+4"
+  },
+  {
+   "jid": "JVASP-57797",
+   "formula": "SrB4O7",
+   "dfpt": 9.88656686,
+   "cm": 10.467512183860672,
+   "x": 0.7593746085218563,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12010",
+   "formula": "MoO3",
+   "dfpt": 34.29296437,
+   "cm": 10.567387629580583,
+   "x": 0.7612869047709862,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58394",
+   "formula": "SiO2",
+   "dfpt": 3.83722996,
+   "cm": 2.946289597269187,
+   "x": 0.39348476448765163,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35686",
+   "formula": "LuAgO2",
+   "dfpt": 11.199565230000001,
+   "cm": 7.344107606064328,
+   "x": 0.6789420534869484,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52751",
+   "formula": "Li4WO5",
+   "dfpt": 21.124986590000002,
+   "cm": 17.564733778070305,
+   "x": 0.846662876478154,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35506",
+   "formula": "Sr4Bi2O",
+   "dfpt": 22.13706984,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-40900",
+   "formula": "LiSiBiO4",
+   "dfpt": 35.62826526,
+   "cm": 9.883474733918007,
+   "x": 0.747548585984085,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-40901",
+   "formula": "NbBiO4",
+   "dfpt": 37.36219555,
+   "cm": 13.083589754509285,
+   "x": 0.8011083535931398,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58413",
+   "formula": "LiSiBO4",
+   "dfpt": 6.655712149999999,
+   "cm": 6.266592932580062,
+   "x": 0.6370935372689654,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52016",
+   "formula": "FeBiO3",
+   "dfpt": 33.57275678,
+   "cm": 3.906338559619386,
+   "x": 0.4920711080616881,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-51552",
+   "formula": "K3VO4",
+   "dfpt": 5.81415034,
+   "cm": 5.14636879831176,
+   "x": 0.5802063838758625,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13971",
+   "formula": "Nd2O3",
+   "dfpt": 21.58639083,
+   "cm": 5.948242057305275,
+   "x": 0.6225580476323462,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50051",
+   "formula": "NaHoO2",
+   "dfpt": 27.86008086,
+   "cm": 10.631933996007994,
+   "x": 0.7625066754664745,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50053",
+   "formula": "NaLiO",
+   "dfpt": 17.837967589999998,
+   "cm": 6.968219672073854,
+   "x": 0.6654854464212443,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58345",
+   "formula": "SiO2",
+   "dfpt": 4.69697835,
+   "cm": 3.8508275697404115,
+   "x": 0.4872520230273846,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35117",
+   "formula": "BaAl2Si2O8",
+   "dfpt": 7.60765046,
+   "cm": 4.755660916290912,
+   "x": 0.5559279784505374,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4537",
+   "formula": "BaO",
+   "dfpt": 19.47066801,
+   "cm": 16.91095609936155,
+   "x": 0.8413618018974047,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58347",
+   "formula": "SiO2",
+   "dfpt": 4.3194309,
+   "cm": 3.819861970605062,
+   "x": 0.4845238572405343,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35118",
+   "formula": "BaAl2Si2O8",
+   "dfpt": 7.60909399,
+   "cm": 4.755453575811845,
+   "x": 0.5559143488541446,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58348",
+   "formula": "SiO2",
+   "dfpt": 12.079905239999999,
+   "cm": 18.20341002298514,
+   "x": 0.8515102155236695,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35120",
+   "formula": "BaCa3O4",
+   "dfpt": 13.166466,
+   "cm": 10.734597884981032,
+   "x": 0.764421301159564,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-58349",
+   "formula": "SiO2",
+   "dfpt": 4.876551109999999,
+   "cm": 4.438042404857357,
+   "x": 0.534019844644613,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-39720",
+   "formula": "YbGeO3",
+   "dfpt": 80.7878357,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Yb+2"
+  },
+  {
+   "jid": "JVASP-40398",
+   "formula": "Rb2Hf2O5",
+   "dfpt": 17.59479877,
+   "cm": 10.827162908504901,
+   "x": 0.7661213144793784,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-54453",
+   "formula": "VCuO3",
+   "dfpt": 13.18387429,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-41",
+   "formula": "SiO2",
+   "dfpt": 4.87783444,
+   "cm": 4.440041427152292,
+   "x": 0.5341644873041502,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-39095",
+   "formula": "SiO2",
+   "dfpt": 4.14674617,
+   "cm": 3.570631186002273,
+   "x": 0.46146138564363826,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57444",
+   "formula": "LiAlSiO4",
+   "dfpt": 5.75440389,
+   "cm": 3.9884204485915173,
+   "x": 0.49903317147585996,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-40475",
+   "formula": "Li5Si2BiO8",
+   "dfpt": 9.36752361,
+   "cm": 7.242791808387652,
+   "x": 0.675422744318707,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-54662",
+   "formula": "Ta2O5",
+   "dfpt": 37.93271589,
+   "cm": null,
+   "x": 1.0373766412135519,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-272",
+   "formula": "PtO2",
+   "dfpt": 13.99217345,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pt+4"
+  },
+  {
+   "jid": "JVASP-24911",
+   "formula": "CaGaBO4",
+   "dfpt": 8.105658080000001,
+   "cm": 4.794688472556012,
+   "x": 0.5584786540078907,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13815",
+   "formula": "MgGeO3",
+   "dfpt": 42.78018694,
+   "cm": 12.996436515069469,
+   "x": 0.799952475577422,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-39186",
+   "formula": "ScAgO2",
+   "dfpt": 15.10784963,
+   "cm": 7.757733653626345,
+   "x": 0.6925515589488256,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-40246",
+   "formula": "Ba2Sc2O5",
+   "dfpt": 26.97128144,
+   "cm": 15.63920669628932,
+   "x": 0.8299243241686659,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-14147",
+   "formula": "B2O3",
+   "dfpt": 5.3625036999999995,
+   "cm": 4.810557329001136,
+   "x": 0.5595074154614021,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4567",
+   "formula": "YAlO3",
+   "dfpt": 19.66721243,
+   "cm": 9.758951387115802,
+   "x": 0.7448752102770764,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-25380",
+   "formula": "O",
+   "dfpt": 5.21673049,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:O+0"
+  },
+  {
+   "jid": "JVASP-35230",
+   "formula": "LuO3",
+   "dfpt": 11.86278824,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-37219",
+   "formula": "SmGaO3",
+   "dfpt": 6.19473708,
+   "cm": 28.135939850528924,
+   "x": 0.9004510888036118,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-40636",
+   "formula": "Si2O5",
+   "dfpt": 5.457224650000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-26395",
+   "formula": "Ca4Bi2O",
+   "dfpt": 42.2222528,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-36584",
+   "formula": "MgSnO3",
+   "dfpt": 6.06907967,
+   "cm": 6.760474437990955,
+   "x": 0.657552793374968,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36585",
+   "formula": "BaSiO3",
+   "dfpt": 6.27115081,
+   "cm": null,
+   "x": 0.9904145458197096,
+   "reason": "cm_divergent"
+  },
+  {
+   "jid": "JVASP-37910",
+   "formula": "DyAlO3",
+   "dfpt": 5.72969396,
+   "cm": 28.131097211001595,
+   "x": 0.9004350894030959,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-37301",
+   "formula": "SrCa3O4",
+   "dfpt": 19.25804777,
+   "cm": 10.821396653155627,
+   "x": 0.7660161306013699,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-40651",
+   "formula": "NaCoO2",
+   "dfpt": 12.511018159999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-36762",
+   "formula": "AgBiO2",
+   "dfpt": 34.83184341,
+   "cm": 8.239515556333952,
+   "x": 0.7070173892998032,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-37014",
+   "formula": "K2O",
+   "dfpt": 8.11128037,
+   "cm": 5.949581098323689,
+   "x": 0.6226216245994894,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-37015",
+   "formula": "K2O",
+   "dfpt": 8.11254738,
+   "cm": 5.951533048776708,
+   "x": 0.6227142638284663,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-37017",
+   "formula": "KO",
+   "dfpt": 7.555440969999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-36849",
+   "formula": "CrAuO2",
+   "dfpt": 15.9728228,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-43663",
+   "formula": "LiTmO2",
+   "dfpt": 46.5236004,
+   "cm": 13.749078884361294,
+   "x": 0.8095126691517829,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9234",
+   "formula": "V2ZnO6",
+   "dfpt": 36.20922965,
+   "cm": 14.122344460049748,
+   "x": 0.8139228443211948,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-22614",
+   "formula": "SiO2",
+   "dfpt": 3.6869725000000004,
+   "cm": 3.005134859159337,
+   "x": 0.4006155509456381,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9876",
+   "formula": "Ca2AlBiO5",
+   "dfpt": 22.654871200000002,
+   "cm": 9.782178399149137,
+   "x": 0.7453781551791264,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9671",
+   "formula": "CaSb2O4",
+   "dfpt": 22.21832235,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-9604",
+   "formula": "NaNbO3",
+   "dfpt": 50.61396323,
+   "cm": 12.86840248213598,
+   "x": 0.7982298364868434,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49935",
+   "formula": "SrO",
+   "dfpt": 14.665294789999999,
+   "cm": 6.297342730125089,
+   "x": 0.6384384618574418,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-14002",
+   "formula": "LiYMo3O8",
+   "dfpt": 18.141160300000003,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mo+4"
+  },
+  {
+   "jid": "JVASP-14003",
+   "formula": "LiScMo3O8",
+   "dfpt": 19.25328494,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mo+4"
+  },
+  {
+   "jid": "JVASP-43671",
+   "formula": "Li2TiNiO4",
+   "dfpt": 50.35266829,
+   "cm": 18.120555540374674,
+   "x": 0.8508987490936776,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49936",
+   "formula": "NaTmO2",
+   "dfpt": 15.805224729999999,
+   "cm": 10.28011865767119,
+   "x": 0.7557026862988862,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57807",
+   "formula": "SiO2",
+   "dfpt": 4.55023805,
+   "cm": 3.8034487433127295,
+   "x": 0.4830659952917001,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57182",
+   "formula": "Ca4Al6O13",
+   "dfpt": 15.30337817,
+   "cm": 5.351807641328305,
+   "x": 0.5919370927041873,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9285",
+   "formula": "ZnSb4O8",
+   "dfpt": 44.97593835,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+4"
+  },
+  {
+   "jid": "JVASP-4486",
+   "formula": "CaSiO3",
+   "dfpt": 21.55852161,
+   "cm": 28.874902895936973,
+   "x": 0.9028337025022745,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30763",
+   "formula": "Ta2O5",
+   "dfpt": 16.91950234,
+   "cm": 14.332582538065042,
+   "x": 0.8163180872952492,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29958",
+   "formula": "Ba2Bi6O11",
+   "dfpt": 46.630609400000004,
+   "cm": 16.78860328495882,
+   "x": 0.8403287378790075,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30103",
+   "formula": "MoO3",
+   "dfpt": 66.32742069,
+   "cm": 9.795587836775413,
+   "x": 0.745667613898239,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29283",
+   "formula": "NiO2",
+   "dfpt": 18.74778682,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-35176",
+   "formula": "Mg2SiO4",
+   "dfpt": 19.792161189999998,
+   "cm": 11.51370282185447,
+   "x": 0.778003109913859,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-37916",
+   "formula": "BaSr3O4",
+   "dfpt": 32.00560959,
+   "cm": 10.762336068125837,
+   "x": 0.7649333175379581,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-29365",
+   "formula": "NiO2",
+   "dfpt": 21.21787098,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-36784",
+   "formula": "LiAgO2",
+   "dfpt": 12.98873398,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-36829",
+   "formula": "CuBiO2",
+   "dfpt": 32.973800759999996,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-37693",
+   "formula": "Ge2O3",
+   "dfpt": 10.849453350000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ge+3"
+  },
+  {
+   "jid": "JVASP-30404",
+   "formula": "TiGeO3",
+   "dfpt": 45.56876171,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ti+2"
+  },
+  {
+   "jid": "JVASP-4723",
+   "formula": "GeO2",
+   "dfpt": 15.3179656,
+   "cm": 15.546326353600282,
+   "x": 0.829024039588524,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36830",
+   "formula": "CuBiO2",
+   "dfpt": 28.467364789999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-36788",
+   "formula": "KAuO2",
+   "dfpt": 9.33047239,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-36831",
+   "formula": "BiAuO2",
+   "dfpt": 30.73938476,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+1,Au+3"
+  },
+  {
+   "jid": "JVASP-36832",
+   "formula": "RbAgO2",
+   "dfpt": 14.34455871,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-30119",
+   "formula": "MoO3",
+   "dfpt": 34.34966505,
+   "cm": 10.637385674279018,
+   "x": 0.7626091283970287,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30120",
+   "formula": "MoO3",
+   "dfpt": 66.26194602,
+   "cm": 9.746532580074236,
+   "x": 0.7446054842525248,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-37209",
+   "formula": "SiSnO3",
+   "dfpt": 9.556546789999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-36835",
+   "formula": "NaAuO2",
+   "dfpt": 13.09053186,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-36837",
+   "formula": "SrAuO2",
+   "dfpt": 15.67105076,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-36795",
+   "formula": "BaAuO2",
+   "dfpt": 17.22318621,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-281",
+   "formula": "SnO",
+   "dfpt": 21.97472904,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-29777",
+   "formula": "V2O5",
+   "dfpt": 29.42090855,
+   "cm": 7.723413955410628,
+   "x": 0.6914663909448554,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36842",
+   "formula": "KAgO2",
+   "dfpt": 9.7564063,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-36844",
+   "formula": "AgRhO2",
+   "dfpt": 15.56665117,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Rh+3"
+  },
+  {
+   "jid": "JVASP-29444",
+   "formula": "CoBiO3",
+   "dfpt": 56.56880898,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-36846",
+   "formula": "RbAgO2",
+   "dfpt": 9.51367738,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-37013",
+   "formula": "KO3",
+   "dfpt": 5.87011115,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-46868",
+   "formula": "LiSi2NiO6",
+   "dfpt": 88.39214697,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+3"
+  },
+  {
+   "jid": "JVASP-45991",
+   "formula": "SmTaO4",
+   "dfpt": 54.92487788,
+   "cm": 31.286432866985294,
+   "x": 0.9098731903178634,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30728",
+   "formula": "SnO2",
+   "dfpt": 11.358056009999999,
+   "cm": 8.618968106091238,
+   "x": 0.7174866738436531,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46735",
+   "formula": "LiFeSiO4",
+   "dfpt": 7.32530979,
+   "cm": 5.493072009203707,
+   "x": 0.5996301655295567,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46993",
+   "formula": "Na2NiO2",
+   "dfpt": 11.52159895,
+   "cm": 5.454643666137095,
+   "x": 0.5975662775636648,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-44828",
+   "formula": "Li5CrO5",
+   "dfpt": 91.35770236,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+5"
+  },
+  {
+   "jid": "JVASP-104",
+   "formula": "TiO2",
+   "dfpt": 65.82650675000001,
+   "cm": 16.042981562948732,
+   "x": 0.8337303627156334,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47283",
+   "formula": "TaCrO4",
+   "dfpt": 30.50416659,
+   "cm": 27.6007519383152,
+   "x": 0.8986512232442041,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46195",
+   "formula": "LiCrBO3",
+   "dfpt": 16.805576639999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+2"
+  },
+  {
+   "jid": "JVASP-46743",
+   "formula": "Li3MnSi2O7",
+   "dfpt": 8.78640278,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3"
+  },
+  {
+   "jid": "JVASP-45803",
+   "formula": "Li8TiMn3O12",
+   "dfpt": 23.821222679999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-46747",
+   "formula": "Li2MnSi3O8",
+   "dfpt": 6.58771418,
+   "cm": 4.943618778153991,
+   "x": 0.5679486308438191,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30753",
+   "formula": "Cr3O8",
+   "dfpt": 254.03066867,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+5"
+  },
+  {
+   "jid": "JVASP-45827",
+   "formula": "LiFeSiO4",
+   "dfpt": 7.2939875700000005,
+   "cm": 5.572523240113252,
+   "x": 0.6038308625969786,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-45835",
+   "formula": "LiVSiO4",
+   "dfpt": 8.33242454,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+3"
+  },
+  {
+   "jid": "JVASP-45968",
+   "formula": "TmTaO4",
+   "dfpt": 30.747455,
+   "cm": 22.95625486111042,
+   "x": 0.8797896552709545,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-44986",
+   "formula": "LiVBO4",
+   "dfpt": 86.10485921,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+4"
+  },
+  {
+   "jid": "JVASP-45847",
+   "formula": "LiFeSiO4",
+   "dfpt": 7.556859810000001,
+   "cm": 5.850007577629794,
+   "x": 0.6178347638097682,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-44993",
+   "formula": "Li2HfO3",
+   "dfpt": 24.957254470000002,
+   "cm": 11.25877231677519,
+   "x": 0.7737347072319541,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47371",
+   "formula": "Li4FeSi2O7",
+   "dfpt": 7.425625760000001,
+   "cm": 7.0956692341619,
+   "x": 0.670172702770185,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-45986",
+   "formula": "YBiO3",
+   "dfpt": 59.62057524,
+   "cm": 17.831565959249122,
+   "x": 0.8487260155771588,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47085",
+   "formula": "LiFeSi2O6",
+   "dfpt": 21.767004,
+   "cm": 4.223957478812459,
+   "x": 0.5179915656216204,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46005",
+   "formula": "Sr2HfO4",
+   "dfpt": 72.63678686,
+   "cm": 11.119981517204891,
+   "x": 0.7713411412915522,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46248",
+   "formula": "Li2AlVO4",
+   "dfpt": 10.52626508,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+3"
+  },
+  {
+   "jid": "JVASP-46775",
+   "formula": "Li2Si2NiO6",
+   "dfpt": 8.00071367,
+   "cm": 5.854982294435646,
+   "x": 0.6180767966688918,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46250",
+   "formula": "Li2CrO4",
+   "dfpt": 5.7602771100000005,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+6"
+  },
+  {
+   "jid": "JVASP-34410",
+   "formula": "Na2Zn2O3",
+   "dfpt": 12.074863579999999,
+   "cm": 6.0658619501338205,
+   "x": 0.6280620696774724,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-59298",
+   "formula": "SrAl2O4",
+   "dfpt": 10.23509907,
+   "cm": 5.358831472047612,
+   "x": 0.5923265791049237,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10240",
+   "formula": "KAlSiO4",
+   "dfpt": 6.5210834,
+   "cm": 4.690063767924584,
+   "x": 0.5515737810477297,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36754",
+   "formula": "LiAuO2",
+   "dfpt": 11.350790230000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-30186",
+   "formula": "TiSnO3",
+   "dfpt": 33.82741061,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-59246",
+   "formula": "TaGaO4",
+   "dfpt": 28.4277042,
+   "cm": 31.15010395284673,
+   "x": 0.9095025462282939,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47122",
+   "formula": "LiCoO2",
+   "dfpt": 17.53675906,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-34674",
+   "formula": "SiO2",
+   "dfpt": 4.7610858700000005,
+   "cm": 3.9824534364755513,
+   "x": 0.49853349769364974,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10198",
+   "formula": "Li2Ge2O5",
+   "dfpt": 6.43316398,
+   "cm": 5.000838438774091,
+   "x": 0.5714798982669672,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47125",
+   "formula": "Li2FeSiO4",
+   "dfpt": 142.52924348,
+   "cm": 7.515304200331225,
+   "x": 0.6847184349717825,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-24767",
+   "formula": "Li8SiO6",
+   "dfpt": 7.04732291,
+   "cm": 8.068201139758541,
+   "x": 0.7020321745308371,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36755",
+   "formula": "LiAuO2",
+   "dfpt": 10.27820766,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-45245",
+   "formula": "PrGeBO5",
+   "dfpt": 11.9972713,
+   "cm": 9.28386008534047,
+   "x": 0.7341335343303771,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47182",
+   "formula": "LiCrO2",
+   "dfpt": 72.19175251,
+   "cm": 11.373234990387184,
+   "x": 0.7756713314200767,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36756",
+   "formula": "LiAgO2",
+   "dfpt": 14.309537549999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-47261",
+   "formula": "Li4Si2NiO7",
+   "dfpt": 7.15709087,
+   "cm": 6.574820667439539,
+   "x": 0.6501384557939908,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-41120",
+   "formula": "YbO2",
+   "dfpt": 7.46254056,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-37022",
+   "formula": "K2O",
+   "dfpt": 44.69809689,
+   "cm": 7.578581893847957,
+   "x": 0.686801237046706,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46283",
+   "formula": "Li2CrO4",
+   "dfpt": 8.40665076,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+6"
+  },
+  {
+   "jid": "JVASP-46789",
+   "formula": "Li2Si3NiO8",
+   "dfpt": 10.47528017,
+   "cm": 4.875279245675656,
+   "x": 0.5636540869395363,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46022",
+   "formula": "Lu3AlO6",
+   "dfpt": 13.378893600000001,
+   "cm": 14.10324905057897,
+   "x": 0.8137021919876387,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36759",
+   "formula": "AgBiO2",
+   "dfpt": 59.361860240000006,
+   "cm": 8.077439013147778,
+   "x": 0.702305318237503,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36760",
+   "formula": "KAgO2",
+   "dfpt": 14.323652809999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-46044",
+   "formula": "KNdO2",
+   "dfpt": 19.02989582,
+   "cm": 10.22343287349407,
+   "x": 0.7545697652166637,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12235",
+   "formula": "TiMnO3",
+   "dfpt": 39.16675758,
+   "cm": 27.426648725923062,
+   "x": 0.8980515916731903,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12706",
+   "formula": "YMo3O8",
+   "dfpt": 41.1407074,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mo+4"
+  },
+  {
+   "jid": "JVASP-48228",
+   "formula": "LiCoSiO4",
+   "dfpt": 11.495146120000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-9587",
+   "formula": "BaZnO2",
+   "dfpt": 14.18563418,
+   "cm": 10.205889298246852,
+   "x": 0.7542170073235963,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52528",
+   "formula": "LiSbO3",
+   "dfpt": 12.43789349,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-36771",
+   "formula": "AgBiO2",
+   "dfpt": 60.42718045,
+   "cm": 8.093365714728577,
+   "x": 0.7027750618782891,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-1360",
+   "formula": "Li2O",
+   "dfpt": 7.17324543,
+   "cm": 10.93760808750017,
+   "x": 0.7681178793088896,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47766",
+   "formula": "LiCrSiO4",
+   "dfpt": 10.6992351,
+   "cm": 10.42099070422401,
+   "x": 0.7584733720974617,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49838",
+   "formula": "Li2CeO3",
+   "dfpt": 273.83926242999996,
+   "cm": 7.449377246669194,
+   "x": 0.6825187605820829,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12763",
+   "formula": "Li7SbO6",
+   "dfpt": 10.80185216,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-59277",
+   "formula": "NaCaTaTiO6",
+   "dfpt": 197.16622764000002,
+   "cm": 24.80705648074944,
+   "x": 0.8880891677848202,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-42941",
+   "formula": "TiSnO4",
+   "dfpt": 77.62446662999999,
+   "cm": 9.624436142111353,
+   "x": 0.741922966127189,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-36772",
+   "formula": "AgAuO2",
+   "dfpt": 17.96454313,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Au+3"
+  },
+  {
+   "jid": "JVASP-42945",
+   "formula": "CrCuO2",
+   "dfpt": 12.902758259999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-52543",
+   "formula": "TiBi2O5",
+   "dfpt": 35.69259333,
+   "cm": 19.16735890329941,
+   "x": 0.8582723516096105,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52268",
+   "formula": "LaAgO2",
+   "dfpt": 11.30793596,
+   "cm": 7.066668332043327,
+   "x": 0.6691177078356964,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-44243",
+   "formula": "Li5MnO4",
+   "dfpt": 20.25760962,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3"
+  },
+  {
+   "jid": "JVASP-46189",
+   "formula": "Li2FeBO4",
+   "dfpt": 9.58210553,
+   "cm": 8.193044447989706,
+   "x": 0.7056816522965652,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9244",
+   "formula": "MgV2O6",
+   "dfpt": 48.46094319,
+   "cm": 11.618292892576967,
+   "x": 0.7797080718072061,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-59263",
+   "formula": "Li5GaO4",
+   "dfpt": 8.18034088,
+   "cm": 7.441983992366161,
+   "x": 0.6822701666910791,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9674",
+   "formula": "K3TaO8",
+   "dfpt": 16.90421886,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-56648",
+   "formula": "BaWO4",
+   "dfpt": 45.49979529,
+   "cm": 17.17796517746169,
+   "x": 0.8435704741227887,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46393",
+   "formula": "Tm3TaO7",
+   "dfpt": 22.46758754,
+   "cm": 25.03444415525173,
+   "x": 0.8890304537880718,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46477",
+   "formula": "Li2VBO4",
+   "dfpt": 13.39372668,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+3"
+  },
+  {
+   "jid": "JVASP-12703",
+   "formula": "ScMo3O8",
+   "dfpt": 39.57395703,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sc+2,Mo+5"
+  },
+  {
+   "jid": "JVASP-42957",
+   "formula": "VRhO4",
+   "dfpt": 33.49931205,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Rh+3"
+  },
+  {
+   "jid": "JVASP-30196",
+   "formula": "Ce2Dy2O7",
+   "dfpt": 23.89635946,
+   "cm": 12.344095680075469,
+   "x": 0.7908547135413269,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30197",
+   "formula": "BiSbO3",
+   "dfpt": 54.57767156,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-55301",
+   "formula": "Ca2CoSi2O7",
+   "dfpt": 13.840161340000002,
+   "cm": 6.387908897417575,
+   "x": 0.6423423243278639,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46065",
+   "formula": "K2Mg2O3",
+   "dfpt": 7.804508289999999,
+   "cm": 6.318121141273924,
+   "x": 0.6393416314756208,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-45285",
+   "formula": "Ba3Ti3B2O12",
+   "dfpt": 32.42708102,
+   "cm": 16.44599135619208,
+   "x": 0.8373630377424557,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-59208",
+   "formula": "Na5MnO4",
+   "dfpt": 11.56638783,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+3"
+  },
+  {
+   "jid": "JVASP-49227",
+   "formula": "K3Nb3B2O12",
+   "dfpt": 30.446874490000003,
+   "cm": 9.193468032360299,
+   "x": 0.7319865486436371,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34705",
+   "formula": "CrBiO3",
+   "dfpt": 39.512752500000005,
+   "cm": 53.37590833475441,
+   "x": 0.9458248164189991,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13254",
+   "formula": "NbBi3O7",
+   "dfpt": 68.98324174,
+   "cm": 36.52998261027631,
+   "x": 0.9221385581627574,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10736",
+   "formula": "MgSb4O8",
+   "dfpt": 46.14026646,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+4"
+  },
+  {
+   "jid": "JVASP-10734",
+   "formula": "CaSb4O8",
+   "dfpt": 91.57873959,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+4"
+  },
+  {
+   "jid": "JVASP-27495",
+   "formula": "Ca3TaGa3Si2O14",
+   "dfpt": 40.07049869,
+   "cm": 8.100567019398307,
+   "x": 0.7029869714998722,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10039",
+   "formula": "MgSb2O4",
+   "dfpt": 15.09464904,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+3"
+  },
+  {
+   "jid": "JVASP-11696",
+   "formula": "K3CrO8",
+   "dfpt": 12.20105779,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-34685",
+   "formula": "SiO2",
+   "dfpt": 5.49587867,
+   "cm": 4.707025514497716,
+   "x": 0.5527078294968037,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11481",
+   "formula": "RbLiCrO4",
+   "dfpt": 5.69846421,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+6"
+  },
+  {
+   "jid": "JVASP-9609",
+   "formula": "Na2SiO3",
+   "dfpt": 6.64543576,
+   "cm": 4.861068048836353,
+   "x": 0.5627502921343559,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-13047",
+   "formula": "K4Sb2O3",
+   "dfpt": 14.75157518,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+1"
+  },
+  {
+   "jid": "JVASP-9802",
+   "formula": "MgBi2O4",
+   "dfpt": 19.83841897,
+   "cm": 12.251371572207011,
+   "x": 0.7894939455616614,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-41404",
+   "formula": "YbTiO3",
+   "dfpt": 22.96281772,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Yb+2"
+  },
+  {
+   "jid": "JVASP-11119",
+   "formula": "ZnSnO3",
+   "dfpt": 26.00476076,
+   "cm": 11.904693069151701,
+   "x": 0.7842455072485088,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-44620",
+   "formula": "LiY3WO8",
+   "dfpt": 18.02634974,
+   "cm": 7.873156610152952,
+   "x": 0.6961458104579256,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30715",
+   "formula": "SnW2O8",
+   "dfpt": 10.58201707,
+   "cm": 7.744242508204868,
+   "x": 0.6921258889571013,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34676",
+   "formula": "SiO2",
+   "dfpt": 3.97448066,
+   "cm": 3.6328010340389345,
+   "x": 0.4674052958961192,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46527",
+   "formula": "Ba3Ti2O7",
+   "dfpt": 54.79449201,
+   "cm": 40.99121398404104,
+   "x": 0.9302182999271981,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30724",
+   "formula": "NiO2",
+   "dfpt": 20.656751879999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-47594",
+   "formula": "Li4V3SiO10",
+   "dfpt": 98.39783752,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+4"
+  },
+  {
+   "jid": "JVASP-12517",
+   "formula": "BiB3O6",
+   "dfpt": 12.38603769,
+   "cm": 7.4792592933301,
+   "x": 0.6835195760378775,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-46536",
+   "formula": "Li2CrO3",
+   "dfpt": 379.28263955,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+4"
+  },
+  {
+   "jid": "JVASP-11820",
+   "formula": "BaNiO3",
+   "dfpt": 85.02580395999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ni+4"
+  },
+  {
+   "jid": "JVASP-42958",
+   "formula": "Li4V2SiGeO10",
+   "dfpt": 15.77346245,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:V+4"
+  },
+  {
+   "jid": "JVASP-52263",
+   "formula": "SmAgO2",
+   "dfpt": 12.15934654,
+   "cm": 6.655022878121372,
+   "x": 0.6533804656272417,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-43037",
+   "formula": "K3CrO4",
+   "dfpt": 22.665014239999998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cr+5"
+  },
+  {
+   "jid": "JVASP-12870",
+   "formula": "LiAlO2",
+   "dfpt": 12.69399774,
+   "cm": 11.053786509620235,
+   "x": 0.7701816252480387,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-10213",
+   "formula": "Li2ZnGeO4",
+   "dfpt": 7.41773128,
+   "cm": 7.075329014571202,
+   "x": 0.6694334723090206,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-44568",
+   "formula": "LiCuO2",
+   "dfpt": 21.40860012,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+3"
+  },
+  {
+   "jid": "JVASP-9451",
+   "formula": "CaMnO2",
+   "dfpt": 15.41389006,
+   "cm": 10.41878461516645,
+   "x": 0.7584304669930222,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-55469",
+   "formula": "ScZnMo3O8",
+   "dfpt": 29.4465005,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mo+4"
+  },
+  {
+   "jid": "JVASP-11815",
+   "formula": "Li3VO4",
+   "dfpt": 7.37970899,
+   "cm": 8.63417103928853,
+   "x": 0.717890563456584,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-53148",
+   "formula": "AlSbO4",
+   "dfpt": 12.02344462,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-11492",
+   "formula": "Na2NiO2",
+   "dfpt": 10.85823791,
+   "cm": 5.964513213188639,
+   "x": 0.6233291452097507,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9286",
+   "formula": "ZnSn4O8",
+   "dfpt": 13.2329441,
+   "cm": 6.668598347613525,
+   "x": 0.6539232895908825,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-11490",
+   "formula": "Na4CoO3",
+   "dfpt": 16.83484954,
+   "cm": 4.4283428608231725,
+   "x": 0.5333167404179435,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57291",
+   "formula": "CuBiW2O8",
+   "dfpt": 34.91539384,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-57293",
+   "formula": "Nd3BWO9",
+   "dfpt": 17.08815714,
+   "cm": 15.497923631680646,
+   "x": 0.8285510862232598,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-42411",
+   "formula": "Ti3MnO8",
+   "dfpt": 54.82397845,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-22700",
+   "formula": "Rb2O",
+   "dfpt": 9.43987916,
+   "cm": 7.42429143090447,
+   "x": 0.6816736810406463,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-4426",
+   "formula": "CaSiO3",
+   "dfpt": 22.003883780000002,
+   "cm": 28.873660070307277,
+   "x": 0.9028297910526893,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52497",
+   "formula": "YbB4O7",
+   "dfpt": 13.686550420000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Yb+2"
+  },
+  {
+   "jid": "JVASP-25577",
+   "formula": "K2LiBO3",
+   "dfpt": 9.34151132,
+   "cm": 6.798967018796284,
+   "x": 0.6590508870426013,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49840",
+   "formula": "LiLuO2",
+   "dfpt": 33.15114979,
+   "cm": 14.19534953502875,
+   "x": 0.8147616392278949,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-50766",
+   "formula": "Na5SbO5",
+   "dfpt": 10.65404073,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+5"
+  },
+  {
+   "jid": "JVASP-34899",
+   "formula": "SiBi2O5",
+   "dfpt": 42.96108033,
+   "cm": 18.972946632234788,
+   "x": 0.8569585832355531,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9282",
+   "formula": "MgSb4O8",
+   "dfpt": 50.48011587,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sb+4"
+  },
+  {
+   "jid": "JVASP-48089",
+   "formula": "Li2VGa3O8",
+   "dfpt": 7.58916241,
+   "cm": 5.329934341802243,
+   "x": 0.5907193898189302,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-53341",
+   "formula": "Bi2O3",
+   "dfpt": 62.678977010000004,
+   "cm": 17.027896569212356,
+   "x": 0.8423367507234573,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49240",
+   "formula": "Sr3TaGa3Si2O14",
+   "dfpt": 19.97642218,
+   "cm": 8.014875595943092,
+   "x": 0.7004456050142785,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57876",
+   "formula": "B2O3",
+   "dfpt": 6.410970799999999,
+   "cm": 7.32785032150011,
+   "x": 0.6783824893625074,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52203",
+   "formula": "Na3BiO4",
+   "dfpt": 18.84427642,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+5"
+  },
+  {
+   "jid": "JVASP-43384",
+   "formula": "MgO",
+   "dfpt": 6.38320736,
+   "cm": 5.089447598813274,
+   "x": 0.5768358594677843,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9902",
+   "formula": "MgAg2O4",
+   "dfpt": 27.47592799,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Ag+3"
+  },
+  {
+   "jid": "JVASP-36951",
+   "formula": "BaHfO3",
+   "dfpt": 34.37446251,
+   "cm": 26.05009816246043,
+   "x": 0.8930485026246748,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9487",
+   "formula": "TiZnSiO5",
+   "dfpt": 19.55102199,
+   "cm": 7.71692880184178,
+   "x": 0.691260473223662,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-26341",
+   "formula": "SiO2",
+   "dfpt": 4.17086006,
+   "cm": 3.5138414321172777,
+   "x": 0.45591471264924993,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-53354",
+   "formula": "NdO3",
+   "dfpt": 50.57884302,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-48085",
+   "formula": "LiCoSiO4",
+   "dfpt": 56.753475120000004,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-9813",
+   "formula": "MgBi2O5",
+   "dfpt": 40.61835184,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+4"
+  },
+  {
+   "jid": "JVASP-9906",
+   "formula": "MgSn2O4",
+   "dfpt": 162.7480764,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+3"
+  },
+  {
+   "jid": "JVASP-12053",
+   "formula": "MnCoO4",
+   "dfpt": 723.68438213,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4,Co+4"
+  },
+  {
+   "jid": "JVASP-12809",
+   "formula": "Ag3BO3",
+   "dfpt": 200.76327574,
+   "cm": 5.301554405021421,
+   "x": 0.5891285836428416,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-51662",
+   "formula": "Al2O3",
+   "dfpt": 24.70347579,
+   "cm": 9.820577990288498,
+   "x": 0.7462053037960811,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34447",
+   "formula": "SiO2",
+   "dfpt": 5.60389333,
+   "cm": 4.433656723828605,
+   "x": 0.5337021963125925,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35979",
+   "formula": "LiO3",
+   "dfpt": 9.21274678,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-34385",
+   "formula": "Y3GaO6",
+   "dfpt": 14.220203569999999,
+   "cm": 11.59370889639262,
+   "x": 0.7793096775232465,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-51609",
+   "formula": "Na2V2ZnO7",
+   "dfpt": 23.52033123,
+   "cm": 5.654833491526742,
+   "x": 0.6080907568635231,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-49154",
+   "formula": "Ba3NbGa3Si2O14",
+   "dfpt": 15.119926889999999,
+   "cm": 8.502652918941493,
+   "x": 0.7143578843218258,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-21497",
+   "formula": "Li2CaSiO4",
+   "dfpt": 12.06462708,
+   "cm": 9.104236171285933,
+   "x": 0.7298328355301378,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9481",
+   "formula": "MgTiSiO5",
+   "dfpt": 46.960111250000004,
+   "cm": 9.688049337178851,
+   "x": 0.7433275721674776,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-19255",
+   "formula": "Mg2Mo3O8",
+   "dfpt": 14.29691998,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mo+4"
+  },
+  {
+   "jid": "JVASP-44586",
+   "formula": "Mn3CoO8",
+   "dfpt": 258.40374844,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4,Co+4"
+  },
+  {
+   "jid": "JVASP-53460",
+   "formula": "TaAlO4",
+   "dfpt": 89.8259487,
+   "cm": 26.968403741798422,
+   "x": 0.8964388916027393,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-40732",
+   "formula": "LiMnNbO4",
+   "dfpt": 576.8662084,
+   "cm": 25.44349812657438,
+   "x": 0.8906844897773798,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35194",
+   "formula": "ZnGeO3",
+   "dfpt": 30.791138349999997,
+   "cm": 14.824425023935209,
+   "x": 0.8216878142502902,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-31290",
+   "formula": "CoCuO2",
+   "dfpt": 15.89595,
+   "cm": 13.67213729412415,
+   "x": 0.8085774809333268,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-34716",
+   "formula": "SiO2",
+   "dfpt": 6.366306359999999,
+   "cm": 5.798737915619658,
+   "x": 0.6153223723557286,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-54542",
+   "formula": "BaAl2O4",
+   "dfpt": 11.852056319999999,
+   "cm": 6.067579030127154,
+   "x": 0.6281412318618815,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-35195",
+   "formula": "RbMgBO3",
+   "dfpt": 6.02647621,
+   "cm": 6.093711859426592,
+   "x": 0.6293418826732808,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-52256",
+   "formula": "Yb4Sb2O",
+   "dfpt": 32.36019651,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Yb+2,Sb-3"
+  },
+  {
+   "jid": "JVASP-44594",
+   "formula": "Cr3WO8",
+   "dfpt": 33.13521789,
+   "cm": 9.00076671595646,
+   "x": 0.7272917354343547,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-54553",
+   "formula": "LiNbWO6",
+   "dfpt": 190.60588824,
+   "cm": 14.484459721954623,
+   "x": 0.8180104140140858,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-56652",
+   "formula": "Sm3BWO9",
+   "dfpt": 16.579151680000003,
+   "cm": 16.785784579187304,
+   "x": 0.8403047800663227,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-27144",
+   "formula": "K2PdO2",
+   "dfpt": 11.198997760000001,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Pd+2"
+  },
+  {
+   "jid": "JVASP-27049",
+   "formula": "CrCuO2",
+   "dfpt": 12.90004015,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Cu+1"
+  },
+  {
+   "jid": "JVASP-27155",
+   "formula": "KTaGe3O9",
+   "dfpt": 12.35027931,
+   "cm": 5.462926669187205,
+   "x": 0.5980129333996614,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-27156",
+   "formula": "RbTaGe3O9",
+   "dfpt": 12.119797169999998,
+   "cm": 5.736301228593176,
+   "x": 0.6122177884035752,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-47734",
+   "formula": "LiCoSiO4",
+   "dfpt": 144.14696179999999,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Co+3"
+  },
+  {
+   "jid": "JVASP-44636",
+   "formula": "TiMn3O8",
+   "dfpt": 25.692128840000002,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Mn+4"
+  },
+  {
+   "jid": "JVASP-58443",
+   "formula": "HoBi2O6",
+   "dfpt": 652.21894195,
+   "cm": null,
+   "x": null,
+   "reason": "no_oxidation_state_guess"
+  },
+  {
+   "jid": "JVASP-31081",
+   "formula": "Li3NbO4",
+   "dfpt": 17.383479649999998,
+   "cm": 19.900821241373635,
+   "x": 0.863018835369854,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-55257",
+   "formula": "BaSi3SnO9",
+   "dfpt": 8.24801342,
+   "cm": 6.020093920957696,
+   "x": 0.625939542657904,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-12889",
+   "formula": "Na4SnO3",
+   "dfpt": 8.69653051,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Sn+2"
+  },
+  {
+   "jid": "JVASP-45297",
+   "formula": "K6MgO4",
+   "dfpt": 9.04371331,
+   "cm": 6.835219786888942,
+   "x": 0.6604498730804794,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-59132",
+   "formula": "Tb3GaO6",
+   "dfpt": 14.1540325,
+   "cm": 13.715876539533067,
+   "x": 0.8091102336892542,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-9895",
+   "formula": "Mg2FeWO6",
+   "dfpt": 72.84527553,
+   "cm": 11.886739025612524,
+   "x": 0.7839665601501664,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57456",
+   "formula": "K3Nb3B2O12",
+   "dfpt": 29.677988,
+   "cm": 9.044760268745575,
+   "x": 0.7283779885662716,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-30795",
+   "formula": "SnO2",
+   "dfpt": 11.479449840000001,
+   "cm": 9.320632979392498,
+   "x": 0.7349971502953018,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-57138",
+   "formula": "SiO2",
+   "dfpt": 4.74455028,
+   "cm": 3.56456831548314,
+   "x": 0.4608746213695237,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-25966",
+   "formula": "SrTa4O11",
+   "dfpt": 47.06006331,
+   "cm": 24.04802404583682,
+   "x": 0.8848281161472791,
+   "reason": "ok"
+  },
+  {
+   "jid": "JVASP-31195",
+   "formula": "Li7BiO6",
+   "dfpt": 12.88931424,
+   "cm": null,
+   "x": null,
+   "reason": "no_polarizability:Bi+5"
+  },
+  {
+   "jid": "JVASP-20967",
+   "formula": "Li2Si2O5",
+   "dfpt": 5.4552869600000005,
+   "cm": 5.065022176885427,
+   "x": 0.575372882789374,
+   "reason": "ok"
+  }
+ ]
+}

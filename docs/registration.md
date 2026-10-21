@@ -100,3 +100,117 @@ Registered 2026-10-21 07:10 (UTC). `xrd.agent_classic_refined` scans nine isotro
   Jaccard rose 0.40 -> 0.725, which satisfies the second clause. Read together: lattice
   refinement is worth +27.5 points on T2 and +35 on T3 for a rule-based agent, and any model
   result must be compared to these numbers, not to the unrefined matcher.
+
+# Registration: Clausius-Mossotti validation against DFPT (written before the run)
+
+Registered 2026-10-21 07:30 (UTC), after the network policy change made JARVIS-DFT reachable and
+before `scripts/validate_cm.py` was run. Compared on oxides passing the composition rule that
+carry a DFPT total dielectric constant in JARVIS (expected a few hundred to about two thousand).
+
+| id | prediction |
+| --- | --- |
+| P15 | Spearman rank correlation between CM and DFPT (DFPT < 200) between 0.5 and 0.8 |
+| P16 | Mean absolute relative deviation between 25 % and 50 % |
+| P17 | Recall of DFPT >= 25 at the CM >= 15 screen between 0.7 and 0.9; the misses are dominated by x > 0.9 (soft lattices) or by ions whose table value is wrong |
+| P18 | Precision of the screen (share of CM >= 15 that are DFPT >= 25) below 0.5: the screen is meant to be loose |
+
+If P17 fails low, the screen margin (15) is wrong and funnel v0.2 must set it from this data, by a
+registered rule (the value that gives recall 0.9), not by eye.
+
+- 2026-10-21 07:35 Validation run (765 oxides with DFPT; 498 scorable, 267 not: 218 ions missing
+  from the table, led by Cu+, Mn4+, Ni4+, Co3+, Sn2+, Sb5+; 39 no oxidation-state guess; 10
+  divergent). P15 held (Spearman 0.70). P16 held (MARD 0.47, at the top of the range). P17
+  FAILED low: recall 0.45 at the k >= 15 screen; the misses are NOT soft lattices (86 % have
+  x < 0.8), so the estimator is missing ionic contributions outright, not only diverging.
+  P18 failed in the other direction (precision 0.64, the screen is tighter than meant).
+  Applying the registered rule: the threshold giving recall 0.9 is k_CM >= 7, which keeps 67 % of
+  everything scored at precision 0.48. A screen that keeps two thirds is not a screen.
+  Decision: funnel v0.2 does not remove any candidate on the Clausius-Mossotti value. The value
+  is kept as a flag. Removal on dielectric constant requires a DFPT value; with only an
+  electronic dielectric constant (a lower bound on the total) a candidate is kept and graded
+  "lower bound only". v0.1 results stand as run.
+
+# Registration: funnel v0.2 on JARVIS-DFT with evidence grades (written before the run)
+
+Registered 2026-10-21 07:40 (UTC). Dataset JARVIS-DFT 3D (93,902 entries). Stages: composition,
+stability (JARVIS ehull <= 0.05), band gap (TBmBJ >= 5.0 where available; else OptB88vdW >= 3.4
+as the calibrated proxy), dielectric (DFPT total >= 25 passes, DFPT total < 25 removes; no DFPT:
+kept, graded by what exists). Each survivor carries an evidence grade:
+
+- A: gap from TBmBJ and dielectric from DFPT (both verified at DFT level)
+- B: one of the two verified, the other a proxy or lower bound
+- C: proxies only (OptB88 gap, electronic dielectric or CM estimate)
+
+plus the ICSD flag as the synthesizability evidence. The deliverable list is grade A sorted by
+DFPT dielectric constant, with B and C counted, not listed as candidates.
+
+| id | prediction |
+| --- | --- |
+| P19 | Oxides passing composition and stability: between 4,000 and 12,000 |
+| P20 | Share of those with a TBmBJ gap: between 20 % and 40 % |
+| P21 | Grade-A survivors: between 10 and 80 |
+| P22 | Monoclinic HfO2 and ZrO2 are present in JARVIS, pass every stage, and are grade A or B; rutile TiO2 and SrTiO3 are removed at band gap; corundum Al2O3, quartz SiO2 and rocksalt MgO are removed at dielectric with a DFPT value (not merely flagged) |
+| P23 | At least 60 % of grade-A survivors carry an ICSD id |
+| P24 | At least half of the grade-A list are tantalates, niobates, hafnates, zirconates or rare-earth aluminates/scandates, i.e. the classes the literature already names |
+
+- 2026-10-21 07:50 Amendment to the v0.2 registration, before the valid run. The first run
+  (kept at results/funnel/v0.2_jarvis_invalid_run1.md) removed 13,728 of 13,825 oxides at the
+  stability stage. Cause: the `ehull` field in this JARVIS release is not usable as energy above
+  hull (monoclinic HfO2, the ground state, reads 1.78 eV/atom; MgO reads 0.015). Stability is
+  now computed from JARVIS's own formation energies with pymatgen phase diagrams per chemical
+  system (`speclab/hull.py`). Two further amendments, declared now because the reference-oxide
+  rows exposed them: (1) the DFPT dielectric pass/remove threshold carries the DFPT-vs-experiment
+  error from Petousis 2017 (MARD 16 %): pass at >= 21, not 25; (2) the TBmBJ band-gap threshold
+  carries a 15 % tolerance: pass at >= 4.25 eV, not 5.0. Known consequence, stated before the
+  run: monoclinic ZrO2 (JVASP-113) has a TBmBJ gap of 4.21 eV in JARVIS against 5.8 eV
+  experimental and will be removed at band gap by a 0.04 eV margin. P22 is therefore amended to
+  expect that removal, and the v0.2 result will report it as the cost of a threshold rule with
+  no per-material uncertainty. Nothing else changes.
+
+# Registration: MACE-MP-0 relaxation cross-check (written before the run)
+
+Registered 2026-10-21 08:05 (UTC), after one smoke test (monoclinic HfO2, mp-352: energy change
+-0.1 meV/atom, volume change +0.13 %, 2.5 s) and before `scripts/mace_check.py` ran on anything
+else. Model: mace-mp-0b3-medium (GitHub release), CPU, float64, FIRE with a cell filter to
+fmax 0.05 eV/A, 300 steps max. Structures: the 29 grade-A survivors of funnel v0.2 (JARVIS
+geometries) and the six v0.1 positive controls (MP-20 geometries).
+
+A universal potential relaxing a DFT-relaxed structure should barely move it. A large move
+means the potential disagrees with the DFT functional about that structure, or the structure
+is dynamically unstable in the potential's view; either way the candidate needs a look.
+
+| id | prediction |
+| --- | --- |
+| P25 | At least 90 % of the 35 structures change volume by less than 3 % in absolute value |
+| P26 | At least 90 % drop in energy by less than 30 meV/atom |
+| P27 | The structures that fail P25 or P26 are over-represented among the DFPT-divergent (k > 100) entries: at least half of the failures are in that set, which has 5 members |
+
+# Registration: Clausius-Mossotti validation against the Petousis 2017 set (written before the run)
+
+Registered 2026-10-21 08:05 (UTC). Second dataset for the same question as P15-P18: the Materials
+Project DFPT set (Petousis et al. 2017, 1,056 compounds, via matminer), restricted to oxides
+passing the composition rule. Same metrics; predictions are now informed by the JARVIS result.
+
+| id | prediction |
+| --- | --- |
+| P28 | Spearman between 0.6 and 0.8 |
+| P29 | Recall of poly_total >= 25 at the k_CM >= 15 screen between 0.35 and 0.6 (the JARVIS value was 0.45) |
+| P30 | Unscorable share between 20 % and 40 % (JARVIS: 35 %) |
+
+- 2026-10-21 (see timeline) v0.2 valid run. P19 held (7,061 stable oxides). P20 FAILED low: only
+  10.6 % of them carry a TBmBJ gap, so 89 % of band-gap decisions rest on the OptB88 proxy; the
+  grade-A list is bounded by TBmBJ coverage before anything else. P21 held (29 grade A). P22 held
+  as amended: monoclinic HfO2 survives at grade B (no DFPT value in JARVIS), Pca21 HfO2 at grade A
+  rank 24 (k 23.8, inside the tolerance), ZrO2 removed at band gap by 0.04 eV as declared; the
+  three dielectric negatives were removed on DFPT values, not flags. P23 FAILED (12 of 29 with an
+  ICSD id, 41 %). P24 FAILED (12 of 29 in the named classes, 41 %); the rest are NaREO2 / LiREO2
+  layered oxides and rare-earth sesquioxides, which the registration did not name.
+  Observation not registered: 5 grade-A entries have DFPT k > 100 (Na2Hf2O5 890, SrHfO3 315 and
+  295, LuTaO4 277, tetragonal HfO2 141). Those are soft-mode divergences of the same kind the
+  Clausius-Mossotti estimate shows; they rank first by k. A flag column is added to the output
+  after the fact and the ranking is left as run. A v0.3 rule for them (phonon check or exclusion
+  above a cut-off) would be registered separately.
+- Petousis validation run. Underpowered: only 130 oxides pass the composition rule and only ONE
+  has poly_total >= 25, so recall is 0 of 1 and P28-P30 cannot be read. Unscorable share 48 %,
+  Spearman 0.56 on 68 points. Lesson recorded: check the denominator before registering a
+  threshold prediction. The JARVIS validation (765 oxides, 175 positives) stands as the one that counts.

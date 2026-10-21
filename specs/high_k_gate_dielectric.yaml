@@ -3,7 +3,7 @@
 # Material-level proxies are what the computational funnel screens. The mapping between
 # the two, and the margin each proxy carries, is stated per field.
 name: high_k_gate_dielectric
-version: 0.1
+version: 0.2
 customer: "ALD/sputter tool vendor or logic/memory fab (hypothetical)"
 device_targets:            # recorded for traceability; cannot be computed from a crystal structure
   eot_nm_max: 0.5
@@ -24,13 +24,19 @@ material_proxies:
     # first three and excludes the last three. The threshold is a calibrated proxy, not a claim
     # about any one material.
     pbe_threshold_eV: 3.4
+    # TBmBJ gaps (JARVIS) are close to experiment but not exact; a 15 percent tolerance on the
+    # target gives the pass threshold below. ZrO2's JARVIS TBmBJ gap (4.21) falls just under it.
+    mbj_threshold_eV: 4.25
   dielectric_constant:
     target_min: 25
     # Screened with a Clausius-Mossotti estimate from Shannon ion polarizabilities, which
     # underestimates ionic contributions in soft lattices. Margin: keep anything >= 15 and
     # send it to the DFPT stage (not run in this version).
     estimator: clausius_mossotti
-    screen_min: 15
+    screen_min: 15                            # v0.1 only; v0.2 does not remove on this value
+    # DFPT total dielectric constant (JARVIS) with the Petousis 2017 DFPT-vs-experiment MARD of
+    # 16 percent as tolerance: pass at >= 21.
+    dfpt_pass_min: 21
   energy_above_hull_eV_per_atom_max: 0.05   # metastable polymorphs (ferroelectric HfO2) allowed
   band_offset_to_Si_eV_min: 1.0             # not screened in this version; Top-N interface DFT
   deposition:
