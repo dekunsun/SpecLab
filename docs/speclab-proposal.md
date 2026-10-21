@@ -1,4 +1,9 @@
-# 晶体结构预测（CSP）求职项目建议：面向 AI4S 材料方向 PM & Operations
+# SpecLab：从客户性能规格到可交付材料候选集
+
+副标题：SpecLab: from a customer's property spec to a deliverable material candidate set.
+项目定位：LiveLab 闭环中实验前的设计与交付阶段；晶体结构预测（CSP）是其工具层。
+
+## 项目建议（面向 AI4S 材料方向 PM & Operations 求职）
 
 调研日期：2026-10-21。目标职位：DeepMind / Anthropic / OpenAI 等的 AI for Science 材料方向 PM、Program Manager、Operations。
 项目范式参考：DeepMind 自动化材料实验室、CuspAI、Lila Sciences、Periodic Labs。
@@ -503,6 +508,6 @@ Ops 延伸：A-Lab 自动合成论文曾被质疑 XRD 相鉴定自动化出错�
 
 ## D.3 组合层面
 
-- 命名：不叫 LiveLab 3.0；README 首段写明"LiveLab 闭环中实验前的设计阶段"；ai4s 的 repos 页按闭环阶段排列四个项目。
+- 命名：SpecLab（备选 PreLab、TenderLab）；README 首段写明"LiveLab 闭环中实验前的设计阶段"；ai4s 的 repos 页按闭环阶段排列四个项目。
 - 运营：四个项目偏重前沿模型 eval，运营只在 ai4s 的定时例程与审核门中体现。CSP 明确承担实验室运营：吞吐模型、阶段门、成本、表征质控，对应 DeepMind 的 TPM Science Automation 岗位。
 - 工具层与 LiveLab 共用：harness、后端、计分、预注册模板可直接复用 livelab/ 与 livelab2/ 的结构。
