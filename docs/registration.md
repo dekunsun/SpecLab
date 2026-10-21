@@ -434,3 +434,10 @@ fails, the residual tool trades missed minor phases for false ones and the gate 
   accept. Zero tokens billed. The two keywords are removed; the up-to-three limit is enforced in
   the tool function and stated in its description. No prediction is affected; the failed
   directory is kept as `..._run1_schema_error` and the run restarts as run 1.
+- 2026-10-21 22:23 UTC (15:23 PT) Arm B2 run 1 interrupted by the account spend cap when
+  submitting round 5: 101 of 120 items done, 19 mid-conversation (state saved), 0 item errors.
+  Usage so far 21.2M input / 0.26M output tokens, about USD 45 at batch price, already 1.4x arm
+  B's whole run with the 19 heaviest items still open: P54 (1.0-1.6x) will fail high whatever the
+  remaining items cost. Observation from the rounds: every item called fit_and_residual in
+  round 1 (350 calls over 120 items), so P53's "fewer than 50 % of T1 items" is also headed for
+  failure. Neither is a reason to stop the run; the T3 result is what the registration is for.
