@@ -353,3 +353,24 @@ the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/x
   (`scripts/run_llm_xrd_batch.py`): identical model, system prompt, user prompt, effort and
   max_tokens; non-streaming; half price. Predictions P39-P42 apply unchanged. Arm B keeps the
   synchronous runner because of the tool loop.
+
+- 2026-10-21 20:25 UTC (13:25 PT) Arm A, public set, one run through the Batches API
+  (`results/xrd/claude-opus-5-5_armA_batch_public_run1/`). 120 of 120 requests succeeded at the
+  API; 101 parsed to an answer. Cost at batch price USD 14.50 against the USD 8.5 estimate:
+  output averaged 7,874 tokens per item (median 5,986, max 16,000), not the assumed 3,000.
+  - P39 FAILED: coverage 92.5 / 92.5 / 67.5 % by tier. Every one of the 19 silences is a
+    `max_tokens` stop at the registered 16,000 cap, with the model still computing peak positions
+    by hand; 13 of the 19 are two-phase items. This is the harness's cap, not a refusal to commit
+    (LiveLab's output-cap lesson again). Silence stays scored as coverage; a re-run with a larger
+    cap is a new registration, not a correction of this one.
+  - P40 FAILED high: T1 exact 94.6 % (35 of 37 answered), far above the 40-75 % registered.
+  - P41 FAILED high on every clause: T2 89.2 %; T3 exact 33.3 % (above the 30 % ceiling by one
+    item) with Jaccard 0.648 (above 0.6). The 18 T3 errors are almost all the major phase alone
+    with the minor phase (weights 0.10-0.35) missed.
+  - P42 FAILED: arm A is below the strain-refined classic on T1 (94.6 vs 100) and on T3 exact
+    (33.3 vs 50) but ABOVE it on T2 (89.2 vs 65): reading the CIFs, the model handles the +-1.5 %
+    strain that a fixed-strain-grid matcher cannot.
+  Reading: the registered prior ("reading numbers is not what the model is for") was wrong for
+  single-phase items and right for the minor phase of two-phase items. Before arm B runs, two
+  predictions are added: P48 arm B median output tokens per item below arm A's 5,986 (the tool
+  replaces hand computation); P49 arm B coverage at or above 95 % at the same 16,000 cap.

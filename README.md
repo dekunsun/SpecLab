@@ -11,8 +11,7 @@ every step has an eval and an evidence grade.
 
 **Status (2026-10-21): v0.3. Three funnel versions, two validations, a potential cross-check, a
 phonon check, a substrate stage and one eval set with baselines, all registered before running.
-No language model has been run yet. No material has been made. 37 registered predictions:
-21 held, 12 failed, 4 could not be read. Every failure is logged with its direction in
+One language model run (Claude Opus 5.5, arm A, public XRD set). No material has been made. 42 registered predictions: 22 held, 16 failed, 4 could not be read. Every failure is logged with its direction in
 [docs/registration.md](docs/registration.md).**
 
 **Deliverable:** [results/funnel/v0.3_gradeA.md](results/funnel/v0.3_gradeA.md), 20 oxides with a
@@ -123,8 +122,14 @@ between this project and the diagnosis stage. `items/xrd_public.json` holds 120 
 | classic NNLS matcher | 100 % | 37.5 % | 15 % (Jaccard 0.40) |
 | classic NNLS with strain refinement | 100 % | 65 % | 50 % (Jaccard 0.73) |
 | oracle | 100 % | 100 % | 100 % |
+| **Claude Opus 5.5, arm A (reading only, no tool), 1 run** | **94.6 %** (37 of 40 answered) | **89.2 %** (37 answered) | **33.3 %** (27 answered; Jaccard 0.65) |
 
-Any model result is to be read against the refined row. A held-out set of 60 items exists
+Any model result is to be read against the refined row. The Opus run was registered before it ran
+([P38-P47](docs/registration.md)); four of its five predictions failed, three of them because the
+model did far better at reading CIFs and patterns than the registration expected (T2 is above the
+refined matcher). Every one of its 19 non-answers is a `max_tokens` stop at the registered 16,000
+cap, with the model still computing peak positions by hand; coverage, not error. The next
+registered step is arm B, the same prompt plus a `simulate_pattern` tool. A held-out set of 60 items exists
 locally; its sha256 is in `items/README.md`.
 
 ## What is deliberately not claimed
@@ -163,7 +168,7 @@ python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
 
 ## Next
 
-1. Register and run frontier models (Claude, Gemini, GPT) and one open-weight model on the XRD set (needs API keys).
+1. Arm B (tool-assisted) for Opus 5.5; then the held-out gate; then Gemini 4 Argon and GPT-6 Astra under the same harness.
 2. The Si band-offset and reaction-with-Si stages; precursor availability from the literature.
 3. Verify the Shannon table against the paper, or retire the estimator.
 4. Run the phonon check on the grade-B list, whose DFPT values (where present) carry the same risk.
