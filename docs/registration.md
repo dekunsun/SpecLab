@@ -214,3 +214,10 @@ passing the composition rule. Same metrics; predictions are now informed by the 
   has poly_total >= 25, so recall is 0 of 1 and P28-P30 cannot be read. Unscorable share 48 %,
   Spearman 0.56 on 68 points. Lesson recorded: check the denominator before registering a
   threshold prediction. The JARVIS validation (765 oxides, 175 positives) stands as the one that counts.
+
+- 2026-10-21 06:48 UTC MACE cross-check run. P25 held (35 of 35 within 3 % volume; max 2.46 %,
+  YBiO3). P26 held (35 of 35 within 30 meV/atom; max 3.0 meV/atom, SiBi2O5). P27 not testable: no
+  failures. Three MP-20 positives relaxed in 0 steps (already below fmax). Reading: the potential
+  agrees with both DFT sources on every candidate's geometry; it says nothing about the five
+  DFPT-divergent entries, because a static relaxation from a symmetric minimum cannot see a soft
+  mode. The phonon check stays the open item for v0.3.

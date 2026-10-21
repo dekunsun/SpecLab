@@ -1,31 +1,36 @@
 # Data
 
-## MP-20
+Network policy during the first hours allowed GitHub and PyPI only; the author widened it to
+full at about 06:20 UTC on 2026-10-21. Both phases are recorded here.
 
-Source: `https://raw.githubusercontent.com/txie-93/cdvae/main/data/mp_20/{train,val,test}.csv`
-(Xie et al., CDVAE, ICLR 2022). 45,229 Materials Project entries with at most 20 atoms per unit
-cell, with PBE band gap, formation energy per atom, energy above hull (MP 2021 hull) and CIF.
-11,522 of them contain oxygen.
+## MP-20 (funnel v0.1, XRD items)
 
-Limits that matter for this project:
+`https://raw.githubusercontent.com/txie-93/cdvae/main/data/mp_20/{train,val,test}.csv`
+(Xie et al., CDVAE, ICLR 2022): 45,229 Materials Project entries with at most 20 atoms per cell,
+PBE band gap, formation energy, energy above hull (MP 2021 hull), CIF. 11,522 contain oxygen.
+Limits: no cell above 20 atoms (cubic Y2O3 is absent), PBE gaps, no dielectric data, no ICSD
+flag, pre-GNoME hull.
 
-- **Cell size.** Cubic Y2O3 (Ia-3, 40 atoms) and other large cells are absent. Any claim about
-  "the oxides in MP" is a claim about the small-cell subset.
-- **PBE gaps.** Systematically low for oxides; the spec uses a calibrated threshold, not the
-  target value.
-- **No dielectric data.** The Materials Project DFPT set (Petousis 2017) and JARVIS are behind
-  hosts this environment cannot reach. The funnel uses a Clausius-Mossotti estimate instead
-  and says so.
-- **No synthesizability flag.** MP-20 does not carry the ICSD / theoretical flag.
-- **Hull vintage.** The hull is MP 2021, before the GNoME additions. Some entries stable here
-  would be above the post-GNoME hull.
+## JARVIS-DFT 3D (funnel v0.2, Clausius-Mossotti validation)
 
-## Why not the Materials Project API, JARVIS, Alexandria, OQMD
+`jarvis-tools` figshare copy, 93,902 entries (`scripts`: `speclab.jarvis.fetch`). Fields used:
+OptB88vdW gap (all), TBmBJ gap (21,559), OptB88 and mBJ electronic dielectric tensors (60,354 and
+19,834), DFPT total dielectric constant (4,706), formation energy, ICSD ids (20,812), structure.
+Limits: the `ehull` field in this release is not usable (see registration); the hull is
+recomputed from formation energies per chemical system. TBmBJ coverage among stable oxides is
+10.6 %, which bounds the grade-A list. DFPT values above about 100 are soft-mode divergences.
 
-All four need a host outside the allowed list (api.materialsproject.org, figshare, ICAMS, oqmd.org).
-The code keeps the loader behind one module so these can be swapped in on a machine that reaches them.
+## Petousis 2017 (MP DFPT, via matminer `dielectric_constant`)
+
+1,056 compounds; only 130 oxides pass the composition rule and only one has k >= 25, so it could
+not test the screen (recorded as an underpowered run).
+
+## MACE-MP-0b3 medium
+
+Weights from the ACEsuit/mace-foundations GitHub release, downloaded to `data/models/`
+(not tracked). CPU, float64.
 
 ## Shannon polarizabilities
 
-`speclab/dielectric.py` carries the table and its provenance note. `VERIFIED = False` until the values
-are checked against Shannon 1993 Table 1.
+`speclab/dielectric.py` carries the table and its provenance note (`VERIFIED = False`). Its
+empirical check against JARVIS DFPT is in `results/dielectric/`.

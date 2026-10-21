@@ -1,4 +1,11 @@
 numpy
+scipy
 pymatgen
 pyyaml
 pytest
+# funnel v0.2 and validation
+jarvis-tools
+matminer
+# MACE cross-check (optional, ~1 GB with torch)
+# torch --index-url https://download.pytorch.org/whl/cpu
+# mace-torch

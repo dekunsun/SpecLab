@@ -13,3 +13,4 @@ read 06:44 when the v0.2 retrospective finished. Order is correct. From here on 
 - 2026-10-21 07:20 Network policy widened to full by the author; JARVIS dft_3d, Petousis dielectric set and MACE weights now reachable. Funnel v0.2 planned.
 - 2026-10-21 ~07:50 UTC JARVIS ehull field found unusable; hull recomputed from formation energies; v0.2 registration amended (tolerances on DFPT k and TBmBJ gap) before the valid run.
 - 2026-10-21 ~08:05 UTC Funnel v0.2 valid run (29 grade A); CM validated against JARVIS DFPT (recall 0.45 at the screen: CM demoted to a flag); Petousis validation underpowered; MACE cross-check registered and started.
+- 2026-10-21 06:48 UTC MACE cross-check done, all 35 pass. Model file untracked (a 76 MB blob remains in one earlier commit; rewriting history is the author's call). No model API keys in this environment: the frontier-model XRD runs wait for the author.
