@@ -67,9 +67,10 @@ model:
 |---|---:|---:|---:|
 | random | 5 % | 10 % | 2.5 % |
 | classic NNLS matcher | 100 % | 37.5 % | 15 % (Jaccard 0.40) |
+| classic NNLS with strain refinement | 100 % | 65 % | 50 % (Jaccard 0.73) |
 | oracle | 100 % | 100 % | 100 % |
 
-Four of five predictions held; the classic matcher lost more to strain than predicted. The
+Four of five predictions held for the plain matcher; for the refined one, one of three (it gained less on T2 than predicted). Any model result is to be read against the refined row. The
 simulation's limits (no K-alpha2, no texture beyond a per-peak factor, no amorphous hump) are
 stated in the rules: a good score here is necessary, not sufficient.
 
@@ -108,7 +109,7 @@ python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt scipy
 ## Next
 
 1. Register and run frontier models (Claude, Gemini, GPT) and one open-weight model on the XRD set.
-2. A classic baseline with lattice refinement, so the T2 comparison is against the best rule-based method.
+2. Funnel v0.2 on JARVIS-DFT (TBmBJ gaps, DFPT dielectric) now that the network policy allows it; validate the Clausius-Mossotti table against the Petousis DFPT set.
 3. MACE-MP-0 relaxation of the Top-30 as a cross-check on the hull stage.
 4. Funnel v0.2: verify the polarizability table; add the Si band-offset and reaction stages.
 

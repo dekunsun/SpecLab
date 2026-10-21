@@ -81,3 +81,22 @@ any model is run.
   P10 held (T3 exact 15 %, Jaccard 0.40, gap 0.25). P11 held. Items released as generated.
   A follow-up classic baseline with a strain scan (lattice refinement) is the obvious next
   rule-based agent and would be registered separately.
+
+# Registration: classic baseline with lattice refinement (written before the run)
+
+Registered 2026-10-21 07:10 (UTC). `xrd.agent_classic_refined` scans nine isotropic strains in
+[-2 %, +2 %] per candidate, keeps the best-correlating template, then runs the same NNLS.
+
+| id | prediction |
+| --- | --- |
+| P12 | T1 stays at 100 % |
+| P13 | T2 exact rate rises to between 70 % and 95 % |
+| P14 | T3 exact-set rate rises but stays below 50 %; Jaccard rises by at least 0.1 over the unrefined matcher |
+
+- 2026-10-21 07:15 Refined baseline run. P12 held (T1 100 %). P13 FAILED low: T2 65 %, under the
+  70 % floor; nine strain points in +-2 % still leave peak-position error of up to 0.25 %
+  against the +-1.5 % per-item strain, and the per-peak intensity distortion is untouched by
+  a strain scan. P14 FAILED on the exact clause: T3 reached exactly 50 %, not "below 50 %";
+  Jaccard rose 0.40 -> 0.725, which satisfies the second clause. Read together: lattice
+  refinement is worth +27.5 points on T2 and +35 on T3 for a rule-based agent, and any model
+  result must be compared to these numbers, not to the unrefined matcher.

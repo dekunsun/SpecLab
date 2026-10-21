@@ -140,3 +140,36 @@ def agent_classic(item, two_phase_threshold=0.12):
     if wn[order[1]] >= two_phase_threshold:
         out.append(item["candidates"][order[1]]["id"])
     return out
+
+
+def agent_classic_refined(item, strains=None, two_phase_threshold=0.12):
+    """Classic matcher with a lattice-refinement scan: each candidate is simulated at several
+    isotropic strains and the best-fitting strain is kept before the NNLS step. The rule-based
+    agent a learned model must beat on T2/T3."""
+    from pymatgen.core import Structure
+    from scipy.optimize import nnls
+    if strains is None:
+        strains = np.linspace(-0.02, 0.02, 9)
+    obs = np.array(item["intensity"])
+    cols = []
+    for c in item["candidates"]:
+        s = Structure.from_str(c["cif"], fmt="cif")
+        best, best_corr = None, -1.0
+        for st in strains:
+            x, y = peaks(s, float(st))
+            p = profile(x, y, fwhm=0.25)
+            p = p / max(p.max(), 1e-9) * 100
+            corr = float(np.dot(p, obs) / (np.linalg.norm(p) * np.linalg.norm(obs) + 1e-9))
+            if corr > best_corr:
+                best, best_corr = p, corr
+        cols.append(best)
+    A = np.array(cols).T
+    w, _ = nnls(A, obs)
+    if w.sum() <= 0:
+        return [item["candidates"][0]["id"]]
+    wn = w / w.sum()
+    order = np.argsort(-wn)
+    out = [item["candidates"][order[0]]["id"]]
+    if wn[order[1]] >= two_phase_threshold:
+        out.append(item["candidates"][order[1]]["id"])
+    return out

@@ -5,3 +5,5 @@
 - 2026-10-21 06:40 Clausius-Mossotti estimator checked on 13 anchors; divergence cut-off and score cap fixed; registration written.
 - 2026-10-21 06:50 Funnel v0.1 and retrospective run; 3 of 6 predictions held; deviations logged.
 - 2026-10-21 07:00 XRD items generated (120 public, 60 held-out local); baselines run; 4 of 5 predictions held.
+- 2026-10-21 07:15 Strain-refined classic baseline registered and run; 1 of 3 predictions held.
+- 2026-10-21 07:20 Network policy widened to full by the author; JARVIS dft_3d, Petousis dielectric set and MACE weights now reachable. Funnel v0.2 planned.

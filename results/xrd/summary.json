@@ -87,6 +87,36 @@
    "jaccard_mean": 0.4,
    "coverage": 1.0
   },
-  "seconds": 10.1
+  "seconds": 11.0
+ },
+ "classic_refined": {
+  "T1": {
+   "n": 40,
+   "answered": 40,
+   "exact": 40,
+   "jaccard": 40.0,
+   "exact_rate": 1.0,
+   "jaccard_mean": 1.0,
+   "coverage": 1.0
+  },
+  "T2": {
+   "n": 40,
+   "answered": 40,
+   "exact": 26,
+   "jaccard": 33.0,
+   "exact_rate": 0.65,
+   "jaccard_mean": 0.825,
+   "coverage": 1.0
+  },
+  "T3": {
+   "n": 40,
+   "answered": 40,
+   "exact": 20,
+   "jaccard": 29.0,
+   "exact_rate": 0.5,
+   "jaccard_mean": 0.725,
+   "coverage": 1.0
+  },
+  "seconds": 72.3
  }
 }

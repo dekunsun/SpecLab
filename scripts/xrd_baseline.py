@@ -8,7 +8,7 @@ items = json.loads(Path("items/xrd_public.json").read_text())
 answers = json.loads(Path("items/xrd_public_answers.json").read_text())
 out = Path("results/xrd"); out.mkdir(parents=True, exist_ok=True)
 rng = random.Random(1)
-runs = {"random": lambda it: xrd.agent_random(it, rng), "oracle": lambda it: xrd.agent_oracle(it, answers), "classic_nnls": xrd.agent_classic}
+runs = {"random": lambda it: xrd.agent_random(it, rng), "oracle": lambda it: xrd.agent_oracle(it, answers), "classic_nnls": xrd.agent_classic, "classic_refined": xrd.agent_classic_refined}
 summary = {}
 for name, fn in runs.items():
     t = time.time(); resp = {}
