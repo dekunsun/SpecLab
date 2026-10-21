@@ -385,3 +385,25 @@ the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/x
   intact, so the run continues as one run rather than a restart. The interim score (coverage
   70 / 57.5 / 35 %) is NOT read against P43-P47: the missing items are the ones that needed more
   tool calls, so any interim rate is biased towards easy items.
+
+- 2026-10-21 21:35 UTC (14:35 PT) Arm B, public set, one run, six rounds through the Batches API
+  (interrupted once by the spend cap, resumed with the rounds 1-2 conversations intact).
+  119 of 120 answered (one T3 item stopped at max_tokens); median 3 tool calls per item (T1 3,
+  T2 3, T3 5; max 9); median output 3,847 tokens; USD 32.03 at batch price, 12.8M input tokens
+  because every round resends the conversation.
+  - P43 held: coverage 100 / 100 / 97.5 %; median tool calls 3 (inside 3-6).
+  - P44 FAILED on the T2 clause only: T1 100 % (held), T2 97.5 % (above the 90 % ceiling), T3
+    exact 48.7 % (held, inside 45-75 %).
+  - P45 FAILED: on T3 arm B does not beat the strain-refined classic (48.7 % vs 50.0 % exact, one
+    item; Jaccard 0.726 vs 0.725, a tie); on T2 it is 32 points above, not "within 10".
+  - P46 held: 2.2x the cost of arm A per item.
+  - P48 held: median output 3,847 < 5,986. P49 held: coverage above 95 % at the same cap.
+  - P47 (held-out gate) not yet run.
+  Error analysis: 20 of the 21 errors are T3; 16 of those are the major phase alone with the
+  minor phase missed, and the missed minor phases are lighter (median weight 0.16) than the
+  found ones (0.23). The one T2 error and zero T1 errors say the single-phase task is solved
+  at this difficulty. Reading for the product: with the tool the model matches the best
+  rule-based method on T1, beats it decisively on T2 (strain), and ties it on T3; the minor
+  phase below about 15 % weight is the open problem for both, so the two-phase QC gate cannot
+  rest on either alone. A v2 tool that returns the residual after subtracting the major phase
+  would be registered separately before any further run.

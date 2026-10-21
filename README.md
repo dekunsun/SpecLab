@@ -11,7 +11,7 @@ every step has an eval and an evidence grade.
 
 **Status (2026-10-21): v0.3. Three funnel versions, two validations, a potential cross-check, a
 phonon check, a substrate stage and one eval set with baselines, all registered before running.
-One language model run (Claude Opus 5.5, arm A, public XRD set). No material has been made. 42 registered predictions: 22 held, 16 failed, 4 could not be read. Every failure is logged with its direction in
+Two language model runs (Claude Opus 5.5, arms A and B, public XRD set). No material has been made. 49 registered predictions: 27 held, 18 failed, 4 could not be read. Every failure is logged with its direction in
 [docs/registration.md](docs/registration.md).**
 
 **Deliverable:** [results/funnel/v0.3_gradeA.md](results/funnel/v0.3_gradeA.md), 20 oxides with a
@@ -123,13 +123,17 @@ between this project and the diagnosis stage. `items/xrd_public.json` holds 120 
 | classic NNLS with strain refinement | 100 % | 65 % | 50 % (Jaccard 0.73) |
 | oracle | 100 % | 100 % | 100 % |
 | **Claude Opus 5.5, arm A (reading only, no tool), 1 run** | **94.6 %** (37 of 40 answered) | **89.2 %** (37 answered) | **33.3 %** (27 answered; Jaccard 0.65) |
+| **Claude Opus 5.5, arm B (with a simulate_pattern tool), 1 run** | **100 %** (40 answered) | **97.5 %** (40 answered) | **48.7 %** (39 answered; Jaccard 0.73) |
 
-Any model result is to be read against the refined row. The Opus run was registered before it ran
-([P38-P47](docs/registration.md)); four of its five predictions failed, three of them because the
-model did far better at reading CIFs and patterns than the registration expected (T2 is above the
-refined matcher). Every one of its 19 non-answers is a `max_tokens` stop at the registered 16,000
-cap, with the model still computing peak positions by hand; coverage, not error. The next
-registered step is arm B, the same prompt plus a `simulate_pattern` tool. A held-out set of 60 items exists
+Any model result is to be read against the refined row. Both Opus runs were registered before
+they ran ([P38-P49](docs/registration.md)). Arm A's 19 non-answers are all `max_tokens` stops at
+the registered 16,000 cap, with the model still computing peak positions by hand. With the tool
+(arm B, median 3 calls per item, 2.2x the cost of arm A) the model matches the best rule-based
+method on single clean patterns, beats it by 32 points on strained ones, and ties it on
+two-phase mixtures: 16 of its 20 two-phase errors are the major phase alone, with a minor phase
+of median weight 0.16 missed. The minor phase below about 15 % is the open problem for model and
+rules alike, so the two-phase QC gate cannot rest on either yet. Next registered steps: the
+held-out gate for arm B, then a residual-after-major-phase tool. A held-out set of 60 items exists
 locally; its sha256 is in `items/README.md`.
 
 ## What is deliberately not claimed
@@ -168,7 +172,7 @@ python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
 
 ## Next
 
-1. Arm B (tool-assisted) for Opus 5.5; then the held-out gate; then Gemini 4 Argon and GPT-6 Astra under the same harness.
+1. The held-out gate for arm B (three runs); a residual-after-major-phase tool for the minor-phase problem; then Gemini 4 Argon and GPT-6 Astra under the same harness.
 2. The Si band-offset and reaction-with-Si stages; precursor availability from the literature.
 3. Verify the Shannon table against the paper, or retire the estimator.
 4. Run the phonon check on the grade-B list, whose DFPT values (where present) carry the same risk.

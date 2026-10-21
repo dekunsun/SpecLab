@@ -17,3 +17,4 @@ read 06:44 when the v0.2 retrospective finished. Order is correct. From here on 
 - 2026-10-21 07:05-07:20 UTC Substrate ZSL stage (both predictions held); soft-mode check on divergent entries (all three held); v0.3 rule applied to all grade A: 9 demoted, 20 remain.
 - 2026-10-21 (after v0.3) Opus 5.5 XRD registration written (P38-P47), prompts frozen, runner and backend written; no model call made (no key).
 - 2026-10-21 20:25 UTC Arm A (Opus 5.5, reading only, batch) on the public set: T1 94.6 %, T2 89.2 %, T3 33.3 % exact; 19 silences, all max_tokens stops; USD 14.50.
+- 2026-10-21 21:35 UTC Arm B (Opus 5.5 + simulate_pattern tool, round-batched) on the public set: T1 100 %, T2 97.5 %, T3 48.7 % exact (Jaccard 0.73); 119/120 answered; USD 32.03. One spend-cap interruption, resumed.
