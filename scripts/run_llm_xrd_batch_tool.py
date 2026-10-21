@@ -17,6 +17,7 @@ import anthropic
 ap = argparse.ArgumentParser()
 ap.add_argument("--set", default="public"); ap.add_argument("--run", type=int, default=1); ap.add_argument("--effort", default="high")
 ap.add_argument("--poll", type=int, default=60); ap.add_argument("--max-rounds", type=int, default=13); ap.add_argument("--max-tool-calls", type=int, default=12)
+ap.add_argument("--resume-errored", action="store_true", help="reopen items whose last round errored at the API (e.g. a spend cap) and continue them; their earlier rounds are kept")
 a = ap.parse_args()
 key = os.environ.get("SPECLAB_ANTHROPIC_KEY") or os.environ.get("ANTHROPIC_API_KEY")
 if not key:
@@ -62,6 +63,13 @@ def finish(s, text):
 
 
 states = {it["id"]: load_state(it) for it in items}
+if a.resume_errored:
+    n = 0
+    for s_ in states.values():
+        if s_["done"] and s_["error"]:
+            s_["done"] = False; s_["parsed"] = None; s_["final_text"] = ""; s_.setdefault("errors_cleared", []).append(s_["error"]); s_["error"] = None; s_["rounds"] -= 1
+            save_state(s_); n += 1
+    print(f"reopened {n} errored items", file=sys.stderr)
 
 # submit a round when nothing is open; collect the open round; repeat until every item is done
 while True:

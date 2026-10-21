@@ -377,3 +377,11 @@ the runner is `scripts/run_llm_xrd.py`; raw exchanges and usage go to `results/x
 - 2026-10-21 20:40 UTC (13:40 PT) Author's decision: arm B runs through the Batches API one round
   per batch (`scripts/run_llm_xrd_batch_tool.py`); message sequence per item identical to the
   synchronous runner; same prompts, effort, cap and 12-call limit. P43-P47, P48, P49 apply unchanged.
+- 2026-10-21 20:49 UTC (13:49 PT) Arm B run 1 interrupted in round 3: the account's monthly API
+  spend cap was reached and all 55 round-3 requests errored ("You have reached your specified API
+  usage limits", access resumes 2026-11-01 unless the cap is raised). Rounds 1 and 2 completed
+  (120/120, 115/115), 65 items answered, USD 18.75 at batch price. The partial directory is kept
+  as is; a `--resume-errored` option reopens the 55 items with their rounds 1-2 conversations
+  intact, so the run continues as one run rather than a restart. The interim score (coverage
+  70 / 57.5 / 35 %) is NOT read against P43-P47: the missing items are the ones that needed more
+  tool calls, so any interim rate is biased towards easy items.
