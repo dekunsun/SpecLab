@@ -387,3 +387,76 @@ Ops 延伸：A-Lab 自动合成论文曾被质疑 XRD 相鉴定自动化出错�
 - https://matsci.org/t/number-of-materials-in-gnome-explorer/63304
 - https://pmc.ncbi.nlm.nih.gov/articles/PMC11044265 （Cheetham & Seshadri）
 - https://www.theregister.com/2024/04/11/google_deepmind_material_study/
+
+---
+
+# 附录 C：面向 DeepMind / Anthropic / OpenAI 的重新定位
+
+## C.1 关键事实
+
+- Periodic Labs（据 hyper.ai 单一来源，未见官方公告）：发布 "Periodic Neon"，基于开源权重 Kimi K2.6 后训练（科学文献 + 代码中间训练，再用自有实验数据做 RL），用于实验室 XRD 分析；自建 FrontierXRD 基准，基线 2.7% 提升到 55.3%。模型由"科学 harness"供给实验上下文、晶体学数据库和分析工具。
+- Lila Sciences：官方称在训练科学推理模型，有"验证器与工具驱动的通用 RL 引擎"；后训练工程师 JD 提到使用前沿与开源 LLM，未点名基座。
+- DeepMind：Gemini 是实验室的"科学推理层"，机器人做合成与表征；AI co-scientist 是多智能体系统。
+- Anthropic：Claude for Life Sciences 走"连接器 + Agent Skills + 提示库"路线，2026 年扩展到化学数据库（ChEMBL、OpenTargets）；材料科学在岗位 JD 里被点名，但产品上还没有材料专属连接器。
+- OpenAI：OpenAI for Science 2025 年 9 月启动，2026 年 1 月有 "Research Engineer, AI for Science" 岗位；Periodic Labs 创始人来自 OpenAI。
+
+## C.2 重心调整：从"CSP 流水线"变成"前沿模型驱动的材料发现产品"
+
+这三家是模型公司。它们看材料问题的方式是：**前沿模型是大脑，CSP/MLIP/DFT 是工具，实验室是验证器。** 所以项目的头条应该是 agent 编排层和 evals，CSP 漏斗降为工具层。
+
+新的分层：
+
+| 层 | 内容 | 对应三家公司的什么 |
+|---|---|---|
+| 大脑 | 前沿 LLM agent：读客户需求 → 写规格 → 调工具 → 解释结果 → 提实验计划 | Gemini 实验室大脑；Claude for Science；OpenAI for Science |
+| 工具 / harness | MP、Alexandria、GNoME 数据集查询；pymatgen；MACE/Orb 松弛；ALIGNN 预测；QE 提交；XRD 相鉴定 | Claude 连接器 / MCP；Periodic 的"科学 harness" |
+| 验证器 | 凸包距离、带隙阈值、去重、可合成性、XRD 匹配，全部给出可机检的 0/1 或分数 | Lila 的"验证器驱动 RL"；OpenAI 的可验证奖励 |
+| 实验 | 组合库沉积与表征计划 | DeepMind 实验室 |
+
+## C.3 三份核心交付物（替代原来的"候选档案"为第一交付物）
+
+1. **Materials Agent Eval Suite**：100 到 200 道可自动判分的任务，分四类：
+   - 规格转化：客户自然语言需求 → 结构化规格（与金标准比对字段级精度）。
+   - 工具使用：给定规格，agent 能否正确调用数据库、MLIP、预测器并得到正确候选（用回溯测试里的 HfO2 等已知答案判分）。
+   - 文献抽取：合成配方抽取的精度 / 召回 / 幻觉率。
+   - XRD 相鉴定：用 MP 模拟衍射图加噪声生成题目，判分对错。这直接对标 Periodic 的 FrontierXRD 思路。
+   同一套题跑 Claude、Gemini、GPT 三家前沿模型和一个开源模型，出一张对比表。
+
+2. **Build vs Buy vs Post-train 决策备忘录**：对比三条路线的精度、成本、数据护城河、迭代速度和风险。
+   - Buy：前沿 API + harness（Anthropic 路线）。
+   - Post-train：开源权重 + 自有实验数据 RL（Periodic 路线）。
+   - Build：自研（DeepMind 路线）。
+   可选小实验：用 Qwen 或 Kimi 的小模型，在 XRD 相鉴定或配方抽取这一个可验证任务上做 SFT，与前沿 API 在同一 eval 上对比。一周、一张 GPU。目的不是训练，而是让备忘录里的数字是自己测的。
+
+3. **闭环运营方案**：实验室吞吐模型、表征自动化的质量控制（A-Lab 教训）、数据管道、阶段门。原来的候选档案和实验计划作为这份方案的附件。
+
+## C.4 三家公司的侧重
+
+| 公司 | 面试时突出 | 项目里对应的部分 |
+|---|---|---|
+| DeepMind | 闭环实验室运营、吞吐、XRD 质控、GNoME 批评的回应、Gemini 多智能体编排 | 运营方案、XRD eval、GNoME 候选池与凸包 |
+| Anthropic | 把 Claude 部署到科研场景：连接器 / Skills 设计、外部伙伴管理、安全与可靠性评估 | 用 Agent Skills + MCP 做一个"材料连接器"原型，eval suite，伙伴（大学实验室 / 设备商）合作手册 |
+| OpenAI | 可验证奖励与 RL 思路、科学家与模型协作、评估体系 | 验证器设计、Build vs Post-train 备忘录、eval suite |
+
+## C.5 时间分配调整（8 到 10 周）
+
+| 周 | 内容 |
+|---|---|
+| 1 到 2 | 最小 CSP 工具层跑通（附录 B 的 MVP）+ 回溯测试 |
+| 3 到 4 | Eval suite 四类题目各 25 到 50 道，三家前沿模型跑分 |
+| 5 | Agent harness：前沿模型 + 工具调用，跑完整漏斗 |
+| 6 | 可选：小模型 SFT 对比实验 |
+| 7 | Build vs Buy vs Post-train 备忘录 + 闭环运营方案 |
+| 8 | 候选档案、实验计划、复盘、汇报材料 |
+
+## C.6 来源
+
+- https://hyper.ai/en/stories/1e9ac8c903b2b6ef401eec65c77632ce （Periodic Neon，单一来源）
+- https://arxiv.org/pdf/2507.20534 （Kimi K2 技术报告）
+- https://www.lila.ai/tech
+- https://job-boards.greenhouse.io/lilasciences/jobs/4031323009
+- https://www.anthropic.com/news/claude-for-life-sciences
+- https://intuitionlabs.ai/articles/claude-healthcare-life-sciences-ai-capabilities-2026
+- https://jobs.ashbyhq.com/openai/d1425d2b-0c54-4fc9-8e21-fc8b9ae60238
+- https://planckperspective.com/quantum/6FVFVmaGFvd
+- https://www.rdworldonline.com/google-deepmind-partners-with-u-k-for-its-first-automated-lab/
