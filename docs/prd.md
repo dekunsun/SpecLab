@@ -12,7 +12,7 @@ As of 2026-10-21 · Dekun Sun · [中文版](prd.zh.md) · See also: [proposal](
 | Most dangerous failure | Delivering a computed number as a verified property: a threshold with no method error, an estimator used as a screen, a DFT value computed at an unstable structure |
 | Core design | The system removes a candidate only on DFT-level evidence; proxies grade, they do not reject; every threshold carries its method's error; every candidate carries an evidence grade and a list of what is unverified; predictions are registered before every run |
 | Measures | 100 % recall of known positives; known negatives removed at the textbook stage; grade-A yield and evidence coverage; cost and cycle time per candidate; an XRD quality-control gate |
-| Status | v0.3: 93,902 JARVIS entries to 20 grade-A candidates; 21 of 37 registered predictions held; no language model run yet; no material made |
+| Status | v0.3 funnel: 93,902 JARVIS entries to 20 grade-A candidates. XRD qualification: Opus 5.5 with the simulate_pattern tool passed the held-out gate on one run. 59 registered predictions: 31 held, 24 failed, 4 unreadable. No material made |
 
 ## Problem and users
 
@@ -57,9 +57,9 @@ The product states that proxies are not device metrics: the SiOx interfacial lay
 | FR7 | Each deliverable reports stage counts, evidence coverage, A/B/C distribution | done |
 | FR8 | Retrospective controls: known positives recovered, known negatives removed at the textbook stage | done (v0.1, v0.2) |
 | FR9 | Registration and deviation log; every run kept, invalid runs included | done |
-| FR10 | XRD phase-ID eval: public items, local held-out set, baselines; used as the characterisation QC gate and the model qualification test | items and baselines done; no model run |
+| FR10 | XRD phase-ID eval: public items, held-out set, baselines; used as the characterisation QC gate and the model qualification test | done; four Opus 5.5 runs (arms A, B, B2 public; B held-out) |
 | FR11 | Band offset to Si, reaction with Si, precursor availability, crystallisation temperature | not built; declared in the spec |
-| FR12 | Model qualification: one run on the XRD held-out set within 10 points of the public result on every tier and above the refined classic baseline; two more runs only if a tier falls short (amended 2026-10-22, see registration) | pending |
+| FR12 | Model qualification: one run on the XRD held-out set within 10 points of the public result on every tier and above the refined classic baseline; two more runs only if a tier falls short (amended 2026-10-22, see registration) | passed on one run (arm B, 2026-10-22): T1 100 %, T2 100 %, T3 78.9 %, coverage 98 % |
 
 ## Measures and targets
 
