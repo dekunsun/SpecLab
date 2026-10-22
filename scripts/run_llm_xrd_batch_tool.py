@@ -18,6 +18,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--set", default="public"); ap.add_argument("--run", type=int, default=1); ap.add_argument("--effort", default="high")
 ap.add_argument("--poll", type=int, default=60); ap.add_argument("--max-rounds", type=int, default=13); ap.add_argument("--max-tool-calls", type=int, default=12)
 ap.add_argument("--arm", default="B", choices=["B", "B2"], help="B: simulate_pattern only. B2: plus fit_and_residual")
+ap.add_argument("--budget", type=float, default=40.0, help="hard stop in USD at batch price: no round is submitted once the running total exceeds it")
+ap.add_argument("--pilot", type=int, default=0, help="run only the first N items of each tier (cost measurement before a full run); run name gets a _pilotN suffix")
 ap.add_argument("--resume-errored", action="store_true", help="reopen items whose last round errored at the API (e.g. a spend cap) and continue them; their earlier rounds are kept")
 a = ap.parse_args()
 key = os.environ.get("SPECLAB_ANTHROPIC_KEY") or os.environ.get("ANTHROPIC_API_KEY")
@@ -26,8 +28,17 @@ if not key:
 client = anthropic.Anthropic(api_key=key)
 items_path = Path("items/xrd_public.json") if a.set == "public" else Path("data/heldout/xrd_heldout.json")
 ans_path = Path("items/xrd_public_answers.json") if a.set == "public" else Path("data/heldout/xrd_heldout_answers.json")
-items = json.loads(items_path.read_text()); answers = json.loads(ans_path.read_text()); by_id = {it["id"]: it for it in items}
-run_name = f"{llm.MODEL}_arm{a.arm}_batch_{a.set}_run{a.run}"
+items = json.loads(items_path.read_text()); answers = json.loads(ans_path.read_text())
+if a.pilot:
+    keep = []
+    for tier in ("T1", "T2", "T3"):
+        keep += [it for it in items if it["tier"] == tier][: a.pilot]
+    items = keep; answers = {k: v for k, v in answers.items() if k in {it["id"] for it in items}}
+by_id = {it["id"]: it for it in items}
+run_name = f"{llm.MODEL}_arm{a.arm}_batch_{a.set}_run{a.run}" + (f"_pilot{a.pilot}" if a.pilot else "")
+PIN, POUT = llm.PRICE[llm.MODEL]
+def spent_so_far(states):
+    return sum(s["usage"]["input"] for s in states.values()) / 1e6 * PIN * 0.5 + sum(s["usage"]["output"] for s in states.values()) / 1e6 * POUT * 0.5
 SYSTEM = prompts.SYSTEM_XRD_TOOL2 if a.arm == "B2" else prompts.SYSTEM_XRD_TOOL
 TOOLS = [llm.TOOL, llm.TOOL_RESIDUAL] if a.arm == "B2" else [llm.TOOL]
 out = Path("results/xrd") / run_name; (out / "state").mkdir(parents=True, exist_ok=True)
@@ -80,6 +91,10 @@ while True:
     if not open_rounds:
         pending = [s for s in states.values() if not s["done"]]
         if not pending or len(rounds) >= a.max_rounds:
+            break
+        if spent_so_far(states) > a.budget:
+            print(f"BUDGET STOP: USD {spent_so_far(states):.2f} spent at batch price exceeds --budget {a.budget}; {len(pending)} items left unfinished", file=sys.stderr)
+            (out / "BUDGET_STOP.txt").write_text(f"stopped before round {len(rounds)+1}: spent {spent_so_far(states):.2f} > budget {a.budget}; pending {len(pending)}\n")
             break
         reqs = [{"custom_id": s["id"], "params": {"model": llm.MODEL, "max_tokens": 16000, "system": SYSTEM, "output_config": {"effort": a.effort},
                                                  "tools": TOOLS, "messages": s["messages"]}} for s in pending]

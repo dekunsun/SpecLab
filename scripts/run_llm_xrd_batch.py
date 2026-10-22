@@ -14,6 +14,7 @@ import anthropic
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--set", default="public"); ap.add_argument("--run", type=int, default=1); ap.add_argument("--effort", default="high")
+ap.add_argument("--pilot", type=int, default=0, help="first N items per tier only"); ap.add_argument("--budget", type=float, default=40.0, help="refuse to submit if the pre-submit estimate (measured per-item cost x items) exceeds this")
 ap.add_argument("--submit", action="store_true"); ap.add_argument("--collect", action="store_true"); ap.add_argument("--poll", type=int, default=60)
 a = ap.parse_args()
 key = os.environ.get("SPECLAB_ANTHROPIC_KEY") or os.environ.get("ANTHROPIC_API_KEY")
@@ -23,7 +24,16 @@ client = anthropic.Anthropic(api_key=key)
 items_path = Path("items/xrd_public.json") if a.set == "public" else Path("data/heldout/xrd_heldout.json")
 ans_path = Path("items/xrd_public_answers.json") if a.set == "public" else Path("data/heldout/xrd_heldout_answers.json")
 items = json.loads(items_path.read_text()); answers = json.loads(ans_path.read_text())
-run_name = f"{llm.MODEL}_armA_batch_{a.set}_run{a.run}"
+if a.pilot:
+    keep = []
+    for tier in ("T1", "T2", "T3"):
+        keep += [it for it in items if it["tier"] == tier][: a.pilot]
+    items = keep; answers = {k: v for k, v in answers.items() if k in {it["id"] for it in items}}
+run_name = f"{llm.MODEL}_armA_batch_{a.set}_run{a.run}" + (f"_pilot{a.pilot}" if a.pilot else "")
+MEASURED_PER_ITEM_USD = {"A": 0.121}   # arm A public run 1: USD 14.50 / 120 at batch price
+est = MEASURED_PER_ITEM_USD["A"] * len(items) * 1.2
+if est > a.budget and a.submit:
+    sys.exit(f"refusing to submit: estimate USD {est:.2f} (measured per-item x {len(items)} x 1.2) exceeds --budget {a.budget}")
 out = Path("results/xrd") / run_name; out.mkdir(parents=True, exist_ok=True)
 meta_path = out / "batch.json"
 
