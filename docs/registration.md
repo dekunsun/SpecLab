@@ -466,3 +466,29 @@ fails, the residual tool trades missed minor phases for false ones and the gate 
   limit must end with one final turn without tools that asks for the answer; (2) a tool that
   returns a 1,400-point array invites iteration, so a residual tool should return a summary
   (the residual's largest peaks and their positions) and the harness should say when to stop.
+
+# Registration: arm B on the held-out set, one run with a conditional repeat (written before the run)
+
+Registered 2026-10-22 (PT morning). Amends PRD FR12 and P47. Reason: cost and item count. The
+held-out set has 20 items per tier, so a single T3 rate carries about +-10 points of sampling
+error that two more runs would not remove (60 two-phase items in all); arm B's T1 and T2 are
+near the ceiling, where run-to-run variance is small (LiveLab 2.0's three repeats spread by at
+most 2 items). The question this run answers is generalisation to unseen items, which one run
+can answer. The held-out set (60 items, seed private, sha256 in items/README.md) exists only on
+the author's and this session's machines; it has never been sent to a model.
+
+Protocol: arm B (simulate_pattern only), Opus 5.5, effort high, 16,000 cap, 12-call limit,
+Batches API one round per batch, `--budget 25`. Estimate from the measured unit cost:
+0.27 x 60 x 1.2 = USD 19.
+
+| id | prediction |
+| --- | --- |
+| P56 | Coverage at or above 95 % |
+| P57 | T1 exact between 95 % and 100 %; T2 between 90 % and 100 %; T3 exact between 35 % and 60 % |
+| P58 | Every tier within 10 points of the public-set result (100 / 97.5 / 48.7) |
+| P59 | Cost between USD 14 and USD 24 at batch price |
+
+Gate rule (replaces "three runs"): if P58 holds on every tier, arm B is qualified on one run.
+If any tier is more than 10 points below the public result, two more runs are made on the
+held-out set before any verdict, and the three are reported together. If coverage is below
+95 %, the harness is at fault before the model is.

@@ -59,7 +59,7 @@ The product states that proxies are not device metrics: the SiOx interfacial lay
 | FR9 | Registration and deviation log; every run kept, invalid runs included | done |
 | FR10 | XRD phase-ID eval: public items, local held-out set, baselines; used as the characterisation QC gate and the model qualification test | items and baselines done; no model run |
 | FR11 | Band offset to Si, reaction with Si, precursor availability, crystallisation temperature | not built; declared in the spec |
-| FR12 | Model qualification: three runs on the XRD held-out set above the refined classic baseline before any language model enters the pipeline | pending |
+| FR12 | Model qualification: one run on the XRD held-out set within 10 points of the public result on every tier and above the refined classic baseline; two more runs only if a tier falls short (amended 2026-10-22, see registration) | pending |
 
 ## Measures and targets
 
@@ -77,7 +77,7 @@ North star: every number in the customer's candidate set can answer "how far doe
 
 ## Model qualification (FR12)
 
-Before any language model handles literature extraction, synthesis routes or experiment plans, it runs three times on the local XRD held-out set (60 items) and must match or beat the strain-refined classic baseline per tier; a non-answer counts as coverage, not as an error. Re-tested on every model update. LiveLab 1.0's conclusion carries over: when the evidence is insufficient, the system says "cannot verify"; the model does not decide.
+Before any language model handles literature extraction, synthesis routes or experiment plans, it runs once on the local XRD held-out set (60 items) and must land within 10 points of its public-set result on every tier and match or beat the strain-refined classic baseline; two more runs follow only if a tier falls short; a non-answer counts as coverage, not as an error. Re-tested on every model update. LiveLab 1.0's conclusion carries over: when the evidence is insufficient, the system says "cannot verify"; the model does not decide.
 
 ## Operations model
 
