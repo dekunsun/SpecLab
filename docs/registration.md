@@ -502,3 +502,23 @@ held-out set before any verdict, and the three are reported together. If coverag
   earlier commits still carry it, and rewriting history is the author's call. A new private
   set, if ever needed, must be generated with a new seed on a machine that never commits it,
   and its hashes checked against the ignore rule before the first commit.
+
+- 2026-10-22 04:54 UTC (21:54 PT, 2026-10-21) Held-out run done: 5 rounds, 59 of 60 answered
+  (one T3 item stopped at max_tokens), median 3 tool calls, USD 15.91 at batch price.
+  Exact: T1 100 % (20/20), T2 100 % (20/20), T3 78.9 % (15/19, Jaccard 0.89).
+  - P56 held (coverage 100 / 100 / 95 %).
+  - P57 FAILED high on T3: 78.9 % against the registered 35-60 % (T1 and T2 held).
+  - P58 FAILED on T3 in the upward direction: +30 points over the public result (48.7 %);
+    T1 within 0, T2 within 2.5.
+  - P59 held (USD 15.91).
+  Gate verdict under the rule as written (repeat only when a tier falls more than 10 points
+  BELOW the public result): no tier fell, so arm B is qualified on one run. The T3 jump is
+  read with care, not celebrated: the held-out two-phase items are an easier draw (3 of 20
+  minor phases below 0.15 weight, against 12 of 40 in the public set; median minor weight
+  0.22 vs 0.20), and the model also did better within each weight band (below 0.15: 3/3 vs
+  4/12; 0.15-0.25: 5/9 vs 8/16; above 0.25: 7/8 vs 8/12), which with 20 items is inside
+  run-to-run and sampling noise. Pooled over both sets, arm B's two-phase exact rate is
+  34 of 58 (59 %). The 4 errors are three "major phase only" and one wrong minor phase.
+  Product reading unchanged: single-phase identification is solved at this difficulty;
+  two-phase is 50-80 % and bounded by light minor phases; the T3 figure needs more items,
+  not more runs, before it is quoted as a capability.

@@ -19,3 +19,5 @@ read 06:44 when the v0.2 retrospective finished. Order is correct. From here on 
 - 2026-10-21 20:25 UTC Arm A (Opus 5.5, reading only, batch) on the public set: T1 94.6 %, T2 89.2 %, T3 33.3 % exact; 19 silences, all max_tokens stops; USD 14.50.
 - 2026-10-21 21:35 UTC Arm B (Opus 5.5 + simulate_pattern tool, round-batched) on the public set: T1 100 %, T2 97.5 %, T3 48.7 % exact (Jaccard 0.73); 119/120 answered; USD 32.03. One spend-cap interruption, resumed.
 - 2026-10-21 23:29 UTC Arm B2 (residual tool) on the public set: 80/120 answered, T3 exact 25 %; 40 silences from the 12-call cap inside a tool turn; USD 49.33. Retired; gate stays on arm B.
+- 2026-10-22 04:54 UTC Arm B held-out run (60 items): T1 100 %, T2 100 %, T3 78.9 %; 59/60 answered; USD 15.91. Gate passed on one run; T3 read as 50-80 % pooled.
+- 2026-10-22 04:2x UTC Author rewrote history to drop the model file and the held-out set (9c88104 -> 1bab04f); pack 74 MB -> 10 MB.

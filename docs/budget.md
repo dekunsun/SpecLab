@@ -30,10 +30,10 @@ Rules for every future paid run:
 | arm A public | 8.5 | 14.50 | 1.7 |
 | arm B public | 15-30 | 32.03 | 1.1-2.1 |
 | arm B2 public | 32-51 (1.0-1.6x B) | 49.33 | inside, but the run was not worth it |
+| arm B held-out | 19 (0.27 x 60 x 1.2) | 15.91 | 0.84 |
 
 Planned, not approved:
 
 | run | pilot needed | estimate from measured unit cost | decision it informs |
 | --- | --- | ---: | --- |
-| arm B, held-out, 3 runs x 60 items | no (same arm, same model) | 0.27 x 180 x 1.2 = USD 58 | FR12 qualification: is arm B the gate |
 | Gemini 4 Argon, arm B, public | yes | pilot x 120 x 1.2 | whether the result is Opus-specific |

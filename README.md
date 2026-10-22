@@ -11,7 +11,7 @@ every step has an eval and an evidence grade.
 
 **Status (2026-10-21): v0.3. Three funnel versions, two validations, a potential cross-check, a
 phonon check, a substrate stage and one eval set with baselines, all registered before running.
-Three language model runs (Claude Opus 5.5, arms A, B and B2, public XRD set). No material has been made. 55 registered predictions: 29 held, 22 failed, 4 could not be read. Every failure is logged with its direction in
+Four language model runs (Claude Opus 5.5: arms A, B and B2 on the public XRD set, arm B on the held-out set). Arm B passed the registered qualification gate. No material has been made. 59 registered predictions: 31 held, 24 failed, 4 could not be read. Every failure is logged with its direction in
 [docs/registration.md](docs/registration.md).**
 
 **Deliverable:** [results/funnel/v0.3_gradeA.md](results/funnel/v0.3_gradeA.md), 20 oxides with a
@@ -125,6 +125,7 @@ between this project and the diagnosis stage. `items/xrd_public.json` holds 120 
 | **Claude Opus 5.5, arm A (reading only, no tool), 1 run** | **94.6 %** (37 of 40 answered) | **89.2 %** (37 answered) | **33.3 %** (27 answered; Jaccard 0.65) |
 | **Claude Opus 5.5, arm B (with a simulate_pattern tool), 1 run** | **100 %** (40 answered) | **97.5 %** (40 answered) | **48.7 %** (39 answered; Jaccard 0.73) |
 | Claude Opus 5.5, arm B2 (plus a fit_and_residual tool), 1 run, retired | 100 % (39 answered) | 96 % (25 answered) | 25 % (16 answered; Jaccard 0.60) |
+| **Claude Opus 5.5, arm B, held-out set (20 per tier), 1 run** | **100 %** (20 answered) | **100 %** (20 answered) | **78.9 %** (19 answered; Jaccard 0.89) |
 
 Any model result is to be read against the refined row. Both Opus runs were registered before
 they ran ([P38-P49](docs/registration.md)). Arm A's 19 non-answers are all `max_tokens` stops at
@@ -142,7 +143,15 @@ tool turn and the runner closed them without a final answer, and on the items it
 minor phase was found less often than in arm B (4 of 28 against 16 of 28). Two harness lessons,
 registered for the next arm rather than patched into this one: a tool-call limit must end with
 one final turn without tools, and a tool that returns a 1,400-point array invites iteration.
-The gate stays on arm B. A held-out set of 60 items exists; it was committed by mistake on 2026-10-21 and untracked the next day (see `items/README.md`), so it is unseen by the model but not private.
+The gate stays on arm B.
+
+The held-out run (60 items the model had not been sent) passed the registered gate on one run:
+no tier below the public result. Its T3 figure is read with care: the held-out two-phase items
+are an easier draw (3 of 20 minor phases under 0.15 weight, against 12 of 40 in the public set),
+and with 20 items the +30 points over the public result sits inside sampling noise. Pooled over
+both sets, two-phase exact is 34 of 58. Single-phase identification is solved at this difficulty;
+two-phase is 50-80 % and bounded by light minor phases, and needs more items, not more runs,
+before it is quoted as a capability. A held-out set of 60 items exists; it was committed by mistake on 2026-10-21 and untracked the next day (see `items/README.md`), so it is unseen by the model but not private.
 
 ## What is deliberately not claimed
 
@@ -180,7 +189,7 @@ python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt
 
 ## Next
 
-1. The held-out gate for arm B (three runs); then Gemini 4 Argon and GPT-6 Astra under the arm B harness. A minor-phase tool returns only after the two harness lessons above are built in and registered.
+1. The Si band-offset and reaction-with-Si stages and precursor extraction (the funnel side, where the next evidence is). The XRD line pauses: a second model or a minor-phase tool only with a pilot-first budget and the two harness lessons built in.
 2. The Si band-offset and reaction-with-Si stages; precursor availability from the literature.
 3. Verify the Shannon table against the paper, or retire the estimator.
 4. Run the phonon check on the grade-B list, whose DFPT values (where present) carry the same risk.
