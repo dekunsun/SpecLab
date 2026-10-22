@@ -86,7 +86,7 @@ Before any language model handles literature extraction, synthesis routes or exp
 | Stage gates | Composition, stability, band gap, dielectric, phonon, substrate, then (to build) band offset / reaction / precursor; each gate logs removals and reasons |
 | Cycle time | Spec freeze to candidate dossier: under one hour on one CPU machine today |
 | Experimental assumption | At a few hundred samples a day, combinatorial deposition and XRD screening of 20 grade-A candidates takes one to two days; the bottleneck is phase-ID QC, not deposition |
-| Data pipeline | Every run written to results/, invalid runs included; items and answers separated; held-out set stored as a hash only |
+| Data pipeline | Every run written to results/, invalid runs included; items and answers separated; the held-out set was meant to be stored as a hash only and was committed by mistake (corrected 2026-10-22; see registration) |
 | Cost | Compute near zero; model evals billed per token (proposal appendix) |
 
 ## Non-goals

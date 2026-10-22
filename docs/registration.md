@@ -492,3 +492,13 @@ Gate rule (replaces "three runs"): if P58 holds on every tier, arm B is qualifie
 If any tier is more than 10 points below the public result, two more runs are made on the
 held-out set before any verdict, and the three are reported together. If coverage is below
 95 %, the harness is at fault before the model is.
+- 2026-10-22 01:06 UTC (18:06 PT) Correction, found by the session running the held-out set:
+  `data/heldout/` was never gitignored (only `data/raw/` was) and was committed with the item
+  set on 2026-10-21 (commit e04fbad). The held-out items and answers have therefore been public
+  on GitHub since then. What this does and does not change: no model has been sent these items
+  (the model cannot have seen them through the API), so the held-out run still measures
+  generalisation to items unseen by the model under test; but the set is not private, and any
+  claim that it is withdrawn. From this commit the directory is untracked and ignored; the
+  earlier commits still carry it, and rewriting history is the author's call. A new private
+  set, if ever needed, must be generated with a new seed on a machine that never commits it,
+  and its hashes checked against the ignore rule before the first commit.

@@ -142,8 +142,7 @@ tool turn and the runner closed them without a final answer, and on the items it
 minor phase was found less often than in arm B (4 of 28 against 16 of 28). Two harness lessons,
 registered for the next arm rather than patched into this one: a tool-call limit must end with
 one final turn without tools, and a tool that returns a 1,400-point array invites iteration.
-The gate stays on arm B. A held-out set of 60 items exists
-locally; its sha256 is in `items/README.md`.
+The gate stays on arm B. A held-out set of 60 items exists; it was committed by mistake on 2026-10-21 and untracked the next day (see `items/README.md`), so it is unseen by the model but not private.
 
 ## What is deliberately not claimed
 
