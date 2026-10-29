@@ -1,5 +1,7 @@
 # 帝国理工 MATE70026《AI for Materials》课程调研
 
+逐讲详细讲解（第 1–9 讲，含幻灯片）见 [imperial-ai-for-materials-lectures.zh.md](imperial-ai-for-materials-lectures.zh.md)。
+
 调研日期：2026-10-28（美西时间）
 课程网站：https://aronwalsh.github.io/MLforMaterials/Overview.html
 新组织：AIforMaterials（GitHub）
@@ -8,7 +10,7 @@
 ## 调研范围
 
 - 读过：课程网站的 Overview、Contents、Learning outcomes、Resources 页，以及第 1–9 讲 notebook 的正文。
-- 没读：讲课幻灯片。
+- 讲课幻灯片：首次调研时没读；2026-10-29 补读了第 1–9 讲全部幻灯片，见逐讲讲解。
 - 新组织 AIforMaterials 只有简介页和两个仓库（`lectures`、`labs`），两个仓库的 README 都几乎是空的，新版内容还没放出来。
 - 没能核实：GitHub 组织 API 在本会话被拦，仓库列表来自网页；aiformaterials.github.io 返回 404。
 
